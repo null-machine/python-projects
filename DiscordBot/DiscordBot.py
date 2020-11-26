@@ -1,13 +1,10 @@
 import discord
 import asyncio
-# from chatterbot import ChatBot
-# from chatterbot.conversation import Statement
-# from chatterbot.trainers import UbuntuCorpusTrainer
 
 # id 551378788286464000
 # perms 68608
 
-token = 'NTUxMzc4Nzg4Mjg2NDY0MDAw.XHp1gw.52YL0UzlIHdEdTGOBhRgn07UHgg'
+token = 'NTUxMzc4Nzg4Mjg2NDY0MDAw.XHp1gw.ZDzYuw5-XHdPJy-uK8_iN3mybXw'
 
 client = discord.Client()
 
