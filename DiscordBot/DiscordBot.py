@@ -1,28 +1,27 @@
 import discord
 import asyncio
-from chatterbot import ChatBot
-from chatterbot.conversation import Statement
-from chatterbot.trainers import UbuntuCorpusTrainer
+# from chatterbot import ChatBot
+# from chatterbot.conversation import Statement
+# from chatterbot.trainers import UbuntuCorpusTrainer
 
 # id 551378788286464000
-# token NTUxMzc4Nzg4Mjg2NDY0MDAw.D1wTew.yGnbvpNyxcg7GM5PF6CBMQ2Gx0Q
 # perms 68608
-# https://discordapp.com/api/oauth2/authorize?client_id=551378788286464000&scope=bot&permissions=68608
 
-token = 'NTUxMzc4Nzg4Mjg2NDY0MDAw.D1wTew.yGnbvpNyxcg7GM5PF6CBMQ2Gx0Q'
+token = 'NTUxMzc4Nzg4Mjg2NDY0MDAw.XHp1gw.52YL0UzlIHdEdTGOBhRgn07UHgg'
+
 client = discord.Client()
 
-chatbot = ChatBot(
-	'bhot',
-	logic_adapters=[
-		'chatterbot.logic.BestMatch',
-		'chatterbot.logic.MathematicalEvaluation'
-	],
-	initialize=True
-)
-
-trainer = UbuntuCorpusTrainer(chatbot)
-trainer.train()
+# chatbot = ChatBot(
+# 	'bhot',
+# 	logic_adapters=[
+# 		'chatterbot.logic.BestMatch',
+# 		'chatterbot.logic.MathematicalEvaluation'
+# 	],
+# 	initialize=True
+# )
+#
+# trainer = UbuntuCorpusTrainer(chatbot)
+# trainer.train()
 
 async def verify(response, trigger):
 	
@@ -34,8 +33,6 @@ async def verify(response, trigger):
 		reaction, user = await client.wait_for('reaction_add', timeout=20.0, check=check)
 	except asyncio.TimeoutError:
 		# await message.clear_reactions()
-		await response.edit(content=response.content + ' ~')
-		chatbot.learn_response(Statement(text=response.content), trigger)
 		pass
 	else:
 		await response.delete()
@@ -49,7 +46,7 @@ async def on_ready():
 async def on_message(message):
 	if message.author != client.user:
 		trigger = message.content
-		response = await message.channel.send(chatbot.get_response(message.content))
+		response = await message.channel.send('test')
 		await verify(response, trigger)
 	
 client.run(token)
