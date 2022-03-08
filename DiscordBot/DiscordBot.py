@@ -1,5 +1,6 @@
 import discord
 import asyncio
+import random
 
 # id 551378788286464000
 # perms 68608
@@ -7,18 +8,6 @@ import asyncio
 token = 'NTUxMzc4Nzg4Mjg2NDY0MDAw.XHp1gw.ZDzYuw5-XHdPJy-uK8_iN3mybXw'
 
 client = discord.Client()
-
-# chatbot = ChatBot(
-# 	'bhot',
-# 	logic_adapters=[
-# 		'chatterbot.logic.BestMatch',
-# 		'chatterbot.logic.MathematicalEvaluation'
-# 	],
-# 	initialize=True
-# )
-#
-# trainer = UbuntuCorpusTrainer(chatbot)
-# trainer.train()
 
 async def verify(response, trigger):
 	
@@ -43,7 +32,7 @@ async def on_ready():
 async def on_message(message):
 	if message.author != client.user:
 		trigger = message.content
-		response = await message.channel.send('test')
-		await verify(response, trigger)
+		response = await message.channel.send(random.randrange(1, 20))
+		# await verify(response, trigger)
 	
 client.run(token)
