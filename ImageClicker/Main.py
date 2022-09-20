@@ -1,13 +1,12 @@
 import pyautogui
 import time
+from pynput.keyboard import Key, Listener
+import threading
 import cv2
 from PIL import ImageGrab
 import numpy
 import os
 import sys
-
-# in case we run from cmd
-os.chdir(os.path.dirname(sys.argv[0]))
 
 # offset uses gpu coordinates, so increasing y lowers click point
 def click_target(frame, target, offset = (0, 0), threshold=0.8):
@@ -19,19 +18,49 @@ def click_target(frame, target, offset = (0, 0), threshold=0.8):
 		human_click(point)
 
 def human_click(point):
-	pyautogui.moveTo(point[0], point[1], numpy.random.uniform(0, 0.5))
-	time.sleep(numpy.random.uniform(0, 0.5))
+	moveTime = numpy.linalg.norm(numpy.array(point) - numpy.array(pyautogui.position())) / numpy.linalg.norm(pyautogui.size())
+	pyautogui.moveTo(point[0], point[1], moveTime * numpy.random.uniform(0.4, 0.5))
 	pyautogui.mouseDown()
-	time.sleep(numpy.random.uniform(0, 0.5))
+	time.sleep(numpy.random.uniform(0, 0.3))
 	pyautogui.mouseUp()
-	time.sleep(numpy.random.uniform(0, 0.5))
+	time.sleep(numpy.random.uniform(0, 0.2))
 
 # pyautogui.alert(title='Image Clicker', text='Ready?', button='OK')
 
 # target = pyautogui.center(pyautogui.locateOnScreen('0.png'))
 # pyautogui.click('0.png')
-frame = ImageGrab.grab()
-frame = numpy.array(frame)
-target = cv2.imread('0.png')
-click_target(frame, target)
-# frame.save('test.png')
+def main_loop():
+	frame = ImageGrab.grab()
+	frame = numpy.array(frame)
+	target = cv2.imread('0.png')
+	click_target(frame, target)
+	# frame.save('test.png')
+
+# kill switch
+def on_press(key):
+	print('{0} pressed'.format(
+	key))
+
+def on_release(key):
+	print('{0} release'.format(
+	key))
+	if key == Key.esc:
+		# stop listener
+		return False
+
+def kill_switch():
+	# collect events until released
+	with Listener(on_press=on_press, on_release=on_release) as listener:
+		listener.join()
+
+# in case we run from cmd
+os.chdir(os.path.dirname(sys.argv[0]))
+
+pyautogui.FAILSAFE = False
+
+main_thread = threading.Thread(target=main_loop)
+main_thread.daemon = True # slightly cursed
+kill_thread = threading.Thread(target=kill_switch)
+main_thread.start()
+kill_thread.start()
+kill_thread.join()
