@@ -1,3 +1,15 @@
+# target naming scheme: `[x offset] [y offset] [image name].png`
+# example target: `0 0 start.png`
+
+# this bot scans its working directory for properly named png files as targets.
+# when it finds a target onscreen, it will click at it, with respect to offset.
+
+# offset is in pixels; x from left to right, and y from up to down.
+# both are relative to the center of each target's screenshot.
+
+# pressing escape terminates the bot.
+
+
 import pyautogui
 import time
 from pynput.keyboard import Key, Listener
@@ -8,7 +20,7 @@ import numpy
 import os
 import sys
 
-# offset uses gpu coordinates, so increasing y lowers click point
+# increasing y lowers click point
 def click_target(frame, target, offset = (0, 0), threshold=0.8):
 	point = cv2.matchTemplate(frame, target, cv2.TM_CCOEFF_NORMED)
 	point = numpy.where(point > threshold)
@@ -25,16 +37,12 @@ def human_click(point):
 	pyautogui.mouseUp()
 	time.sleep(numpy.random.uniform(0, 0.2))
 
-# pyautogui.alert(title='Image Clicker', text='Ready?', button='OK')
-
-# target = pyautogui.center(pyautogui.locateOnScreen('0.png'))
-# pyautogui.click('0.png')
 def main_loop():
 	frame = ImageGrab.grab()
 	frame = numpy.array(frame)
+	print(os.listdir())
 	target = cv2.imread('0.png')
 	click_target(frame, target)
-	# frame.save('test.png')
 
 # kill switch
 def on_press(key):
