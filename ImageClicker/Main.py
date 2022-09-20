@@ -27,15 +27,22 @@ import sys
 
 mouse = MouseController()
 
-def click_target(frame, target, offset=(0, 0), threshold=0.8):
+def click_target(frame, target, offset=(0, 0), threshold=0.9):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
-	# print(min_value)
+	print(min_value)
+	# cv2.imshow("img", frame)
+	# cv2.waitKey(0)
+	# cv2.imshow("target", target)
+	# cv2.waitKey(0)
 	if min_value < 1 - threshold and point[0].size > 0 and point[1].size > 0:
 		point = point[1][0] + target.shape[1] / 2, point[0][0] + target.shape[0] / 2
 		point = (point[0] + offset[0], point[1] + offset[1])
 		human_click(point)
+
+		return True
+	return False
 
 def human_click(point):
 	moveTime = numpy.linalg.norm(numpy.array(point) - numpy.array(mouse.position)) / numpy.linalg.norm((1535, 863))
@@ -46,20 +53,26 @@ def human_click(point):
 	time.sleep(numpy.random.uniform(0.2, 0.4))
 
 def main_loop():
-	frame = ImageGrab.grab()
-	frame = numpy.array(frame)
-	frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	files = os.listdir()
 	files = [file for file in files if file.endswith('.png')]
 	print(files)
 	while True:
+		frame = ImageGrab.grab()
+		frame = numpy.array(frame)
+		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+		# frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		for file in files:
-			target = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+			# target = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
+			target = cv2.imread(file)
 			tokens = file.split(' ')
 			if len(tokens) > 1 and tokens[0].lstrip('-').isdigit() and tokens[1].lstrip('-').isdigit():
-				click_target(frame, target, (int(tokens[0]), int(tokens[1])))
+				if click_target(frame, target, (int(tokens[0]), int(tokens[1]))):
+					print(file)
+					break
 			else:
-				click_target(frame, target)
+				if click_target(frame, target):
+					print(file)
+					break
 
 # kill switch
 def on_press(key):
