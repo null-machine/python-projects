@@ -47,6 +47,7 @@ def click_target(frame, target, offset=(0, 0), threshold=0.9):
 def human_click(point):
 	moveTime = numpy.linalg.norm(numpy.array(point) - numpy.array(mouse.position)) / numpy.linalg.norm((1535, 863))
 	mouse.position = numpy.multiply(point, (1535 / 1920, 863 / 1080)) # thank you pynput
+	mouse.move(numpy.random.uniform(-24, 24), numpy.random.uniform(-24, 24))
 	mouse.press(Button.left)
 	time.sleep(numpy.random.uniform(0.3, 0.5))
 	mouse.release(Button.left)
