@@ -11,11 +11,10 @@ import numpy
 import os
 import sys
 
+from image_target import ImageTarget
+
 mouse = MouseController()
 keyboard = KeyboardController()
-
-# global ctrlHeld
-# ctrlHeld = False
 
 def small_sleep():
 	time.sleep(numpy.random.uniform(0.05, 0.1))
@@ -91,29 +90,21 @@ def main_loop():
 	# 	print(mouse.position)
 	# 	time.sleep(1)
 
-	files = os.listdir()
-	files = [file for file in files if file.endswith('.png')]
-
+	files = [file for file in os.listdir() if file.endswith('.png')] # file[0:-4]
 	print(files)
+	# image_targets = [ImageTarget(file, cv2.imread(file), None) for file in files]
+	image_targets = {file : ImageTarget(file, cv2.imread(file), None) for file in files}
+	image_targets['levelstart.png'].action = solve_infernal
 	while True:
 		frame = ImageGrab.grab()
 		frame = numpy.array(frame)
 		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-		for file in files:
-			target = cv2.imread(file)
-			tokens = file.split(' ')
-			if len(tokens) > 1 and tokens[0].lstrip('-').isdigit() and tokens[1].lstrip('-').isdigit():
-				if click_target(frame, target, (int(tokens[0]), int(tokens[1]))):
-					print(file)
-					if file.endswith('levelstart.png'):
-						solve_infernal()
-					break
-			else:
-				if click_target(frame, target):
-					print(file)
-					if file.endswith('levelstart.png'):
-						solve_infernal()
-					break
+		for image_target in image_targets.values():
+			if click_target(frame, image_target.image):
+				print(image_target.name)
+				if not image_target.action is None:
+					image_target.action()
+				break
 
 # kill switch
 def on_press(key):
