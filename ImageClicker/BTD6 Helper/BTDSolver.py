@@ -1,21 +1,8 @@
-# target naming scheme: `[x offset] [y offset] [image name].png`
-# example: `-20 50 start.png` will click 20 pixels to the left and
-# 50 pixels beneath the center of start.png when it is found onscreen.
-
-# this bot scans its working directory for png files as targets.
-# when it finds a target onscreen, it will click it, with respect to offset.
-# if no offset is found, it will click its center.
-
-# offset is in pixels; x from left to right, and y from up to down.
-# both are relative to the center of each target's screenshot.
-
-# pressing escape terminates the bot.
-
-
 from pynput.mouse import Button
 from pynput.mouse import Controller as MouseController
 from pynput.keyboard import Key
 from pynput.keyboard import Listener as KeyListener
+from pynput.keyboard import Controller as KeyboardController
 from PIL import ImageGrab
 import cv2
 import time
@@ -25,9 +12,52 @@ import os
 import sys
 
 mouse = MouseController()
+keyboard = KeyboardController()
+
+def small_sleep():
+	time.sleep(numpy.random.uniform(0.05, 0.1))
+
+def long_sleep():
+	time.sleep(numpy.random.uniform(1.11, 1.2))
+
+def sharp_click(point):
+	mouse.position = point
+	mouse.move(numpy.random.uniform(-2, 2), numpy.random.uniform(-1, 1))
+	small_sleep()
+	mouse.press(Button.left)
+	small_sleep()
+	mouse.release(Button.left)
+	small_sleep()
+
+def human_type(key):
+	keyboard.press(key)
+	small_sleep()
+	keyboard.release(key)
+	small_sleep()
+
+def construct(point, tower, top, mid, bot):
+	human_type(tower)
+	sharp_click(point)
+	sharp_click(point)
+	for i in range(0, top):
+		human_type('w')
+	for i in range(0, mid):
+		human_type('v')
+	for i in range(0, bot):
+		human_type('z')
+
+def solve_infernal():
+	long_sleep()
+	print("UNGA BUNGA UNGA BUNGA UNGA B-")
+	construct((666, 620), ';', 0, 2, 4)
+	construct((666, 565), 'a', 4, 0, 2)
+	# human_type(Key.space)
+	# human_type(Key.space)
+	# construct((666, 260), 'h', 0, 1, 1)
+	sharp_click((200, 200))
 
 # tune the threshold parameter lower if it can't find anything, and higher if there are false positives
-def click_target(frame, target, offset=(0, 0), threshold=0.9):
+def click_target(frame, target, offset=(0, 0), threshold=0.99):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -39,21 +69,16 @@ def click_target(frame, target, offset=(0, 0), threshold=0.9):
 	if min_value < 1 - threshold and point[0].size > 0 and point[1].size > 0:
 		point = point[1][0] + target.shape[1] / 2, point[0][0] + target.shape[0] / 2
 		point = (point[0] + offset[0], point[1] + offset[1])
-		human_click(point)
-
+		point = numpy.multiply(point, (1535 / 1920, 863 / 1080))
+		sharp_click(point)
 		return True
 	return False
 
-def human_click(point):
-	moveTime = numpy.linalg.norm(numpy.array(point) - numpy.array(mouse.position)) / numpy.linalg.norm((1535, 863))
-	mouse.position = numpy.multiply(point, (1535 / 1920, 863 / 1080)) # thank you pynput
-	mouse.move(numpy.random.uniform(-48, 48), numpy.random.uniform(-24, 24))
-	mouse.press(Button.left)
-	time.sleep(numpy.random.uniform(0.3, 0.5))
-	mouse.release(Button.left)
-	time.sleep(numpy.random.uniform(0.7, 0.8))
-
 def main_loop():
+	# while True:
+	# 	print(mouse.position)
+	# 	time.sleep(1)
+
 	files = os.listdir()
 	files = [file for file in files if file.endswith('.png')]
 	print(files)
@@ -61,18 +86,20 @@ def main_loop():
 		frame = ImageGrab.grab()
 		frame = numpy.array(frame)
 		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-		# frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 		for file in files:
-			# target = cv2.imread(file, cv2.IMREAD_GRAYSCALE)
 			target = cv2.imread(file)
 			tokens = file.split(' ')
 			if len(tokens) > 1 and tokens[0].lstrip('-').isdigit() and tokens[1].lstrip('-').isdigit():
 				if click_target(frame, target, (int(tokens[0]), int(tokens[1]))):
 					print(file)
+					if file.endswith('levelstart.png'):
+						solve_infernal()
 					break
 			else:
 				if click_target(frame, target):
 					print(file)
+					if file.endswith('levelstart.png'):
+						solve_infernal()
 					break
 
 # kill switch
