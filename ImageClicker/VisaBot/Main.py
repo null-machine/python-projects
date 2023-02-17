@@ -22,7 +22,8 @@ mouse = MouseController()
 keyboard = KeyboardController()
 
 def small_sleep():
-	time.sleep(numpy.random.uniform(0.05, 0.1))
+	# time.sleep(numpy.random.uniform(0.0625, 0.125))
+	return
 
 def long_sleep():
 	time.sleep(numpy.random.uniform(1.11, 1.2))
@@ -33,22 +34,30 @@ def take_recording():
 	keyboard.release(Key.f10)
 	keyboard.release(Key.alt)
 
-def sharp_click(point):
+def click_point(point):
 	mouse.position = point
-	mouse.move(numpy.random.uniform(-24, 24), numpy.random.uniform(-11, 11))
 	small_sleep()
 	mouse.press(Button.left)
 	small_sleep()
 	mouse.release(Button.left)
 	small_sleep()
 
-def human_type(key):
+def type_key(key):
 	keyboard.press(key)
 	small_sleep()
 	keyboard.release(key)
 	small_sleep()
 
-def match_template(frame, target, offset = (0, 0), threshold = 0.05):
+def select_time(point):
+	click_point((850, 600))
+	click_point((850, 600))
+	click_point((850, 600))
+	click_point((655, 700))
+	click_point((930, 720))
+	time.sleep(0.3)
+
+
+def match_template(frame, target, offset = (0, 0), threshold = 0.0001):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -63,14 +72,13 @@ def match_template(frame, target, offset = (0, 0), threshold = 0.05):
 
 def main_loop():
 	# while True:
-	# 	print(mouse.position)
-	# 	time.sleep(1)
+	#	print(mouse.position)
+	#	time.sleep(1)
 
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
-	image_targets = {file : ImageTarget(file, cv2.imread(file), sharp_click, (0, 0)) for file in files}
-	image_targets['level_start.png'].offset = (40, 0)
-	image_targets['done.png'].offset = (200, 0)
+	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
+	image_targets['february.png'].action = select_time
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
@@ -95,7 +103,7 @@ def on_press(key):
 
 def on_release(key):
 	print('{0} released'.format(key))
-	if key == Key.f12:
+	if key == Key.menu:
 		mouse.release(Button.left)
 		return False
 
