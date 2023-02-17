@@ -23,6 +23,7 @@ keyboard = KeyboardController()
 
 def small_sleep():
 	# time.sleep(numpy.random.uniform(0.0625, 0.125))
+	
 	return
 
 def long_sleep():
@@ -52,7 +53,9 @@ def select_time(point):
 	click_point((850, 600))
 	click_point((850, 600))
 	click_point((850, 600))
+	# time.sleep(0.03125)
 	click_point((655, 700))
+	# time.sleep(0.03125)
 	click_point((930, 720))
 	time.sleep(0.3)
 

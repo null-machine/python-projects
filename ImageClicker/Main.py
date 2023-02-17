@@ -33,7 +33,7 @@ def take_recording():
 	keyboard.release(Key.f10)
 	keyboard.release(Key.alt)
 
-def sharp_click(point):
+def click_point(point):
 	mouse.position = point
 	mouse.move(numpy.random.uniform(-24, 24), numpy.random.uniform(-11, 11))
 	small_sleep()
@@ -42,7 +42,7 @@ def sharp_click(point):
 	mouse.release(Button.left)
 	small_sleep()
 
-def human_type(key):
+def type_key(key):
 	keyboard.press(key)
 	small_sleep()
 	keyboard.release(key)
@@ -62,13 +62,9 @@ def match_template(frame, target, offset = (0, 0), threshold = 0.05):
 		return None
 
 def main_loop():
-	# while True:
-	# 	print(mouse.position)
-	# 	time.sleep(1)
-
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
-	image_targets = {file : ImageTarget(file, cv2.imread(file), sharp_click, (0, 0)) for file in files}
+	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
 	image_targets['level_start.png'].offset = (40, 0)
 	image_targets['done.png'].offset = (200, 0)
 
@@ -91,11 +87,11 @@ def main_loop():
 
 
 def on_press(key):
-	print('{0} pressed'.format(key))
+	print('Key pressed: {0}    Mouse position: {1}'.format(key, mouse.position))
 
 def on_release(key):
-	print('{0} released'.format(key))
-	if key == Key.f12:
+	print('Key released: {0}    Mouse position: {1}'.format(key, mouse.position))
+	if key == Key.menu:
 		mouse.release(Button.left)
 		return False
 
