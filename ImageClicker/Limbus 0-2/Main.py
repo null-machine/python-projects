@@ -28,7 +28,6 @@ def small_sleep():
 	time.sleep(0.1)
 
 def long_sleep():
-	# time.sleep(numpy.random.uniform(0.9))
 	time.sleep(0.5)
 
 def click_point(point):
@@ -37,8 +36,7 @@ def click_point(point):
 	mouse.press(Button.left)
 	frame_sleep()
 	mouse.release(Button.left)
-	long_sleep()
-	# frame_sleep()
+	frame_sleep()
 
 def type_key(key):
 	keyboard.press(key)
@@ -46,7 +44,7 @@ def type_key(key):
 	keyboard.release(key)
 	frame_sleep()
 
-def match_template(frame, target, offset = (0, 0), threshold = 0.01):
+def match_template(frame, target, offset = (0, 0), threshold = 0.05):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -59,44 +57,62 @@ def match_template(frame, target, offset = (0, 0), threshold = 0.01):
 	else:
 		return None
 	
-def confirm_delete(point):
-	click_point(point)
-	time.sleep(1)
-	type_key('L')
-	type_key('i')
-	type_key('m')
-	type_key('b')
-	type_key('u')
-	type_key('s')
-	type_key('C')
-	type_key('o')
-	type_key('m')
-	type_key('p')
-	type_key('a')
-	type_key('n')
-	type_key('y')
-	type_key(Key.enter)
 
-def ball_click(point):
-	for i in range(0, 6):
-		click_point(point)
-		long_sleep()
+def sanity_action(point):
+	click_point(point)
+	long_sleep()
+	mouse.position = (395, 698)
+	frame_sleep()
+	mouse.press(Button.left)
+	frame_sleep()
+	mouse.position = (1138, 762)
+	long_sleep()
+	mouse.release(Button.left)
+	long_sleep()
+	click_point((1122, 682))
+
+def clash_action(point):
+	click_point(point)
+	long_sleep()
+	click_point((438, 694))
+	frame_sleep()
+	mouse.press(Button.left)
+	frame_sleep()
+	mouse.position = (1087, 763)
+	long_sleep()
+	mouse.release(Button.left)
+	long_sleep()
+	click_point((1079, 686))
+
+def speed_action(point):
+	click_point(point)
+	long_sleep()
+	mouse.position = (482, 694)
+	frame_sleep()
+	mouse.press(Button.left)
+	frame_sleep()
+	mouse.position = (1040, 758)
+	long_sleep()
+	mouse.release(Button.left)
+	long_sleep()
+	click_point((1033, 683))
 
 def main_loop():
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
 	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
-	image_targets['limbusinput.png'].action = confirm_delete
-	image_targets['ball.png'].offset = (-70, 120)
-	image_targets['ball.png'].action = ball_click
-	image_targets['fulllunacy.png'].offset = (230, -10)
-	# image_targets['standard.png'].offset = (30, 0)
+	image_targets['skill.png'].action = clash_action
+	image_targets['sanity.png'].action = sanity_action
+	image_targets['clash.png'].action = clash_action
+	image_targets['speed.png'].action = speed_action
+	
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
 	while True:
 		elapsed_time += time.monotonic() - prev_time
-		print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
+		if elapsed_time > 10:
+			print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
 		prev_time = time.monotonic()
 		frame = ImageGrab.grab()
 		frame = numpy.array(frame)
@@ -106,6 +122,7 @@ def main_loop():
 			if point is not None and image_target.action:
 				print('{0} found, performing {1}'.format(image_target.name, image_target.action))
 				image_target.action(numpy.add(point, image_target.offset))
+				long_sleep()
 				elapsed_time = 0
 				break
 

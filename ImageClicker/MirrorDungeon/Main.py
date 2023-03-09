@@ -46,7 +46,7 @@ def type_key(key):
 	keyboard.release(key)
 	frame_sleep()
 
-def match_template(frame, target, offset = (0, 0), threshold = 0.01):
+def match_template(frame, target, offset = (0, 0), threshold = 0.06):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -86,11 +86,7 @@ def main_loop():
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
 	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
-	image_targets['limbusinput.png'].action = confirm_delete
-	image_targets['ball.png'].offset = (-70, 120)
-	image_targets['ball.png'].action = ball_click
-	image_targets['fulllunacy.png'].offset = (230, -10)
-	# image_targets['standard.png'].offset = (30, 0)
+	# image_targets['click_below.png'].offset = (0, 50)
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
