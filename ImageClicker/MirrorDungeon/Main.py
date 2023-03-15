@@ -28,7 +28,6 @@ def small_sleep():
 	time.sleep(0.1)
 
 def long_sleep():
-	# time.sleep(numpy.random.uniform(0.9))
 	time.sleep(0.5)
 
 def click_point(point):
@@ -37,14 +36,23 @@ def click_point(point):
 	mouse.press(Button.left)
 	frame_sleep()
 	mouse.release(Button.left)
-	long_sleep()
-	# frame_sleep()
+	frame_sleep()
 
 def type_key(key):
 	keyboard.press(key)
 	frame_sleep()
 	keyboard.release(key)
 	frame_sleep()
+
+def win_action(point):
+	click_point(point)
+	# long_sleep()
+	click_point((point[0] - 120, point[1] + 20))
+
+def check_action(point):
+	click_point(point)
+	long_sleep()
+	click_point(point)
 
 def match_template(frame, target, offset = (0, 0), threshold = 0.06):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
@@ -58,52 +66,34 @@ def match_template(frame, target, offset = (0, 0), threshold = 0.06):
 		return point
 	else:
 		return None
-	
-def confirm_delete(point):
-	click_point(point)
-	time.sleep(1)
-	type_key('L')
-	type_key('i')
-	type_key('m')
-	type_key('b')
-	type_key('u')
-	type_key('s')
-	type_key('C')
-	type_key('o')
-	type_key('m')
-	type_key('p')
-	type_key('a')
-	type_key('n')
-	type_key('y')
-	type_key(Key.enter)
 
-def ball_click(point):
-	for i in range(0, 6):
-		click_point(point)
-		long_sleep()
 
 def main_loop():
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
 	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
-	# image_targets['click_below.png'].offset = (0, 50)
+	image_targets['3.png'].offset = (0, 50)
+	image_targets['4.png'].offset = (0, 50)
+	image_targets['5.png'].offset = (0, 50)
+	image_targets['0win.png'].action = win_action
+	image_targets['check.png'].action = check_action
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
 	while True:
 		elapsed_time += time.monotonic() - prev_time
-		print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
+		if elapsed_time >= 10:
+			print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
 		prev_time = time.monotonic()
-		frame = ImageGrab.grab()
-		frame = numpy.array(frame)
-		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 		for image_target in image_targets.values():
+			frame = ImageGrab.grab()
+			frame = numpy.array(frame)
+			frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 			point = match_template(frame, image_target.image, image_target.offset)
 			if point is not None and image_target.action:
 				print('{0} found, performing {1}'.format(image_target.name, image_target.action))
 				image_target.action(numpy.add(point, image_target.offset))
 				elapsed_time = 0
-				break
 
 
 def on_press(key):
