@@ -9,7 +9,7 @@ class Sinner:
 		self.s2 = s2
 		self.s3 = s3
 	
-	def gen_charts(self):
+	def gen_chart(self):
 		plt.style.use('dark_background')
 		fig, ax = plt.subplots(3, 1)
 

@@ -1,20 +1,30 @@
 import yaml
+from os import listdir
 from sinner import Sinner
 from skill import Skill
 
-print('''Sinner Ultimate Scientific Analysis Model Of Generally Unknown Strategies
+message = '''Sinner Ultimate Scientific Analysis Model Of Generally Unknown Strategies
 - Generates charts of skill clash ranges.
 - Enemy offense level is assumed to be 30.
-- Y-axis represents the chance of winning on any coin in the clash.
-- X-axis represents the power of an enemy skill that always rolls the same thing.
-- Cyan, yellow and magenta are associated a chance of 0.7, 0.5 and 0.3 of rolling heads respectively.
-''')
+- Y-axis represents the chance of winning a single coin clash that has a set power.
+- X-axis represents the power of the enemy single coin skill that is being clashed.
+- Cyan, yellow and magenta lines are associated a chance of 0.7, 0.5 and 0.3 of rolling heads respectively.
+- An additional chart will be generated for sinners reliant on ego passives, chain passives or conditionals.
+'''
+print(message)
+
+read_me = open('charts/read_me.txt', 'w+')
+read_me.write(message)
+read_me.close()
 
 # file = open('sinners/w_corp_don_quixote.yaml', 'w+')
 # file.write(yaml.dump(w_corp_don_quixote))
 # file.close()
 
-stream = open('sinners/w_corp_don_quixote.yaml', 'r')
-sinner = yaml.load(stream, yaml.Loader)
-fig = sinner.gen_charts()
-fig.savefig(f'charts/{sinner.name}.png')
+files = [file for file in listdir('sinners')]
+for file in files:
+	stream = open(f'sinners/{file}', 'r')
+	sinner = yaml.load(stream, yaml.Loader)
+	fig = sinner.gen_chart()
+	fig.savefig(f'charts/{sinner.name}.png')
+
