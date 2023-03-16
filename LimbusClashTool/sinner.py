@@ -1,3 +1,4 @@
+import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -11,6 +12,7 @@ class Sinner:
 	
 	def gen_chart(self):
 		plt.style.use('dark_background')
+		matplotlib.rcParams['font.family'] = ['DejaVu Sans Mono', 'monospace']
 		fig, ax = plt.subplots(3, 1)
 
 		s1_breakpoints, s1_min_chance, s1_reg_chance, s1_max_chance = self.s1.gen_breakpoints()
@@ -34,7 +36,7 @@ class Sinner:
 		ax[2].set(ylim=(0, 1.1), xlim=(0, 30), yticks=np.arange(0, 1.1, 0.25), xticks=np.arange(0, 30.1, 2))
 		ax[2].set_title(f'{self.s3.name}')
 
-		fig.suptitle(f'{self.name}')
+		fig.suptitle(f'{self.name}', fontsize=24)
 		fig.canvas.manager.set_window_title('Sinner Ultimate Scientific Analysis Model Of Generally Unknown Strategies')
 		fig.tight_layout()
 		# plt.show()

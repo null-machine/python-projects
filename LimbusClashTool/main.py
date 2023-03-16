@@ -22,6 +22,7 @@ read_me.close()
 # file.close()
 
 files = [file for file in listdir('sinners')]
+
 for file in files:
 	stream = open(f'sinners/{file}', 'r')
 	sinner = yaml.load(stream, yaml.Loader)
