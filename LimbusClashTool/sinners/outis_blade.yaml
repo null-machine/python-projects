@@ -1,23 +1,23 @@
 !!python/object:sinner.Sinner
-name: ishmael_shi
+name: outis_blade
 s1: !!python/object:skill.Skill
+  base_power: 4
+  coin_count: 1
+  coin_power: 6
+  name: draw_of_the_sword
+  offense: 34
+  user: outis_blade
+s2: !!python/object:skill.Skill
   base_power: 5
   coin_count: 2
   coin_power: 4
-  name: flying_sword
+  name: acupuncture
   offense: 34
-  user: ishmael_shi
-s2: !!python/object:skill.Skill
-  base_power: 7
-  coin_count: 4
-  coin_power: 4
-  name: flashing_slide
-  offense: 34
-  user: ishmael_shi
+  user: outis_blade
 s3: !!python/object:skill.Skill
   base_power: 8
   coin_count: 2
   coin_power: 4
-  name: catch_breath
+  name: decisive_dive
   offense: 34
-  user: ishmael_shi
+  user: outis_blade
