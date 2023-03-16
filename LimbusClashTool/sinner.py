@@ -37,8 +37,5 @@ class Sinner:
 		fig.suptitle(f'{self.name}')
 		fig.canvas.manager.set_window_title('Sinner Ultimate Scientific Analysis Model Of Generally Unknown Strategies')
 		fig.tight_layout()
-		# fig.text(0.5, 0.01, "asoentuhensto")
-		# plt.xlabel('power of an enemy skill with zero offense that always rolls the same')
-		# plt.ylabel('chance of winning on any coin in the clash')
 		# plt.show()
-		return fig
+		return plt
