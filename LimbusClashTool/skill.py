@@ -12,7 +12,6 @@ class Skill:
 
 	def gen_breakpoints(self, enemy_offense=30):
 		offense_power = (self.offense - enemy_offense) / 5
-		# offense_power = 0
 		effective_base_power = self.base_power + offense_power
 		breakpoints = []
 		min_chance = []
@@ -39,6 +38,3 @@ class Skill:
 			chance += (1 - chance) * (binom.cdf(k, coins_remaining, 1 - heads_chance))
 			coins_remaining -= 1
 		return chance
-	
-	def clash(enemy_skill):
-		return

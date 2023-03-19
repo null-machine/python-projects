@@ -32,7 +32,7 @@ def long_sleep():
 
 def click_point(point):
 	mouse.position = point
-	frame_sleep()
+	# frame_sleep()
 	mouse.press(Button.left)
 	frame_sleep()
 	mouse.release(Button.left)
@@ -49,7 +49,7 @@ def win_action(point):
 	# long_sleep()
 	click_point((point[0] - 120, point[1] + 20))
 
-def check_action(point):
+def ego_action(point):
 	click_point(point)
 	long_sleep()
 	click_point(point)
@@ -76,14 +76,14 @@ def main_loop():
 	image_targets['4.png'].offset = (0, 50)
 	image_targets['5.png'].offset = (0, 50)
 	image_targets['0win.png'].action = win_action
-	image_targets['check.png'].action = check_action
+	# image_targets['check.png'].action = check_action
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
 	while True:
 		elapsed_time += time.monotonic() - prev_time
-		if elapsed_time >= 10:
-			print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
+		# if elapsed_time >= 10:
+		# 	print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
 		prev_time = time.monotonic()
 		for image_target in image_targets.values():
 			frame = ImageGrab.grab()
