@@ -27,12 +27,6 @@ def small_sleep():
 def long_sleep():
 	time.sleep(numpy.random.uniform(1.11, 1.2))
 
-def take_recording():
-	keyboard.press(Key.alt)
-	keyboard.press(Key.f10)
-	keyboard.release(Key.f10)
-	keyboard.release(Key.alt)
-
 def click_point(point):
 	mouse.position = point
 	mouse.move(numpy.random.uniform(-24, 24), numpy.random.uniform(-11, 11))
@@ -73,7 +67,6 @@ def main_loop():
 	elapsed_time = 0
 	while True:
 		elapsed_time += time.monotonic() - prev_time
-		print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
 		prev_time = time.monotonic()
 		frame = ImageGrab.grab()
 		frame = numpy.array(frame)
@@ -83,6 +76,7 @@ def main_loop():
 			if point is not None and image_target.action:
 				print('{0} found'.format(image_target.name))
 				image_target.action(numpy.add(point, image_target.offset))
+				time.sleep(0.75)
 				elapsed_time = 0
 				break
 

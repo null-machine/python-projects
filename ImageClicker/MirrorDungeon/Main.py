@@ -49,9 +49,70 @@ def win_action(point):
 	# long_sleep()
 	click_point((point[0] - 120, point[1] + 20))
 
-def ego_action(point):
+def level_action(point):
+	click_point(point)
+	click_point((1000, 640))
+	click_point((900, 640))
+	long_sleep()
+	click_point((300, 400))
+	click_point((1350, 720))
+	long_sleep()
+	click_point((1000, 640))
+
+def recruit_action(point):
 	click_point(point)
 	long_sleep()
+	long_sleep()
+	long_sleep()
+	click_point((800, 400))
+	click_point((1350, 720))
+	click_point((1350, 720))
+	click_point((1350, 720))
+
+def choose_sinner_action(point):
+	click_point((370, 340)) # yi sang
+	click_point((710, 340)) # don quixote
+	click_point((370, 570)) # heathcliff
+	click_point((710, 570)) # rodion
+	click_point((870, 570)) # sinclair
+	click_point((870, 340)) # ryoshu
+	click_point((1060, 340)) # meursault
+	click_point((1060, 570)) # outis
+	# click_point(point)
+	recruit_action(point)
+
+
+# def node_action(point):
+	# if point[0] < 200:
+	# 	mouse.position = (point[0] + 1, point[1] - 100)
+	# 	frame_sleep()
+	# 	mouse.press(Button.left)
+	# 	frame_sleep()
+	# 	mouse.position = (point[0] - 1, point[1] - 100)
+	# 	frame_sleep()
+	# 	mouse.release(Button.left)
+	# elif point[0] > 1400:
+	# 	mouse.position = (point[0], point[1] - 100)
+	# 	frame_sleep()
+	# 	mouse.press(Button.left)
+	# 	frame_sleep()
+	# 	mouse.move(5, 0)
+	# 	frame_sleep()
+	# 	mouse.move(5, 0)
+	# 	frame_sleep()
+	# 	mouse.move(1, 0)
+	# 	mouse.move(1, 0)
+	# 	mouse.move(1, 0)
+	# 	mouse.move(1, 0)
+	# 	mouse.move(1, 0)
+	# 	mouse.release(Button.left)
+	# else:
+	# click_point(point)
+	# use pinned screenshot bars to eliminate side nodes. this is the best solution.
+
+def ego_action(point):
+	click_point((480, 360))
+	# long_sleep()
 	click_point(point)
 
 def match_template(frame, target, offset = (0, 0), threshold = 0.06):
@@ -76,7 +137,14 @@ def main_loop():
 	image_targets['4.png'].offset = (0, 50)
 	image_targets['5.png'].offset = (0, 50)
 	image_targets['0win.png'].action = win_action
-	# image_targets['check.png'].action = check_action
+	image_targets['level_hong_lu.png'].action = level_action
+	image_targets['level_gregor.png'].action = level_action
+	image_targets['level_faust.png'].action = level_action
+	# image_targets['select_sinner.png'].action = recruit_action
+	image_targets['select_ego.png'].action = ego_action
+	image_targets['choose_sinner.png'].action = choose_sinner_action
+	# image_targets['node.png'].action = node_action
+	
 
 	prev_time = time.monotonic()
 	elapsed_time = 0
