@@ -22,7 +22,8 @@ mouse = MouseController()
 keyboard = KeyboardController()
 
 def frame_sleep():
-	time.sleep(0.05)
+	# time.sleep(0.05)
+	time.sleep(numpy.random.uniform(0.05, 0.1))
 
 def small_sleep():
 	time.sleep(0.1)
@@ -32,7 +33,7 @@ def long_sleep():
 
 def click_point(point):
 	mouse.position = point
-	# frame_sleep()
+	mouse.move(numpy.random.uniform(-4, 4), numpy.random.uniform(-4, 4))
 	mouse.press(Button.left)
 	frame_sleep()
 	mouse.release(Button.left)
@@ -45,8 +46,8 @@ def type_key(key):
 	frame_sleep()
 
 def win_action(point):
+	click_point((point[0], point[1] - 50))
 	click_point(point)
-	# long_sleep()
 	click_point((point[0] - 120, point[1] + 20))
 
 def level_action(point):
@@ -59,7 +60,16 @@ def level_action(point):
 	long_sleep()
 	click_point((1000, 640))
 
-def recruit_action(point):
+
+def choose_sinner_action(point):
+	click_point((1060, 570)) # outis
+	click_point((870, 340)) # ryoshu
+	click_point((370, 570)) # heathcliff
+	click_point((710, 570)) # rodion
+	click_point((710, 340)) # don quixote
+	click_point((870, 570)) # sinclair
+	# click_point((370, 340)) # yi sang
+	# click_point((1060, 340)) # meursault
 	click_point(point)
 	long_sleep()
 	long_sleep()
@@ -69,50 +79,55 @@ def recruit_action(point):
 	click_point((1350, 720))
 	click_point((1350, 720))
 
-def choose_sinner_action(point):
-	click_point((370, 340)) # yi sang
-	click_point((710, 340)) # don quixote
-	click_point((370, 570)) # heathcliff
-	click_point((710, 570)) # rodion
-	click_point((870, 570)) # sinclair
-	click_point((870, 340)) # ryoshu
-	click_point((1060, 340)) # meursault
-	click_point((1060, 570)) # outis
-	# click_point(point)
-	recruit_action(point)
+def dungeon_start_action(point):
+	click_point((1220, 340)) # hong lu
+	click_point((1220, 570)) # gregor
+	click_point((540, 340)) # faust
+	click_point(point)
+	long_sleep()
+	long_sleep()
+	long_sleep()
 
+	click_point((500, 330))
+	click_point((270, 370))
+	click_point((1350, 720))
+	click_point((1350, 720))
 
-# def node_action(point):
-	# if point[0] < 200:
-	# 	mouse.position = (point[0] + 1, point[1] - 100)
-	# 	frame_sleep()
-	# 	mouse.press(Button.left)
-	# 	frame_sleep()
-	# 	mouse.position = (point[0] - 1, point[1] - 100)
-	# 	frame_sleep()
-	# 	mouse.release(Button.left)
-	# elif point[0] > 1400:
-	# 	mouse.position = (point[0], point[1] - 100)
-	# 	frame_sleep()
-	# 	mouse.press(Button.left)
-	# 	frame_sleep()
-	# 	mouse.move(5, 0)
-	# 	frame_sleep()
-	# 	mouse.move(5, 0)
-	# 	frame_sleep()
-	# 	mouse.move(1, 0)
-	# 	mouse.move(1, 0)
-	# 	mouse.move(1, 0)
-	# 	mouse.move(1, 0)
-	# 	mouse.move(1, 0)
-	# 	mouse.release(Button.left)
-	# else:
-	# click_point(point)
-	# use pinned screenshot bars to eliminate side nodes. this is the best solution.
+	click_point((800, 330))
+	click_point((270, 370))
+	click_point((1350, 720))
+	click_point((1350, 720))
 
-def ego_action(point):
-	click_point((480, 360))
+	click_point((1100, 330))
+	click_point((270, 370))
+	click_point((1350, 720))
+	click_point((1350, 720))
+
+	click_point((1350, 720))
+
+def very_high_action(point):
+	click_point((point[0], point[1] + 50))
+	long_sleep()
+	long_sleep()
+	click_point((1370, 770))
+
+def node_action(point):
+	click_point(point)
+	long_sleep()
+	small_sleep()
+	click_point((1300, 700))
+	long_sleep()
+	click_point((1380, 700))
+	mouse.position = point
+	
+
+def skip_action(point):
+	click_point(point)
 	# long_sleep()
+	mouse.move(-200, 0)
+	
+def select_ego_action(point):
+	click_point((800, 350))
 	click_point(point)
 
 def match_template(frame, target, offset = (0, 0), threshold = 0.06):
@@ -136,13 +151,18 @@ def main_loop():
 	image_targets['3.png'].offset = (0, 50)
 	image_targets['4.png'].offset = (0, 50)
 	image_targets['5.png'].offset = (0, 50)
+	image_targets['unselected_sinner.png'].offset = (0, 50)
+	image_targets['qmark_choice.png'].offset = (50, 80)
+	image_targets['skip.png'].action = skip_action
 	image_targets['0win.png'].action = win_action
+	image_targets['very_high.png'].action = very_high_action
 	image_targets['level_hong_lu.png'].action = level_action
 	image_targets['level_gregor.png'].action = level_action
 	image_targets['level_faust.png'].action = level_action
-	# image_targets['select_sinner.png'].action = recruit_action
-	image_targets['select_ego.png'].action = ego_action
+	image_targets['select_ego.png'].action = select_ego_action
+	image_targets['dungeon_start.png'].action = dungeon_start_action
 	image_targets['choose_sinner.png'].action = choose_sinner_action
+	
 	# image_targets['node.png'].action = node_action
 	
 
@@ -170,11 +190,12 @@ def on_press(key):
 		return False
 	print('Key pressed: {0}	Mouse position: {1}'.format(key, mouse.position))
 
-def on_release(key):
-	print('Key released: {0} Mouse position: {1}'.format(key, mouse.position))
+# def on_release(key):
+# 	print('Key released: {0} Mouse position: {1}'.format(key, mouse.position))
 
 def kill_switch():
-	with KeyListener(on_press=on_press, on_release=on_release) as listener: listener.join()
+	# with KeyListener(on_press=on_press, on_release=on_release) as listener: listener.join()
+	with KeyListener(on_press=on_press) as listener: listener.join()
 
 os.chdir(os.path.dirname(sys.argv[0]))
 main_thread = threading.Thread(target=main_loop)

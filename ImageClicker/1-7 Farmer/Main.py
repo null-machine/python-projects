@@ -60,7 +60,7 @@ def main_loop():
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
 	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
-	image_targets['level_start.png'].offset = (40, 0)
+	image_targets['level_start.png'].offset = (40, 10)
 	image_targets['done.png'].offset = (200, 0)
 
 	prev_time = time.monotonic()
