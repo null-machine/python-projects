@@ -46,22 +46,26 @@ def type_key(key):
 	frame_sleep()
 
 def win_action(point):
-	click_point((point[0], point[1] - 50))
+	click_point((point[0] - 120, point[1]))
 	click_point(point)
-	click_point((point[0] - 120, point[1] + 20))
+	click_point((point[0] - 120, point[1]))
 
 def level_action(point):
 	click_point(point)
 	click_point((1000, 640))
+	long_sleep()
 	click_point((900, 640))
 	long_sleep()
 	click_point((300, 400))
+	long_sleep()
 	click_point((1350, 720))
+	long_sleep()
 	long_sleep()
 	click_point((1000, 640))
 
 
 def choose_sinner_action(point):
+	click_point((540, 570)) # ishmael
 	click_point((1060, 570)) # outis
 	click_point((870, 340)) # ryoshu
 	click_point((370, 570)) # heathcliff
@@ -94,7 +98,7 @@ def dungeon_start_action(point):
 	click_point((1350, 720))
 
 	click_point((800, 330))
-	click_point((270, 370))
+	click_point((540, 370))
 	click_point((1350, 720))
 	click_point((1350, 720))
 
@@ -114,14 +118,13 @@ def very_high_action(point):
 def node_action(point):
 	click_point(point)
 	long_sleep()
-	small_sleep()
-	click_point((1300, 700))
 	long_sleep()
-	click_point((1380, 700))
+	click_point((1300, 700))
 	mouse.position = point
 	
 
 def skip_action(point):
+	click_point(point)
 	click_point(point)
 	# long_sleep()
 	mouse.move(-200, 0)
@@ -130,7 +133,7 @@ def select_ego_action(point):
 	click_point((800, 350))
 	click_point(point)
 
-def match_template(frame, target, offset = (0, 0), threshold = 0.06):
+def match_template(frame, target, offset = (0, 0), threshold = 0.04):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -156,32 +159,33 @@ def main_loop():
 	image_targets['skip.png'].action = skip_action
 	image_targets['0win.png'].action = win_action
 	image_targets['very_high.png'].action = very_high_action
-	image_targets['level_hong_lu.png'].action = level_action
-	image_targets['level_gregor.png'].action = level_action
-	image_targets['level_faust.png'].action = level_action
+	image_targets['level_a.png'].action = level_action
+	image_targets['level_b.png'].action = level_action
+	image_targets['level_c.png'].action = level_action
 	image_targets['select_ego.png'].action = select_ego_action
 	image_targets['dungeon_start.png'].action = dungeon_start_action
 	image_targets['choose_sinner.png'].action = choose_sinner_action
+	image_targets['node.png'].action = node_action
 	
-	# image_targets['node.png'].action = node_action
 	
 
-	prev_time = time.monotonic()
-	elapsed_time = 0
+	# prev_time = time.monotonic()
+	# elapsed_time = 0
+	index = 0
+	targets = list(image_targets.values())
 	while True:
-		elapsed_time += time.monotonic() - prev_time
-		# if elapsed_time >= 10:
-		# 	print('Scanning... ({0}s)'.format(round(elapsed_time, 2)))
-		prev_time = time.monotonic()
-		for image_target in image_targets.values():
-			frame = ImageGrab.grab()
-			frame = numpy.array(frame)
-			frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-			point = match_template(frame, image_target.image, image_target.offset)
-			if point is not None and image_target.action:
-				print('{0} found, performing {1}'.format(image_target.name, image_target.action))
-				image_target.action(numpy.add(point, image_target.offset))
-				elapsed_time = 0
+		index = (index + 1) % len(targets)
+		image_target = targets[index]
+		# elapsed_time += time.monotonic() - prev_time
+		# prev_time = time.monotonic()
+		frame = ImageGrab.grab()
+		frame = numpy.array(frame)
+		frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+		point = match_template(frame, image_target.image, image_target.offset)
+		if point is not None and image_target.action:
+			print('{0} found, performing {1}'.format(image_target.name, image_target.action))
+			image_target.action(numpy.add(point, image_target.offset))
+			elapsed_time = 0
 
 
 def on_press(key):
