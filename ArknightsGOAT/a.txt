@@ -1,0 +1,293 @@
+Buff Efficiency is the multiplier that is applied to an additive buff to get the resultant DPS increase.
+The number in brackets is the base attack used to calculate an percentile additive buff.
+
+---------
+
+Thorns S3
+
+Post-Scaling
+Average DPS: 2005.9999
+Average Hit Damage: 1630.2
+Buff Efficiency: 1.1538461 (741)
+Targets: 1
+Max Targets DPS: 2005.9999
+
+---------
+
+Mountain S2
+
+Post-Scaling
+Average DPS: 1648.0616
+Average Hit Damage: 1285.488
+Buff Efficiency: 1.448718 (632)
+Targets: 2
+Max Targets DPS: 3296.1233
+
+---------
+
+Gavialter S3
+
+Cycle Information
+Skill Uptime: 0.41666666
+Skill Duration: 25
+
+Full Cycle
+Average DPS: 1853
+Average Hit Damage: 1373.6001
+Buff Efficiency: 1.1805556 (816)
+
+On Skill
+Average DPS: 3400
+Average Hit Damage: 2040
+Buff Efficiency: 1.6666666 (816)
+Targets: 5
+Max Targets DPS: 17000
+
+Off Skill
+Average DPS: 747.99994
+Average Hit Damage: 897.6
+Buff Efficiency: 0.8333333 (816)
+Targets: 3
+Max Targets DPS: 2243.9998
+
+---------
+
+Blaze S2
+
+Post-Scaling
+Average DPS: 1375
+Average Hit Damage: 1650
+Buff Efficiency: 0.8333333 (825)
+Targets: 3
+Max Targets DPS: 4125
+
+---------
+
+Specter S2
+
+Cycle Information
+Skill Uptime: 0.27272728
+Skill Duration: 15
+
+Full Cycle
+Average DPS: 963.5606
+Average Hit Damage: 1156.2727
+Buff Efficiency: 0.8333334 (805)
+
+On Skill
+Average DPS: 1744.1666
+Average Hit Damage: 2093
+Buff Efficiency: 0.8333333 (805)
+Targets: 3
+Max Targets DPS: 5232.5
+
+Off Skill
+Average DPS: 670.8333
+Average Hit Damage: 805
+Buff Efficiency: 0.8333333 (805)
+Targets: 3
+Max Targets DPS: 2012.5
+
+---------
+
+Gladiia S1
+
+Cycle Information
+Skill Uptime: 0.25
+Skill Duration: 1
+
+Full Cycle
+Average DPS: 522.1267
+Average Hit Damage: 939.828
+Buff Efficiency: 0.96333337 (542)
+
+On Skill
+Average DPS: 859.9734
+Average Hit Damage: 1547.952
+Buff Efficiency: 1.5866667 (542)
+Targets: 1
+Max Targets DPS: 859.9734
+
+Off Skill
+Average DPS: 409.51114
+Average Hit Damage: 737.12
+Buff Efficiency: 0.75555557 (542)
+Targets: 1
+Max Targets DPS: 409.51114
+
+---------
+
+Gladiia S2
+
+Cycle Information
+Skill Uptime: 0.44444445
+Skill Duration: 20
+
+Full Cycle
+Average DPS: 483.89578
+Average Hit Damage: 999.20715
+Buff Efficiency: 0.89279664 (542)
+
+On Skill
+Average DPS: 576.8766
+Average Hit Damage: 1326.816
+Buff Efficiency: 1.0643479 (542)
+Targets: 2
+Max Targets DPS: 1153.7532
+
+Off Skill
+Average DPS: 409.51114
+Average Hit Damage: 737.12
+Buff Efficiency: 0.75555557 (542)
+Targets: 1
+Max Targets DPS: 409.51114
+
+---------
+
+Lappland S1
+
+Post-Scaling
+Average DPS: 993.8462
+Average Hit Damage: 1292
+Buff Efficiency: 0.7692308 (760)
+Targets: 1
+Max Targets DPS: 993.8462
+
+---------
+
+Lappland S2
+
+Cycle Information
+Skill Uptime: 0.4750594
+Skill Duration: 20
+
+Full Cycle
+Average DPS: 917.8878
+Average Hit Damage: 1193.2542
+Buff Efficiency: 0.7692308 (760)
+
+On Skill
+Average DPS: 1286.1538
+Average Hit Damage: 1672
+Buff Efficiency: 0.7692308 (760)
+Targets: 2
+Max Targets DPS: 2572.3076
+
+Off Skill
+Average DPS: 584.6154
+Average Hit Damage: 760
+Buff Efficiency: 0.7692308 (760)
+Targets: 1
+Max Targets DPS: 584.6154
+
+---------
+
+SilverAsh S3
+
+Cycle Information
+Skill Uptime: 0.25
+Skill Duration: 30
+
+Full Cycle
+Average DPS: 939.0769
+Average Hit Damage: 1220.8
+Buff Efficiency: 0.7692308 (763)
+
+On Skill
+Average DPS: 1819.4615
+Average Hit Damage: 2365.3
+Buff Efficiency: 0.7692308 (763)
+Targets: 6
+Max Targets DPS: 10916.77
+
+Off Skill
+Average DPS: 645.61536
+Average Hit Damage: 839.3
+Buff Efficiency: 0.7692308 (763)
+Targets: 1
+Max Targets DPS: 645.61536
+
+---------
+
+Mlynar S3
+
+Cycle Information
+Skill Uptime: 0.4
+Skill Duration: 28
+
+On Skill
+Average DPS: 3083.52
+Average Hit Damage: 3700.224
+Buff Efficiency: 1.65 (365)
+Targets: 5
+Max Targets DPS: 15417.6
+
+---------
+
+Surtr S3
+
+Cycle Information
+Skill Uptime: 1
+Skill Duration: 1
+
+On Skill
+Average DPS: 3315.3
+Average Hit Damage: 4144.125
+Buff Efficiency: 1 (771)
+Targets: 4
+Max Targets DPS: 13261.2
+
+---------
+
+Irene S3
+
+Cycle Information
+Skill Uptime: 0.16129033
+Skill Duration: 3
+
+Full Cycle
+Average DPS: 1408.9579
+Average Hit Damage: 874.94543
+Buff Efficiency: 2.0099258 (701)
+
+On Skill
+Average DPS: 5931.5386
+Average Hit Damage: 1779.4615
+Buff Efficiency: 8.461539 (701)
+Targets: 1
+Max Targets DPS: 5931.5386
+
+Off Skill
+Average DPS: 539.2308
+Average Hit Damage: 701
+Buff Efficiency: 0.7692308 (701)
+Targets: 1
+Max Targets DPS: 539.2308
+
+---------
+
+Exusiai S3
+
+Cycle Information
+Skill Uptime: 0.33333334
+Skill Duration: 15
+
+Full Cycle
+Average DPS: 2256.5933
+Average Hit Damage: 690.05994
+Buff Efficiency: 3.3791454 (630)
+
+On Skill
+Average DPS: 5273.9077
+Average Hit Damage: 734.58
+Buff Efficiency: 7.897436 (630)
+Targets: 1
+Max Targets DPS: 5273.9077
+
+Off Skill
+Average DPS: 747.936
+Average Hit Damage: 667.8
+Buff Efficiency: 1.12 (630)
+Targets: 1
+Max Targets DPS: 747.936
+
