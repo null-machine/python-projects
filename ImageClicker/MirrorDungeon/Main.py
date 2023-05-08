@@ -179,7 +179,7 @@ def main_loop():
 	# image_targets['level_c.png'].action = level_action
 	image_targets['enhancements.png'].action = level_action
 	image_targets['select_ego.png'].action = select_ego_action
-	image_targets['dungeon_start.png'].action = dungeon_start_action
+	# image_targets['dungeon_start.png'].action = dungeon_start_action
 	image_targets['choose_sinner.png'].action = choose_sinner_action
 	image_targets['node.png'].action = node_action
 	
