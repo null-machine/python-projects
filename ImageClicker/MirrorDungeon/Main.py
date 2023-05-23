@@ -63,7 +63,6 @@ def level_action(point):
 	long_sleep()
 	click_point((1000, 640))
 
-
 def choose_sinner_action(point):
 	click_point((540, 570)) # ishmael
 	click_point((1060, 570)) # outis
@@ -71,7 +70,7 @@ def choose_sinner_action(point):
 	click_point((370, 570)) # heathcliff
 	click_point((710, 570)) # rodion
 	click_point((710, 340)) # don quixote
-	click_point((870, 570)) # sinclair
+	# click_point((870, 570)) # sinclair
 	# click_point((370, 340)) # yi sang
 	# click_point((1060, 340)) # meursault
 	click_point(point)
@@ -86,43 +85,10 @@ def choose_sinner_action(point):
 	long_sleep()
 	click_point((1350, 720))
 
-def dungeon_start_action(point):
-	click_point((1220, 340)) # hong lu
-	click_point((1220, 570)) # gregor
-	click_point((540, 340)) # faust
-	click_point(point)
-	long_sleep()
-	long_sleep()
-	long_sleep()
-
-	click_point((500, 330))
-	long_sleep()
-	long_sleep()
-	click_point((270, 370))
-	click_point((1350, 720))
-	click_point((1350, 720))
-
-	click_point((800, 330))
-	long_sleep()
-	long_sleep()
-	click_point((420, 370))
-	click_point((1350, 720))
-	click_point((1350, 720))
-
-	click_point((1100, 330))
-	long_sleep()
-	long_sleep()
-	click_point((270, 370))
-	click_point((1350, 720))
-	click_point((1350, 720))
-
-	click_point((1350, 720))
-
 def very_high_action(point):
 	long_sleep()
 	long_sleep()
 	click_point((point[0], point[1] + 50))
-	long_sleep()
 	long_sleep()
 	click_point((1370, 770))
 
@@ -131,22 +97,31 @@ def node_action(point):
 	# long_sleep()
 	long_sleep()
 	click_point((1300, 700))
+	long_sleep()
+	long_sleep()
+	click_point((1300, 700))
 	mouse.position = point
 	
+def enter_action(point):
+	click_point(point)
+	long_sleep()
+	click_point(point)
 
 def skip_action(point):
-	click_point(point)
-	click_point(point)
-	click_point(point)
-	click_point(point)
-	# long_sleep()
+	click_point((760, 390))
+	click_point((760, 390))
+	click_point((760, 390))
+	click_point((760, 390))
+	click_point((760, 390))
+	click_point((900, 250))
+	long_sleep()
 	click_point((1370, 770))
 	
 def select_ego_action(point):
 	click_point((800, 350))
 	click_point(point)
 
-def match_template(frame, target, offset = (0, 0), threshold = 0.04):
+def match_template(frame, target, offset = (0, 0), threshold = 0.035):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
 	point = (numpy.array([min_point[1],]), numpy.array([min_point[0],]))
@@ -166,11 +141,11 @@ def main_loop():
 	files = [file for file in os.listdir() if file.endswith('.png')]
 	print(files)
 	image_targets = {file : ImageTarget(file, cv2.imread(file), click_point, (0, 0)) for file in files}
-	image_targets['3.png'].offset = (0, 50)
-	image_targets['4.png'].offset = (0, 50)
-	image_targets['5.png'].offset = (0, 50)
-	image_targets['unselected_sinner.png'].offset = (0, 50)
-	image_targets['qmark_choice.png'].offset = (50, 80)
+	# image_targets['3.png'].offset = (0, 50)
+	# image_targets['4.png'].offset = (0, 50)
+	# image_targets['5.png'].offset = (0, 50)
+	# image_targets['unselected_sinner.png'].offset = (0, 50)
+	# image_targets['qmark_choice.png'].offset = (50, 80)
 	image_targets['skip.png'].action = skip_action
 	image_targets['0win.png'].action = win_action
 	image_targets['very_high.png'].action = very_high_action
@@ -182,6 +157,8 @@ def main_loop():
 	# image_targets['dungeon_start.png'].action = dungeon_start_action
 	image_targets['choose_sinner.png'].action = choose_sinner_action
 	image_targets['node.png'].action = node_action
+	image_targets['enter.png'].action = enter_action
+	# # image_targets['node.png'].action = discard_node_action
 	
 	
 
