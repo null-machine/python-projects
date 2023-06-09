@@ -56,7 +56,9 @@ def level_action(point):
 	long_sleep()
 	click_point((900, 640))
 	long_sleep()
+	long_sleep()
 	click_point((300, 400))
+	long_sleep()
 	long_sleep()
 	click_point((1350, 720))
 	long_sleep()
@@ -108,11 +110,11 @@ def enter_action(point):
 	click_point(point)
 
 def skip_action(point):
-	click_point((760, 390))
-	click_point((760, 390))
-	click_point((760, 390))
-	click_point((760, 390))
-	click_point((760, 390))
+	click_point(point)
+	click_point(point)
+	click_point(point)
+	click_point(point)
+	click_point(point)
 	click_point((900, 250))
 	long_sleep()
 	click_point((1370, 770))
@@ -157,7 +159,7 @@ def main_loop():
 	# image_targets['dungeon_start.png'].action = dungeon_start_action
 	image_targets['choose_sinner.png'].action = choose_sinner_action
 	image_targets['node.png'].action = node_action
-	image_targets['enter.png'].action = enter_action
+	# image_targets['enter.png'].action = enter_action
 	# # image_targets['node.png'].action = discard_node_action
 	
 	
