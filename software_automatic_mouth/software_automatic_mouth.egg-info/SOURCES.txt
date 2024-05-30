@@ -1,0 +1,13 @@
+CHANGELOG.txt
+LICENSE.md
+MANIFEST.in
+README.md
+example.py
+sam.py
+setup.py
+bin/SDL.dll
+bin/sam.exe
+software_automatic_mouth.egg-info/PKG-INFO
+software_automatic_mouth.egg-info/SOURCES.txt
+software_automatic_mouth.egg-info/dependency_links.txt
+software_automatic_mouth.egg-info/top_level.txt

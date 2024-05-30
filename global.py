@@ -132,6 +132,8 @@ ahk.add_hotkey('pause', callback=lambda: ahk.send('{esc}')) # null symbol
 # unicode mappings
 ahk.add_hotkey('!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
 ahk.add_hotkey('!^+space', callback=lambda: ahk.send('{u+206b}')) # rtl embedding
+# ahk.add_hotkey('space', callback=lambda: ahk.send('{u+200a}')) # thin space
+# ahk.add_hotkey('space', callback=lambda: ahk.send('{u+2002}')) # thin space
 ahk.add_hotkey('!\\', callback=lambda: ahk.send('{u+2014}')) # emdash
 ahk.add_hotkey('![', callback=lambda: ahk.send('{u+2190}')) # arrow left
 ahk.add_hotkey('!]', callback=lambda: ahk.send('{u+2192}')) # arrow right
@@ -149,9 +151,10 @@ ahk.add_hotkey('!wheeldown', callback=click_stack)
 ahk.add_hotkey('!wheelup', callback=right_click_stack)
 ahk.add_hotkey('q', callback=emote_zaw)
 ahk.add_hotkey('q up', callback=emote_zaw_cleanup)
-ahk.add_hotkey('f8 up', callback=save_dice_position)
-ahk.add_hotkey('f7 up', callback=save_card_position)
-ahk.add_hotkey('f6 up', callback=retarget_mass)
+
+# ahk.add_hotkey('f8 up', callback=save_dice_position)
+# ahk.add_hotkey('f7 up', callback=save_card_position)
+# ahk.add_hotkey('f6 up', callback=retarget_mass)
 
 # media controls
 # ahk.add_hotkey('~mbutton & wheeldown', callback=lambda: ahk.send('{volume_down}'))

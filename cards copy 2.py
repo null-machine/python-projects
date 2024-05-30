@@ -28,32 +28,6 @@ input_deck = [
 	# ['senet', 1],
 ]
 
-# input_deck = [
-# 	['shino', 1],
-# 	['saion', 1],
-# 	['nazuki', 2], # hojo
-# 	['baron', 1],
-# 	['viscount', 1],
-# 	['marquess', 1],
-# 	['dominator', 1],
-# 	['field', 2],
-# 	['solo', 1],
-# 	['small world', 1],
-# 	# ['maxx', 3],
-# 	['ash', 1],
-# 	['golem', 1],
-# 	# ['jizukiru', 1],
-# 	['jizukiru', 1],
-# 	['duelist', 1],
-# 	['fossil', 1],
-# 	# ['crossout', 1],
-# 	['called', 1],
-# 	['bullshit', 20],
-# 	# ['removal', 1],
-# 	['wars', 1],
-# 	['senet', 1],
-# ]
-
 # if a hand meets any rule, it is treated as valid
 
 any_vaylantz = ['shino', 'baron', 'viscount', 'saion', 'nazuki', 'marquess', 'dominator']
@@ -67,50 +41,25 @@ small_world_shino = ['ash', 'maxx', 'golem', 'jizukiru']
 basic_rules = [
 	[['shino']],
 	[['solo'], any_vaylantz + ['field'] + ['wars']],
-	# [['saion'], ['nazuki']],
-	# [['baron', 'viscount'], ['marquess', 'dominator']],
 	[['small world'], small_world_shino],
 ]
 
-# advanced rules are in the form of lambdas that take a hand as input
-
-# def two_high(hand):
-# 	for unit in high_vaylantz:
-# 		if hand.count(unit) >= 2:
-# 			if 'field' in hand or 'wars' in hand:
-# 				return True
-# 	return False
-
 def adversarial(hand):
-	count = 0
-	for unit in any_vaylantz:
-		count += hand.count(unit)
-	fieldable_count = count
-	if not ('field' in hand or 'wars' in hand) and not ('saion' in hand and 'nazuki' in hand) and not (('baron' in hand or 'viscount' in hand) and ('marquess' in hand or 'dominator' in hand)):
-		high_count = 0
-		for unit in high_vaylantz:
-			high_count += hand.count(unit)
-		fieldable_count -= high_count
+	return False
+	# count = 0
+	# for unit in any_vaylantz:
+	# 	count += hand.count(unit)
+	# fieldable_count = count
+	# if not ('field' in hand or 'wars' in hand) and not ('saion' in hand and 'nazuki' in hand) and not (('baron' in hand or 'viscount' in hand) and ('marquess' in hand or 'dominator' in hand)):
+	# 	high_count = 0
+	# 	for unit in high_vaylantz:
+	# 		high_count += hand.count(unit)
+	# 	fieldable_count -= high_count
 	
-	return count >= 3 and fieldable_count >= 2
-	# buffer = set(hand)
-	# overlap = len(buffer & set(low_vaylantz))
-	# if overlap >= 2:
-	# for unit in low_vaylantz:
-	# 	if hand.count(unit) >= 3:
-	# 		return True
-	# 	if hand.count(unit) >= 2:
-	# 		if 'field' in hand or 'wars' in hand:
-	# 			return True
-	# 		for high in high_vaylantz:
-	# 			if high in hand:
-	# 				return True
+	# return count >= 3 and fieldable_count >= 2
 
 
 advanced_rules = [
-	# lambda hand: 'marquess' in hand and 'dominator' in hand,
-	# two_high,
-	# two_low,
 	adversarial,
 ]
 
