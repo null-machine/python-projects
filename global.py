@@ -272,7 +272,7 @@ def stop_pixel_watch():
 	watching_pixel = False
 
 def ytdlp():
-	ahk.run_script(f'run \"C:\\Home\\ytdlp\\yt-dlp.exe" {get_clipboard_text()}')
+	ahk.run_script(f'run \"C:\\Home\\yt-dlp\\yt-dlp.exe" {get_clipboard_text()}')
 
 # def wheel_pgup():
 # 	if not check_window('Terraria'):
@@ -311,6 +311,7 @@ ahk.add_hotkey('$!/', callback=lambda: ahk.send('{u+00f7}')) # division symbol
 ahk.add_hotkey('$!s', callback=lambda: ahk.send('{u+00a7}')) # section sign
 ahk.add_hotkey('$!0', callback=lambda: ahk.send('{u+25ae}')) # cuniform+
 # 00bf inverted qmark
+ahk.add_hotkey('$!x', callback=lambda: ahk.send('{u+00d7}')) # cuniform+
 
 # game inputs
 ahk.add_hotkey('$!o', callback=lambda: keyboard.press(','))
