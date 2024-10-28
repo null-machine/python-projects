@@ -1,4 +1,4 @@
-
+import shutil
 
 
 class Entry:
@@ -7,21 +7,16 @@ class Entry:
 		data = line.split(' | ')
 		self.timeframe = data[0]
 		self.score = self.moons_to_score(data[1])
-		self.medium = data[2]
-		self.length = data[3]
-		self.name = data[4] # ⌚
-			# quick is like two hours
-			# short is like psycholonials
-			# medium is like a seasonal anime
-			# long is like homestuck
-		self.appeal = data[5]
-		self.aspects = data[6].split(', ')
-		self.tags = sorted(data[7].split(', '))
-		self.warnings = sorted(data[8].split(', '))
+		self.length = data[2]
+		self.medium = data[3]
+		self.name = data[4]
+		self.aspects = data[5].split(', ')
+		self.positive = sorted(data[6].split(', '))
+		self.neutral = sorted(data[7].split(', '))
+		self.negative = sorted(data[8].split(', '))
 	
 	def __str__(self):
-		string = f'{self.timeframe} | {self.medium} |  | {self.score_to_moons(self.score)} | {self.name} | {self.appeal} | {', '.join(self.aspects)} | {', '.join(self.tags)} | {', '.join(self.warnings)}'
-		return string
+		return f'{self.timeframe} | {self.score_to_moons(self.score)} | {self.length} | {self.medium} | {self.name} | {', '.join(self.aspects)} | {', '.join(self.positive)} | {', '.join(self.neutral)} | {', '.join(self.negative)}'
 	
 	def moons_to_score(self, moons):
 		return moons.count('🌕') * 4 + moons.count('🌖') * 3 + moons.count('🌗') * 2 + moons.count('🌘')
@@ -40,6 +35,8 @@ class Entry:
 			moons += '🌑'
 		return moons
 
+shutil.copyfile('footpaths.txt', 'footpaths.txt.backup')
+
 data = []
 
 with open('footpaths.txt', encoding='utf-8') as file:
@@ -48,7 +45,7 @@ with open('footpaths.txt', encoding='utf-8') as file:
 		if line:
 			data.append(Entry(line))
 
-data = sorted(data, key=lambda x: (x.medium, -x.score))
+data = sorted(data, key=lambda x: (x.timeframe, x.medium, x.score), reverse=True)
 
 with open('footpaths.txt', 'w', encoding='utf-8') as file:
 	for line in data:
