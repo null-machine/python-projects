@@ -5,6 +5,8 @@ class Entry:
 	
 	def __init__(self, line):
 		data = line.split(' | ')
+		if len(data) < 11:
+			print(line)
 		self.first_contact = data[0].split()[0]
 		self.last_interaction = data[0].split()[1]
 		self.score = self.moons_to_score(data[1])
