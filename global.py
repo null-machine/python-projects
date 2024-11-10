@@ -9,6 +9,8 @@ from pynput.keyboard import Controller as KeyboardController
 
 import ctypes
 
+target_window = None
+
 CF_TEXT = 1
 
 kernel32 = ctypes.windll.kernel32
@@ -355,6 +357,22 @@ ahk.add_hotkey('$!f3 up', callback=lambda: ahk.send('{media_next}'))
 # ahk.add_hotkey('ralt & wheelup', callback=lambda: ahk.send('{volume_up}'))
 # ahk.add_hotkey('ralt & lbutton', callback=lambda: ahk.send('{media_play_pause}'))
 # ahk.add_hotkey('ralt & rbutton', callback=lambda: ahk.send('{media_next}'))
+
+# def update_window():
+# 	global target_window
+# 	target_window = ahk.win_get('a')
+# 	print(f'target window: {target_window}')
+
+# def send_pgup():
+# 	global target_window
+# 	# ahk.control_send(control=target_window, keys='pgup')
+# 	ahk.control_send(title='global.py - python-projects - VSCodium', keys='wheelup', detect_hidden_windows=True)
+# 	print("what")
+# 	# ahk.control_send('Edit1', 'pgup', target_window)
+	
+
+# ahk.add_hotkey('!f5', callback=lambda: update_window())
+# ahk.add_hotkey('!pgup', callback=lambda: send_pgup())
 
 ahk.start_hotkeys()
 ahk.block_forever()

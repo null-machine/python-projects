@@ -126,6 +126,8 @@ valid_count = 0
 for hand in itertools.combinations(deck, hand_size):
 	# for a hand to be valid, only one rule needs to validate
 	hand_valid = False
+	# if hand.count('shino') == 3:
+	# 	hand_valid = True
 	for rule in basic_rules:
 		# for a rule to be valid, every group in that rule needs to validate
 		rule_valid = True
