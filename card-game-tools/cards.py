@@ -4,89 +4,58 @@ import itertools
 hand_size = 6
 
 input_deck = [
-	['shino', 3],
-	['saion', 2],
-	['nazuki', 3],
-	['baron', 3],
+	['priestess', 3],
+	# ['archer', 2],
+	['archer', 1],
+	['ninja', 2],
+	# ['baron', 2],
+	['baron', 1],
 	['viscount', 2],
-	['marquess', 2],
-	['dominator', 1],
+	['marquess', 1],
 	['field', 4],
 	['solo', 3],
 	['small world', 3],
 	['maxx', 3],
 	['ash', 2],
 	['golem', 3],
-	# ['jizukiru', 1],
-	['jizukiru', 2],
+	['jizukiru', 1],
 	['duelist', 1],
+	['skullcrobat', 1],
+	['monkeyboard', 1],
 	['fossil', 1],
-	# ['crossout', 1],
 	['called', 2],
-	# ['removal', 1],
-	# ['wars', 1],
-	# ['senet', 1],
+	['storm', 1],
+	['imperm', 1],
+	['veiler', 1],
+	['pegasus', 1],
+	['village', 1],
 ]
-
-# input_deck = [
-# 	['shino', 1],
-# 	['saion', 1],
-# 	['nazuki', 2], # hojo
-# 	['baron', 1],
-# 	['viscount', 1],
-# 	['marquess', 1],
-# 	['dominator', 1],
-# 	['field', 2],
-# 	['solo', 1],
-# 	['small world', 1],
-# 	# ['maxx', 3],
-# 	['ash', 1],
-# 	['golem', 1],
-# 	# ['jizukiru', 1],
-# 	['jizukiru', 1],
-# 	['duelist', 1],
-# 	['fossil', 1],
-# 	# ['crossout', 1],
-# 	['called', 1],
-# 	['bullshit', 20],
-# 	# ['removal', 1],
-# 	['wars', 1],
-# 	['senet', 1],
-# ]
-
 # if a hand meets any rule, it is treated as valid
 
-any_vaylantz = ['shino', 'baron', 'viscount', 'saion', 'nazuki', 'marquess', 'dominator']
-high_vaylantz = ['nazuki', 'marquess', 'dominator']
-low_vaylantz = ['baron', 'viscount', 'saion']
-small_world_shino = ['ash', 'maxx', 'golem', 'jizukiru']
+any_vaylantz = ['priestess', 'baron', 'viscount', 'archer', 'ninja', 'marquess', 'dominator']
+high_vaylantz = ['ninja', 'marquess', 'dominator']
+low_vaylantz = ['baron', 'viscount', 'archer']
+small_world_priestess = ['ash', 'archer', 'fossil', 'skullcrobat', 'veiler', 'viscount', 'maxx', 'golem', 'jizukiru']
 
 # basic rules are in the form of product of sums
 # duplicates not supported, don't put the same cards in multiple groups
 
 basic_rules = [
-	[['shino']],
+	[['priestess']],
 	[['solo'], any_vaylantz + ['field'] + ['wars']],
-	# [['saion'], ['nazuki']],
+	# [['archer'], ['ninja']],
 	# [['baron', 'viscount'], ['marquess', 'dominator']],
-	[['small world'], small_world_shino],
+	[['small world'], small_world_priestess],
 ]
 
 # advanced rules are in the form of lambdas that take a hand as input
-
-# def two_high(hand):
-# 	for unit in high_vaylantz:
-# 		if hand.count(unit) >= 2:
-# 			if 'field' in hand or 'wars' in hand:
-# 				return True
-# 	return False
 
 def adversarial(hand):
 	count = 0
 	for unit in any_vaylantz:
 		count += hand.count(unit)
 	fieldable_count = count
-	if not ('field' in hand or 'wars' in hand) and not ('saion' in hand and 'nazuki' in hand) and not (('baron' in hand or 'viscount' in hand) and ('marquess' in hand or 'dominator' in hand)):
+	if not ('field' in hand or 'wars' in hand) and not ('archer' in hand and 'ninja' in hand) and not (('baron' in hand or 'viscount' in hand) and ('marquess' in hand or 'dominator' in hand)):
 		high_count = 0
 		for unit in high_vaylantz:
 			high_count += hand.count(unit)
@@ -126,7 +95,7 @@ valid_count = 0
 for hand in itertools.combinations(deck, hand_size):
 	# for a hand to be valid, only one rule needs to validate
 	hand_valid = False
-	# if hand.count('shino') == 3:
+	# if hand.count('priestess') == 3:
 	# 	hand_valid = True
 	for rule in basic_rules:
 		# for a rule to be valid, every group in that rule needs to validate

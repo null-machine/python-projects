@@ -157,7 +157,7 @@ post bait priestess: 1x priestess, 1x normal summon
 	arktos swap viscount scale genesis
 	genesis sss and finish
 
-post bait solo: 1x solo, normal summon
+post bait solo: solo, normal summon
 	solo search priestess
 	sss priestess search fields
 	solo hshift priestess search marquess
