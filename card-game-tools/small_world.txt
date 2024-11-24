@@ -4,7 +4,6 @@ ninja spellcaster water 6 1800 1800
 marquess machine fire 6 1700 1700
 ash zombie fire 3 0 1800
 maxx insect earth 2 500 200
-fossil rock earth 4 1200 1300
 golem fiend fire 8 3000 2500
 duelist spellcaster light 4 1800 400
 monkeyboard beast earth 6 1000 2400
@@ -14,11 +13,14 @@ baron machine fire 2 800 800
 archer spellcaster water 4 1100 1100
 pegasus spellcaster wind 4 1500 1500
 jizukiru machine light 10 3300 2600
+nibiru rock light 11 3000 600
+droll spellcaster wind 1 0 0
 ---
+eccentrick fiend light 3 800 1000
+fossil rock earth 4 1200 1300
+belle zombie earth 3 0 1800
+prodigy machine dark 4 1000 1500
 dominator machine fire 8 2000 2000
 ecclesia spellcaster light 4 1500 1500
-prodigy machine dark 4 1000 1500
-nibiru rock light 11 3000 600
-eccentrick fiend light 3 800 1000
 shifter spellcaster dark 6 1200 2200
 witch spellcaster earth 3 1500 800

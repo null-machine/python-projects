@@ -1,0 +1,343 @@
+
+---
+
+stuff that doesnt work or is outdated
+
+shifter, priestess
+	priestess solo ninja
+	priestess ninja → electrumite search monkeyboard
+	fodder → bounce monkeyboard
+	monkeyboard skullcrobat duelist
+	skullcrobat electrumite → beyond
+
+adversarial: pendulums A B C
+	A B → electrumite search priestess to extra
+	C → bounce priestess draw 1 (standby) // if c is a monster, normal summon and pop
+	sss priestess search solo search ninja
+	sss ninja hshift priestess search viscount
+	priestess electrumite → beyond search duelist // priestess instead of ninja to keep zones clear for viscount
+	scale viscount duelist psummon priestess ABC
+	merge and finish
+
+
+priestess, performapals in deck, normal summon (otk)
+	solo ninja viscount
+	priestess ninja → electrumite search monkeyboard
+	sss viscount restore fodder → electrumite bounce monkeyboard
+	scale monkeyboard search skullcrobat
+	nsummon skullcrobat search duelist
+	electrumite skullcrobat → exceed
+	exceed ssummon ninja → genesis
+	scale duelist psummon ninja, priestess
+
+
+great hand: 1x priestess 1x ninja 1x spell
+	sss priestess
+	sss ninja hshift priestess
+	priestess search viscount other spell
+	solo search baron
+	priestess ninja → beyond search duelist
+	scale viscount duelist psummon priestess ninja baron
+		   # 
+		 BP N
+		V   D
+	baron hshift ninja → genesis
+		   # 
+		 BP G
+		V   D
+	sss viscount put ninja emf column
+		   # 
+		VBP G
+		   ND
+	shinra scale ninja
+	genesis ninja → arktos
+	arktos swap viscount scale genesis (standby sss genesis + pop one)
+	merge and finish
+
+good hand: 1x priestess 1x ninja
+	sss priestess
+	sss ninja hshift priestess
+	priestess search viscount fields (standby backshift one)
+	ninja, priestess → beyond search duelist
+	scale duelist viscount
+	psummon ninja priestess (standby pop two)
+	ninja priestess → electrumite search marquess to extra
+	electrumite pop duelist → bounce marquess to hand (standby draw one)
+	sss viscount place ninja emf
+	shinra ninja → genesis (standby bounce backshift)
+
+no normal summon priestess: priestess
+	solo ninja
+	sss ninja hshift priestess search viscount
+	priestess ninja → beyond search duelist
+	scale viscount duelist psummon priestess ninja (standby pop two)
+					Bey	
+				Pri		Nin
+		Vis				Due
+	priestess beyond → knightmare (standby shuffle one)
+	sss viscount restore priestess
+					Kni	
+		Vis				Nin
+				Pri		Due
+	solo hshift ninja vshift priestess
+	ninja → genesis
+	priestess knightmare → accesscode
+
+no normal summon, priestess, nothing else
+	solo ninja marquess
+	priestess ninja → beyond search duelist
+	scale duelist scale marquess psummon priestess ninja (standby pop two)
+					Bey		
+				Nin		Pri
+		Mar				Due
+	priestess beyond → electrumite search baron // do not sss marquess we need those pend zones
+	duelist → electrumite bounce baron
+	ninja beyond → exceed ssummon ninja // cannot, duelist popped
+	sss marquess (standby excavate)
+
+going first duelist fossil: priestess
+	sss priestess search solo search ninja
+	sss ninja hshift priestess search viscount
+	priestess ninja → electrumite search archer // L4 for granite
+	sss viscount restore priestess
+	priestess → electrumite bounce archer
+	electrumite viscount → beyond search duelist
+	scale archer duelist psummon viscount ninja
+	ssummon archer debuff (standby)
+	viscount archer → granite search fossil
+	nsummon fossil
+	ninja granite beyond → L4
+		or try for arktos which is better
+
+genesis pendulum: field electrumite + shinra, viscount in hand
+	electrumite search ninja to extra
+	sss viscount ninja to emf column
+	shinra ninja → genesis
+	electrumite pop genesis bounce ninja
+	sss ninja → hshift viscount → scale genesis
+	merge and finish
+
+search priestess with electrumite: field electrumite, one pendulum
+	electrumite search priestess
+	scale pendulum → electrumite pop pendulum bounce priestess (standby: draw one)
+	sss priestess
+
+generic beyond: field beyond, one vaylantz
+	beyond search duelist
+	scale vaylantz
+	psummon beyond materials pop 2x (standby)
+	sss vaylantz
+	if fuse then fuse
+	if viscount then link off and revive fuse
+
+beyond before electrumite: priestess, fields
+	sss priestess search solo search ninja // do not replace ninja with baron
+	sss ninja hshift priestess search viscount
+	priestess ninja → beyond search duelist
+	scale viscount duelist psummon priestess ninja pop 2x (standby)
+	priestess ninja → electrumite search baron to extra
+	duelist → electrumite bounce baron draw 1 (standby)
+	sss viscount restore ninja to opposite emz
+	fields vshift ninja
+	ninja → genesis // do not bounce yet, we will get genesis back
+	genesis beyond → unicorn shuffle 1x (standby)
+	sss baron hshift viscount restore genesis
+	sss genesis bounce backshift (standby)
+	merge and finish
+
+
+bait: priestess, archer
+	sss archer (standby threaten)
+	sss priestess
+	priestess search fields (standby bshift)
+	archer priestess → electrumite search ninja
+	scale ninja → electrumite pop ninja bounce ninja (standby draw one)
+	sss ninja electrumite
+	shinra ninja → genesis
+	genesis electrumite → beyond search duelist
+	scale viscount duelist psummon marquess archer
+	
+	
+	solo hshift priestess search ninja
+
+	sss priestess search solo search ninja
+	sss ninja hshift priestess search viscount
+	priestess, ninja → beyond search duelist
+	scale duelist viscount psummon priestess, ninja
+	beyond, priestess → electrumite search archer to extra
+	summon viscount recover priestess to spell
+	priestess → electrumite bounce archer
+	sss archer debuff (standby)
+	archer, viscount → granite search fossil
+	nsummon fossil
+	electrumite, ninja, granite → L4
+
+	sss priestess search solo search ninja
+	sss ninja hshift priestess search archer
+	priestess, ninja → beyond search duelist
+	scale duelist archer psummon priestess, ninja
+	beyond, priestess → electrumite search viscount to extra
+	archer → electrumite bounce viscount draw 1 (standby)
+	sss viscount
+
+	sss priestess search solo search baron
+	sss baron hshift priestess search ninja
+	priestess, baron → summon electrumite, search viscount to extra
+	ninja → electrumite bounce viscount, draw 1 (standby)
+	sss viscount anyone but ninja (standby)
+	solo hshift viscount restore scale ninja
+	viscount, electrumite → beyond search scale duelist 
+	duelist, ninja psummon viscount, priestess
+	ninja hshift priestess search viscount
+	sss viscount
+	viscount, viscount → granite search nsummon fossil
+
+worst-case line
+
+requirements: solo + any vaylantz
+	solo, priestess and small world can all qualify for solo (9/40)
+	vaylantz are common (16/40)
+	drawing better starters results in more standbys for working around disruption
+
+P(AB)
+= 1 - P(!A + !B)
+= 1 - (31C6 / 40C6 + 24C6 / 40C6)
+= ~0.773 (ignores small world requirements for simplicity)
+
+short version
+	scale any vaylantz
+	solo → search priestess
+	sss priestess
+	priestess ignition → search and play wars, backshift (standby)
+	any vaylantz → search and play senet switch
+	senet switch hshift priestess → search dominator
+	sss dominator
+	solo graveyard hshift dominator → control non-fusion opponent monster to lane 2 or 4
+	opponent monster → genesis, bounce backshifted (standby)
+	priestess, dominator → electrumite
+	electrumite spawn → search marquess
+	destroy senet switch → return marquess
+	sss marquess
+	ball and try to finish on knightmare and accesscode talker
+
+
+	viscount ignition → recover dominator to spell zones 2 or 4
+	shinra ignition → vshift dominator
+
+
+	ninja ignition → hshift
+	viscount hshift → recover genesis A to pendulum zone // prio ones that can still vshift
+	ninja → genesis B
+	genesis B spawn → bounce backshifted (standby)
+	viscount, electrumite → beyond // stop here if opponent has held onto a negate and try for reset
+	beyond spawn → search dominator
+	scale dominator
+	pendulum summon → 2x whatever
+	beyond ignition → 2x pop (standby)
+
+fork
+
+	2x whatever → masquerade
+	masquerade, beyond → avramaxx
+
+	beyond, 1x whatever → knightmare
+	knightmare, 1x whatever → accesscode talker
+
+end fork
+
+	dominator ignition → seal set
+	genesis A → free vshift // alternatively, hshift dominator to control opponent
+	genesis A, genesis B → superdreadnoughts
+	normal summon (standby)
+
+
+long version
+	scale any vaylantz
+	solo → search priestess
+	scale priestess
+	priestess → free vshift self
+	priestess ignition → search wars
+	wars activation → search fields, wars graveyard (standby), konig backshift (standby)
+	any vaylantz → senet switch
+	fields activation
+	senet switch activation → hshift
+	hshift priestess → search ninja // can also search dominator for greedy play
+	scale ninja
+	ninja → water vshift self
+	solo graveyard activation → hshift
+	hshift ninja // nothing to use this on yet
+	ninja → genesis A
+	genesis A spawn → bounce backshifted (standby)
+	priestess, genesis A → electrumite
+	electrumite spawn → search viscount
+	destroy senet switch → return viscount // prio random pendulums if available, deprio fields
+	scale viscount
+	viscount → free vshift self
+	viscount ignition → recover ninja to spell zones 2 or 4
+	shinra vshift → ninja
+	ninja ignition → hshift
+	viscount hshift → recover genesis A to pendulum zone // prio ones that can still vshift
+	ninja → genesis B
+	genesis B spawn → bounce backshifted (standby)
+	viscount, electrumite → beyond // stop here if opponent has held onto a negate and try for reset
+	beyond spawn → search dominator
+	scale dominator
+	pendulum summon → 2x whatever
+	beyond ignition → 2x pop (standby)
+	2x whatever → masquerade
+	masquerade, beyond → avramaxx
+	dominator ignition → seal set
+	genesis A → free vshift // alternatively, hshift dominator to control opponent
+	genesis A, genesis B → superdreadnoughts
+	normal summon (standby)
+
+
+// dominator string is probably better
+
+backup line: any 2x summon + fieldable
+	electrumite → search priestess
+	destroy fieldable → return priestess
+	sss priestess
+	priestess ignition → search solo
+	solo → search baron
+		if ninja and viscount havent been used yet, search ninja and switch to default line
+		sss baron
+	baron hshift priestess → get whatever
+	beyond and ball
+
+no normal summon, performapals ready: priestess
+	// NON FUNCTIONAL DO NOT USE
+	solo ninja
+	sss ninja hshift priestess search viscount
+	priestess ninja → electrumite search pegasus // search other if fields
+	sss viscount restore fodder → electrumite bounce ninja
+	viscount electrumite → beyond search monkeyboard // CANT SEARCH WITH MONKEYBOARD UNDER BEYOND
+	scale monkeyboard search duelist scale duelist psummon pegasus priestess ninja (standby pop two)
+		// if no need to pop two get viscount instead of priestess for shinra shenanigans
+	pegasus search fields (standby bshift)
+					Bey		// adjust for bshift edges, ninja covers emf
+				Pri	Nin	Peg
+		Due				Mon
+	shinra hshift duelist // not sure if this works
+	priestess beyond → knightmare pegasus → accesscode
+	ninja → genesis
+
+
+small world
+
+lava golem
+	maxx c → baron
+	ash → any konig except dominator
+
+priestess: maxx c (baron), ash (baron), jizukiru (baron), lava golem (baron)
+
+
+// P(ABC) = 1 - P(!A + !B + !C)
+// = 1 - [(40 - #A)C6 + (40 - #B)C6 + (40 - #C)C6] / 40C6
+// num A and B = num - (num no A) - (num no B) + (num no A or B)
+
+good hands = total hands - bad hands
+bad hands = hands failing condition A + hands failing condition B - hands failing conditions A and B
+
+e.g. hand needs small world (3/40) + bridger (12/40) + shifter (6/40)
+

@@ -4,45 +4,46 @@ import itertools
 hand_size = 6
 
 input_deck = [
+	['small world', 3],
 	['priestess', 3],
-	# ['archer', 2],
 	['archer', 1],
-	['ninja', 2],
-	# ['baron', 2],
+	['ninja', 1],
 	['baron', 1],
-	['viscount', 2],
+	['viscount', 1],
 	['marquess', 1],
 	['field', 4],
 	['solo', 3],
-	['small world', 3],
-	['maxx', 3],
-	['ash', 2],
+	['monkeyboard', 1],
+	['skullcrobat', 1],
+	['duelist', 1],
+	['pegasus', 1],
+	['village', 1],
 	['golem', 3],
 	['jizukiru', 1],
-	['duelist', 1],
-	['skullcrobat', 1],
-	['monkeyboard', 1],
+	['maxx', 3],
+	['ash', 2],
 	['fossil', 1],
 	['called', 2],
 	['storm', 1],
 	['imperm', 1],
 	['veiler', 1],
-	['pegasus', 1],
-	['village', 1],
+	['belle', 1],
+	['crossout', 1],
 ]
 # if a hand meets any rule, it is treated as valid
 
 any_vaylantz = ['priestess', 'baron', 'viscount', 'archer', 'ninja', 'marquess', 'dominator']
 high_vaylantz = ['ninja', 'marquess', 'dominator']
 low_vaylantz = ['baron', 'viscount', 'archer']
-small_world_priestess = ['ash', 'archer', 'fossil', 'skullcrobat', 'veiler', 'viscount', 'maxx', 'golem', 'jizukiru']
+small_world_priestess = ['ash', 'archer', 'fossil', 'skullcrobat', 'veiler', 'viscount', 'maxx', 'golem', 'jizukiru', 'belle']
 
 # basic rules are in the form of product of sums
 # duplicates not supported, don't put the same cards in multiple groups
 
 basic_rules = [
 	[['priestess']],
-	[['solo'], any_vaylantz + ['field'] + ['wars']],
+	[['solo']],
+	# [['solo'], any_vaylantz + ['field'] + ['wars']],
 	# [['archer'], ['ninja']],
 	# [['baron', 'viscount'], ['marquess', 'dominator']],
 	[['small world'], small_world_priestess],

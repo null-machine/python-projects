@@ -276,6 +276,18 @@ def stop_pixel_watch():
 def ytdlp():
 	ahk.run_script(f'run \"C:\\Home\\yt-dlp\\yt-dlp.exe" {get_clipboard_text()}')
 
+def indeed_job_title():
+	ahk.send('Full Stack Developer\tWind River Software\t\n')
+
+def linked_in_auto():
+	ahk.send('{ctrl down}{backspace}{ctrl up}437-264-0413{tab}{tab}{enter}')
+	small_sleep()
+	ahk.send('{tab}{enter}')
+	long_sleep()
+	ahk.send('{shift down}{tab}{shift up}{down}{down}{down}{enter}{esc}{esc}')
+	# time.sleep(1)
+	# ahk.send('{tab}{tab}{tab}{tab}{enter}')
+
 # def wheel_pgup():
 # 	if not check_window('Terraria'):
 # 		return
@@ -298,6 +310,9 @@ def ytdlp():
 ahk.add_hotkey('$!`', callback=open_logbook)
 ahk.add_hotkey('$!insert', callback=ytdlp)
 ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
+
+ahk.add_hotkey('^f9', callback=indeed_job_title)
+ahk.add_hotkey('^f10', callback=linked_in_auto)
 
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override

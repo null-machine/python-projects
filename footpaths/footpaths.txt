@@ -9,6 +9,7 @@
 2024-10 2024-10 | 🌕🌕🌕🌖🌑🌑 | US | ⌚ | 🔧 | myhouse.wad | discovery | space | climaxes, convoluted, imagery, reflexive, relationships | n/a | n/a
 2024-09 2024-10 | 🌕🌕🌕🌗🌑🌑 | JP | 📅 | 🖼️ | higurashi | themes | blood, void, hope | characterizations, compassion, family struggles, overarching themes, unreliable narration | stressful | fanservice, pedophilia
 2024-10 2024-10 | 🌕🌕🌕🌗🌑🌑 | US | ⌛ | 🎮 | mouthwashing | presentation | hope | imagery, spectacle | unreliable narration | n/a
+2024-10 2024-10 | 🌕🌕🌕🌘🌑🌑 | US | ⌛ | 🎥 | parkour civilization | memes | breath | n/a | n/a | n/a
 2024-10 2024-10 | 🌕🌕🌖🌑🌑🌑 | US | ⌛ | 🎥 | transformers one | choreography | rage | climaxes, spectacle | n/a | characterizations, revolution
 2024-01 2024-09 | 🌕🌕🌕🌕🌕🌖 | KR | 📅 | 🔧 | modded library of ruina | mastery | light, time | builds character, complexity endurance, convoluted, hostile tuning, stressful, system mastery, unapologetic, utterly unmarketable | spectacle | n/a
 2018-10 2024-09 | 🌕🌕🌕🌕🌑🌑 | US | 📅 | 🔧 | modded terraria | mastery | time | spectacle, stressful | n/a | n/a
@@ -80,6 +81,7 @@
 2020-11 2020-12 | 🌕🌕🌖🌑🌑🌑 | US | 🕰️ | 🏗️ | starbound | discovery | space | n/a | simple | derivative, tedious
 2020-07 2020-08 | 🌕🌕🌕🌕🌗🌑 | JP | 🕰️ | ⚔️ | breath of the wild | immersion | breath | deep tech, humour, mechanics, player's pace, simple | n/a | gender
 2017-09 2020-07 | 🌕🌕🌕🌕🌕🌘 | AU | 🕰️ | ⚔️ | hollow knight | discovery | void | artstyle, builds character, deep tech, derivative, hostile tuning, mods, player's pace, simple, stressful | imperialism, input dense, tedious | n/a
+2020-03 2020-04 | 🌕🌕🌕🌘🌑🌑 | US | 🕰️ | 🎮 | ori and the blind forest, ori and the will of the wisps | discovery | space | n/a | n/a | n/a
 2020-02 2020-02 | 🌕🌕🌕🌕🌘🌑 | US | 🌙 | 📑 | one by one | themes | blood | humour, philosophy | nostalgia | characterizations, gender
 2019-02 2019-02 | 🌕🌕🌕🌕🌘🌑 | US | 🕰️ | 🎮 | celeste | mastery | space | accessibility, builds character, deep ptech, gender, hostile tuning, mechanics, mods, stressful | input dense | n/a
 2015-09 2018-06 | 🌕🌕🌕🌕🌕🌗 | JP | 🕰️ | 💛 | undertale | themes | breath | characterizations, climaxes, compassion, humour, music, nostalgia, overarching themes | community | n/a
