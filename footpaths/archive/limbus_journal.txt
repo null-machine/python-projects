@@ -1,0 +1,118 @@
+3* gregor: regen peeler
+- 3-7 speed lets him pull attacks with greater agency making him actually impactful as a tank
+- high coin count on his s1 and s3 combined with good base power on s2 means he can clash decently with any of his skills, giving him excellent consistency
+- all three skills, both egos and his passive all heal him
+- getting rid of his first stagger threshold and healing back up lets him scale into late rounds as a massive health pool that can force a lot of retargets
+- not the best at winning clashes directly due to a lack of power stacking in his kit, but losing clashes impacts him less than others because of his regen
+
+2* hong lu: slash payload
+- cloud cutter
+- cloud cutter
+- cloud cutter
+- cloud cutter
+- s3 is surprisingly good at clashing, but s1 is useless and should be cycled whenever there is a lull in pressure
+- linking pride absolute resonance cloud cutter and peeling with others to get an osa is often a win condition on its own
+- unlike other well-known "overpowered" skills, cloud cutter is s2 instead of s3, giving it twice as many copies per card cycle, making it very forgiving to spam (which is handy for mirror dungeon autobattling)
+- additionally, since it hits with four coins and bleed stacks, its damage is relatively reliable too
+
+base meursault: supreme medic
+- positively  D R I P P I N G
+- the drip ego aligns with sin output and heals the team, giving the player more agency by making osa trading and attrition strategies way more viable
+- sadly does not have enough speed to make reliable use of his excellent survival stats
+- is also practically the only source of impact damage on the team
+
+base faust: debuff payload
+- s2 and s3 inflict offensive clash-related debuffs
+- since clash power matters so much, landing enough debuffs effectively neutralizes a target for a scene
+- pseudo-staggering her targets leaves them open for round-winning payloads like cloud cutter
+
+base outis: ego conduit
+- her zayin ego has base power 20, making it a cheap win button
+- both her zayin and teth egos align with sin output, and it is rare to have a turn where neither of them can be used
+- having high speed allows her to pull and neutralize grave threats reliably (e.g. clashing any skill that gives an enemy power if it hits, such as shell)
+- all of her damage modifiers are pretty convenient with her high speed, letting her dispose of staggered targets efficiently
+
+general notes
+- primary sins are pride and sloth
+- pride and sloth are in such high concentration that absolute resonance is extremely common
+- almost everyone has pride and sloth passives
+- slash is provided by hong lu, pierce by outis and gregor, and impact by meursault and faust
+- everyone has varied resistances, making the team acceptably generalist
+
+
+
+
+
+
+limbus clash evaluator
+
+for each skill, we want to know a few things
+- the breakpoints at each win threshold (e.g. single coin skills have a 1.0 breakpoint at its min roll - 1, a 0.5 at its high roll -1, and 0.0 else
+- generating breakpoint graphs would be cool
+- breakpoint graphs will change with sanity and multis
+
+- add future support for multipliers
+
+- generate a tier list for every single breakpoint
+
+
+- what about enemy multis?
+
+for multis, treat their score as the sum of their current score and the score of its matryoshka skills?
+- wait. you can just add the chance for each static target power. unga bunga decision tree, sum all wins / all outcomes.
+
+
+
+list of sinner core items
+yi sang: book (book with wings)
+faust: perfume (floral bottle)
+don quixote: boots (jousting steed)
+ryoshu: sheathed sword (butterfly aflame)
+meursault - ? (chain with sun)
+hong lu - blue eye or blue hairtie (clouded eye)
+heathcliff - ring (ring with heart initials around lightning)
+ishmael - headband with white ribbon (compass reminiscent of a ship's wheel)
+rodion - anatomical heart tattoo (bandaged axed heart)
+sinclair - ? (nested egg with mark of cain)
+outis - watch (watch with net)
+gregor - roach (cockroach limb with dog tags) 
+
+
+
+something about how they both end up going off about unattainable ideals
+
+except cotc focuses more on how life sometimes feels counterproductive or meaningless
+
+so nihilism becomes easier than holding any personal values
+
+and fly my wings is just a lament for how impossible it is to do art for art's sake
+
+
+
+It takes my heart being broken and broken again
+To know that I am the reason why 
+The sufferings never end
+
+
+
+You're doing what you love
+1:12
+Isn't that enough? Isn't that enough?
+1:15
+A genius, perfect job
+1:18
+Isn't that enough? Isn't that enough?
+1:20
+Again and again
+1:21
+You locked me down, I locked me down
+1:24
+We staked me to the ground
+1:32
+The soil gave me warmth
+1:43
+Please die, little dreams
+1:46
+Kill the camellias in me
+1:51
+Wouldn't it be easier to give in?

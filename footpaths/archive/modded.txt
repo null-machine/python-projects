@@ -1,0 +1,51 @@
+my actual go-to recommendation for sp games is probably still celeste or any game with an insane modded community
+for games like that, investment will be consistently returned twofold
+it's not like you beat it in 60h and then call it a week, it's having enough depth to be mastered and then having enough ideas to keep you entertained
+you learn a dialogue that many different modders come together to speak through
+library of ruina gave me that experience but
+[screenshot of 700h of playtime]
+shit takes mastery
+
+slay the spire also mildly counts for having great modded content
+but the depth is not really there once you learn some basic principles
+these days i feel like mastering most roguelikes ends up making them feel like mahjong
+get handed shit and then work to slap it together into shape or fold
+i think my main gripe with slay the spire is that it's a bit too easy to master
+i think ive played a significant portion of the steam workshop for sts
+but during games the player agency is pretty low, the good choices to make are usually pretty obvious
+so realistically the main learning there is to do is just memorization / trying everything once
+it's very fun to see all the stuff people cook but at the end of the day, playing the game makes me feel a bit like a spectator
+sure you can raise ascension but that just makes you need to reset more
+compare and contrast this to ruina
+where even when numbers are jacked to kingdom come, as the player you're still constantly juggling tradeoffs and working with subsystems like clash control, attrition, emotion resets and engine cycles
+all of that is something you can use to tune the chances in your favour
+whereas in slay the spire it's just "pick enough shit to not die but otherwise greed"
+it's lacking the dimension ruina has
+heres my list for now: celeste, ruina, minecraft, terraria, slay the spire
+i'm still skill issued on celeste strawberry jam advanced lobby but i'll probably pick it up again after nine sols :bruhgalia~2: 
+one funny consequence of celeste is that it makes you addicted to tech
+when playing nine sols i've sequence broken at least two times already hahaha
+i love mobility abuse
+ruina makes you addicted to complexity and depth
+ha
+ruina's probably still up there as my personal favourite game of all time
+i'd have to get a pretty good idea of the person before actually recommending it though because to be honest i don't think i can justify why it counts as fun hahaha
+"ah yes what a long day i cant wait to relax and unwind and boot up the most stressful game ever made"
+
+dug out my ruina ratings list
+ruina_mod_ratings.txt10 KB
+the fact that the game's backbone has enough deliciousness to support a modded variety that results in a categorization of difficulty like this is fantastic to me
+these metrics have formed the basis on how i figure out why something is hard in other games ever since
+i also formed my ultimate philosophy for general game optimization while reflecting on my experiences with ruina
+which is that the ultimate, golden metric to be optimized for in adversarial games is wins over time
+aka if you ground a strategy for an hour, how many times would the game let you win
+(another way to phrase it is time until win) 
+it's maybe the best model for figuring out how best to tackle a problem due to how much it encompasses
+as far as models go, it leans towards the side of being too general to be easily used
+but that's where system mastery comes in
+once you know everything, it serves as a golden guideline on how to apply that knowledge
+hopefully it's becoming clearer why i love games with heavy investment hahaha
+that kind of breadth and depth is required to form these sorts of philosophies
+it's not a smooth journey by any means but it's one i feel like i've comfortably solved from the perspective of a vanilla only challenge player
+that feeling of expertise combined with the knowledge that i can just pick up the game again on my own schedule is really really fulfilling
+i think i check in on it every year or so to see what new mods and updates have come out

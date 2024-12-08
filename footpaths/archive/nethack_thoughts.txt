@@ -1,0 +1,119 @@
+- Developing as many intrinsics as possible is a safe way to win deathless and generally achieve godhood
+- Polydiet allows one to develop all intrinsics related to rings, amulets, gloves, boots, robes and corpses, even for inediate characters
+	- Organivores (e.g. gelatinous cubes) can eat clothing, wooden rings and bone rings
+	- Metallivores (e.g. grey oozes, rust monsters) can eat metal rings and amulets
+	- Lithivores (e.g. water trolls, umber hulks) can eat stone and gemstone rings and amulets
+	- Herbivores (e.g. sheep) can eat scrolls, but this is mostly for early game identification via eaten scrolls of identify
+		- Allied herbivores can also be fed scrolls of identify by sharing one with them and then pressing equip
+	- Omnivores are generally capable of eating corpses
+	- This generally results in maxing out all unlockable talents and resistances
+		- From this, it's easy to argue that polymorph and polymorph control are the most important talents in the game
+			- This doesn't make changeling good— polymorph and polymorph control can be acquired via rings but there isn't much the player can do to work around racial limits
+		- Doing this also makes the actual game itself rather trivial, so just clearing floors and descending becomes relatively risk-free
+	- Phasing, mana regeneration, clarity and beautitude are the only talents not acquirable intrinsically outside of starting choices (but the author isn't certain of this)
+- The underdeep dungeon under the caves is a good source of potions for polyfodder and BUC control
+	- It provides so many potions of booze that one will likely be able to max out all potion related intrinsics after polypiling
+	- This includes max ability scores, health, mana and even levels
+	- Potions can also be used to create "homeopathic holy water" and cursed potions of water in excess
+		- Cursed potions of water are important for upgrading scrolls of devouring or scrolls of earth
+		- Personal attempts have been made to deliberately curse worn equipment to prevent theft
+			- Since curses may wear off after being forcefully unequipped (e.g. via polymorph losing the limb), this ended up being impractical
+			- Also, the author isn't even sure if this works
+	- The alternative route is potion merchant refreshing with replica gold (both are tedious)
+	- It is not necessary to polypile right after doing the dungeon, or even doing the dungeon immediately— it is merely a decent way to deal with potion intrinsics
+- Scroll polypiling or replica gold refreshing can result in maxed equipment from scrolls of enchantment, skills from scrolls of training and identification from scrolls of enlightenment
+- The crafting shrine is extremely important compared to the other shrines, since it allows creating large amounts of replica gold
+	- Replica gold can be used to refresh merchants, which is a good alternative to polypiling
+	- All the other shrines are more or less replacable
+		- The witch is almost always inferior to refreshing book shops
+		- The priest's divination and punishment removal are generally inferior to getting an herbivore to "equip" a scroll of identity or praying respectively
+		- It's not clear what the others are even meant to contribute to a normal run
+	- Shrines and merchants can be protected with the walling spell and kept alive with healing spells
+	- Crafting benches are allegedly powerful but the author never really figured out how to use them
+	- Town NPCs can also be safely killed with the conflict talent and a means of summoning enemies— the summoned guards will often attack the target NPC as well
+- After more or less maxing out intrinsics, midas farming is a way of obtaining gold and experience for fame
+	- Having a source of punishment is required to obtain touch of midas (wands of punishment and the remove curse spell are a decent way to cycle for it)
+		- Replica gold shop refreshes are a decent way of finding wands of punishment
+	- Learning the summoning conjuration spell is also more or less a requirement
+	- Scrolls of genocide will make things far faster by removing low weight monsters from the spawn pool
+		- At this point in the game, the player is likely maxed out, so extinction is unlikely to be an issue
+		- Extinction does not work on golems for the purposes of polypile optimization
+	- With the touch of midas, corpses can be picked up for gold coins, adding to inventory value for the purposes of fame calculations
+	- The heavier the corpse, the more gold it generates
+	- By making all lighter monsters extinct and spamming the summoning spell, lots of heavy corpses can be acquired in a short amount of time
+	- Using water to control spawns is also an option
+		- Far fewer extinctions are needed to cause all spawned enemies to be very heavy (e.g. krakens and sharks)
+	- An alternative way of obtaining asset value is gem polypiling with cursed scrolls of earth, but this is far more tedious
+	- Maxed fame is deranged and involves tech like rerolling for the worst stats possible to gain as much fame as possible from ability score increases
+- Inediate is probably the most powerful trait to start with, since it grants infinite turns for whatever shenanigans the player may wish to do, and doesn't impact fame limits
+	- Eating drops from summoned entities via spells is also a way of obtaining infinite time, but the quality of life is far worse
+	- Being able to heal health and mana to max just from finding a safe place to hide is invaluable in both the early game and during the escape sequence
+		- The walling spell pairs especially well with this cheese
+		- Phasing combined with digging is also a good way to make a safe and valid recovery spot
+	- Demon skeleton is probably the author's favourite start
+		- It does not have potential for a maxed fame run due to starting with conflict, which is an acquirable talent
+		- However, conflict makes more or less the entire early game free and never really loses relevance
+		- Class does not matter that much, since every class shares the same power limit and the early game is made trivial with inediate and conflict
+			- This gives the player plenty of time to acquire rings of polymorph and polymorph control, which heralds the start of intrinsic scaling
+- The escape sequence is often several magnitudes more dangerous than the final boss, and the novelty wears off pretty fast
+	- Revenants and animates begin spawning that are often on a completely different difficulty level compared to the boss (e.g. level 70+ animate chest)
+	- Teleportation is now always random, mapping spells are far less effective, and the positions of stairs may be shuffled around
+	- It is genuinely easier to lure the boss to floor 1 and then kill the boss there to avoid all of this if the player intends on escaping
+		- Doing corpse and item control to prevent revenants and animates is probably even more tedious
+	- Failing that, spamming magic mapping or scrying an illumiere in a safe spot made from walling or phasing is a safe way to locate the exit
+		- Being inediate makes this far less annoying
+		- This is not necessary if the revenants and animates do not pose a threat, but this is kind of unlikely
+	- Spamming teleport until the player ends up close enough to dig towards the exit is a decent way of actually getting there
+		- It carries some risk but often far less risk than actually exploring and fighting
+		- Digging tunnels and walling off the entrance is viable as well, since the greatest threats (animates) will not spawn in the tunnel
+			- Even if they do, it's likely the player has some way of dealing with one animate at a time
+	- Since the escape sequence is performed when a run already has a lot of time investment, these cheese strategies can become pretty appealing to secure the escape
+	- Note: it's likely that the author is biased due to running inediate builds very frequently, resulting in far more corpses being left behind, which spawns more revenants
+
+
+lost chambers mapping (likely varies per run)
+
+current | blue | top left | top right | bottom right | bottom left
+merchants | graves | lava | frost | shrines
+graves | shrines | eggs | labyrinth | giants
+forest | mimics | merchants | boulders | start
+mimics | labyrinth | four | ocean 
+four | start | eggs | graves
+start | exit | ocean | frost | engineering | mines
+ocean | four | labyrinth | yeomen
+eggs | hell | forest
+hell | engineering | engineering | start | hell | mines
+engineering | hell | guns | engineering | engineering | engineering
+guns | merchants | hell | yeomen | lava
+lava | frost | hell | hell | flayers
+frost | lava | mimics | shrines | guns | guns
+labyrinth | labyrinth | forest | guns | merchants | engineering
+shrines | forest | start |  | forest
+boulders | yeomen
+yeomen | four | engineering | guns | mines
+mines | hell | guns | frost
+flayers | start
+giants | frost
+
+
+start	exit	frost	death	mines
+frost	lava	mimic	shrine	forest	mercs
+lava	frost	hell	flayer	
+death	maze	death	death	death	death
+maze	shops	spider	graves	forest	
+spider	graves	forest
+graves	maze	graves	graves	graves	graves
+animal	forest	
+forest	mimic	shops	bould	start	
+mimic	four
+four	start	shrine	spider
+mines	hell	mercs	
+hell	engi	hell	mines	engi
+engi	hell	mercs
+mercs	shops	death	death	yeomen
+shops	graves	lava	frost	ocean
+shrine	forest	start	bould
+bould	mercs	mercs
+ocean	four
+yeomen	four	start
+
