@@ -1,7 +1,7 @@
 cd ..
 
 sam -pitch 64 -speed 72 -phonetic "/HEH4LOW DHEHR. YUW4 NOW MIY4Y, AY4 AEM SAE5M,"
-sam -pitch 64 -speed 72 -phonetic "DHAH SAO4FTWEHR MAW5TH"                                      
+sam -pitch 64 -speed 72 -phonetic "DHAH SAO4FTWEHR MAW5TH"									  
 sam -pitch 64 -speed 72 -phonetic "FOHR YOHR KAA4MIXDOH6R SIH4KSTIYFOH6R KUMPYUW4TER."
 sam -pitch 64 -speed 72 -phonetic "AY4 KUHD AO4LWEYZ DUW LAA3TS AHV AHMEY4ZIHNX THIHNXGZ."
 sam -pitch 64 -speed 35 -phonetic "AY5 KUHD TAO5K VEH4RIY KWIH4KLIY WHEHN AY WAA4NTIHD."

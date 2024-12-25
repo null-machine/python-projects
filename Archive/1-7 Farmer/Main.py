@@ -82,10 +82,10 @@ def main_loop():
 
 
 def on_press(key):
-	print('Key pressed: {0}    Mouse position: {1}'.format(key, mouse.position))
+	print('Key pressed: {0}	Mouse position: {1}'.format(key, mouse.position))
 
 def on_release(key):
-	print('Key released: {0}    Mouse position: {1}'.format(key, mouse.position))
+	print('Key released: {0}	Mouse position: {1}'.format(key, mouse.position))
 	if key == Key.menu:
 		mouse.release(Button.left)
 		return False

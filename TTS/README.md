@@ -48,13 +48,13 @@ you can try other options like
 
 Some typical values written in the original manual are:
 
-	DESCRIPTION          SPEED     PITCH     THROAT    MOUTH
-	Elf                   72        64        110       160
-	Little Robot          92        60        190       190
-	Stuffy Guy            82        72        110       105
-	Little Old Lady       82        32        145       145
-	Extra-Terrestrial    100        64        150       200
-	SAM                   72        64        128       128
+	DESCRIPTION		  SPEED	 PITCH	 THROAT	MOUTH
+	Elf				   72		64		110	   160
+	Little Robot		  92		60		190	   190
+	Stuffy Guy			82		72		110	   105
+	Little Old Lady	   82		32		145	   145
+	Extra-Terrestrial	100		64		150	   200
+	SAM				   72		64		128	   128
 
 
 It can even sing
@@ -176,8 +176,8 @@ Final Output
 Except of some special phonemes the output is build by a linear combination:
 	
 	A =   A1 * sin ( f1 * t ) +
-	      A2 * sin ( f2 * t ) +
-	      A3 * rect( f3 * t )
+		  A2 * sin ( f2 * t ) +
+		  A3 * rect( f3 * t )
 
 where rect is a rectangular function with the same periodicity like sin. 
 It seems really strange, but this is really enough for most types of phonemes. 
@@ -194,8 +194,8 @@ Therefore the above phonemes are converted with some tables to
 Above formula is calculated in one very good omptimized routine.
 It only consist of 26 commands:
 
-    48087: 	LDX 43		; get phase	
-    CLC		
+	48087: 	LDX 43		; get phase	
+	CLC		
 	LDA 42240,x	; load sine value (high 4 bits)
 	ORA TabAmpl1,y	; get amplitude (in low 4 bits)
 	TAX		

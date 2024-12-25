@@ -16,7 +16,7 @@ namespace ActionGameFramework.Helpers
 		/// <param name="launchSpeed">Initial speed of the projectile.</param>
 		/// <returns>Vector3 describing initial velocity for this projectile. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateLinearFireVector(Vector3 firePosition, Vector3 targetPosition,
-		                                                float launchSpeed)
+														float launchSpeed)
 		{
 			// If we're starting with a zero initial velocity, we give the vector a tiny base magnitude
 			if (Mathf.Abs(launchSpeed) < float.Epsilon)
@@ -37,7 +37,7 @@ namespace ActionGameFramework.Helpers
 		/// <param name="acceleration">Post-firing acceleration of the projectile.</param>
 		/// <returns>Time in seconds to complete flight to target.</returns>
 		public static float CalculateLinearFlightTime(Vector3 firePosition, Vector3 targetPosition,
-		                                              float launchSpeed, float acceleration)
+													  float launchSpeed, float acceleration)
 		{
 			float flightDistance = (targetPosition - firePosition).magnitude;
 
@@ -60,8 +60,8 @@ namespace ActionGameFramework.Helpers
 		/// <param name="precision">Number of iterations to approximate the correct position. Higher precision is better for faster targets.</param>
 		/// <returns>Vector3 representing the leading target point.</returns>
 		public static Vector3 CalculateLinearLeadingTargetPoint(Vector3 firePosition, Vector3 targetPosition,
-		                                                        Vector3 targetVelocity, float launchSpeed, float acceleration,
-		                                                        int precision = 2)
+																Vector3 targetVelocity, float launchSpeed, float acceleration,
+																int precision = 2)
 		{
 			// No precision means no leading, so we early-out.
 			if (precision <= 0)
@@ -74,7 +74,7 @@ namespace ActionGameFramework.Helpers
 			for (int i = 0; i < precision; i++)
 			{
 				float impactTime = CalculateLinearFlightTime(firePosition, testPosition, launchSpeed,
-				                                             acceleration);
+															 acceleration);
 
 				testPosition = targetPosition + (targetVelocity * impactTime);
 			}
@@ -92,7 +92,7 @@ namespace ActionGameFramework.Helpers
 		/// <param name="gravity">Gravitational constant (Vertical only. Positive = down)</param>
 		/// <returns>Vector3 representing launch velocity to hit the target. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticFireVectorFromAngle(Vector3 firePosition, Vector3 targetPosition,
-		                                                            float launchAngle, float gravity)
+																	float launchAngle, float gravity)
 		{
 			Vector3 target = targetPosition;
 			target.y = firePosition.y;
@@ -132,10 +132,10 @@ namespace ActionGameFramework.Helpers
 		/// <param name="launchAngle">Angle at which the projectile is to be fired.</param>
 		/// <returns>Vector3 representing launch velocity to hit the target. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticFireVectorFromAngle(Vector3 firePosition, Vector3 targetPosition,
-		                                                            float launchAngle)
+																	float launchAngle)
 		{
 			return CalculateBallisticFireVectorFromAngle(firePosition, targetPosition, launchAngle,
-			                                             Mathf.Abs(Physics.gravity.y));
+														 Mathf.Abs(Physics.gravity.y));
 		}
 
 		/// <summary>
@@ -149,8 +149,8 @@ namespace ActionGameFramework.Helpers
 		/// <param name="gravity">Gravitational constant (Vertical only. Positive = down)</param>
 		/// <returns>Vector3 representing launch launchSpeed to hit the target. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticFireVectorFromVelocity(Vector3 firePosition, Vector3 targetPosition,
-		                                                               float launchSpeed, BallisticArcHeight arcHeight,
-		                                                               float gravity)
+																	   float launchSpeed, BallisticArcHeight arcHeight,
+																	   float gravity)
 		{
 			float theta = CalculateBallisticFireAngle(firePosition, targetPosition, launchSpeed, arcHeight, gravity);
 
@@ -192,10 +192,10 @@ namespace ActionGameFramework.Helpers
 		/// <param name="arcHeight">Preference between parabolic ("underhand") or direct ("overhand") projectile arc.</param>
 		/// <returns>Vector3 representing launch launchSpeed to hit the target. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticFireVectorFromVelocity(Vector3 firePosition, Vector3 targetPosition,
-		                                                               float launchSpeed, BallisticArcHeight arcHeight)
+																	   float launchSpeed, BallisticArcHeight arcHeight)
 		{
 			return CalculateBallisticFireVectorFromVelocity(firePosition, targetPosition, launchSpeed, arcHeight,
-			                                                Mathf.Abs(Physics.gravity.y));
+															Mathf.Abs(Physics.gravity.y));
 		}
 
 		/// <summary>
@@ -208,7 +208,7 @@ namespace ActionGameFramework.Helpers
 		/// <param name="gravity">Gravitational constant (Vertical only. Positive = down)</param>
 		/// <returns>The required launch angle in degrees. NaN if no valid solution.</returns>
 		public static float CalculateBallisticFireAngle(Vector3 firePosition, Vector3 targetPosition,
-		                                                float launchSpeed, BallisticArcHeight arcHeight, float gravity)
+														float launchSpeed, BallisticArcHeight arcHeight, float gravity)
 		{
 			Vector3 target = targetPosition;
 			target.y = firePosition.y;
@@ -239,7 +239,7 @@ namespace ActionGameFramework.Helpers
 			}
 
 			float b = Mathf.Sqrt((vSquared * vSquared) -
-			                     (gravity * ((gravity * (targetDistance * targetDistance)) + (2 * relativeY * vSquared))));
+								 (gravity * ((gravity * (targetDistance * targetDistance)) + (2 * relativeY * vSquared))));
 
 			// The "underarm", parabolic arc angle
 			float theta1 = Mathf.Atan((vSquared + b) / (gravity * targetDistance));
@@ -290,10 +290,10 @@ namespace ActionGameFramework.Helpers
 		/// <param name="arcHeight">Preference between parabolic ("underhand") or direct ("overhand") projectile arc.</param>
 		/// <returns>The required launch angle in degrees. NaN if no valid solution.</returns>
 		public static float CalculateBallisticFireAngle(Vector3 firePosition, Vector3 targetPosition,
-		                                                float launchSpeed, BallisticArcHeight arcHeight)
+														float launchSpeed, BallisticArcHeight arcHeight)
 		{
 			return CalculateBallisticFireAngle(firePosition, targetPosition, launchSpeed, arcHeight,
-			                                   Mathf.Abs(Physics.gravity.y));
+											   Mathf.Abs(Physics.gravity.y));
 		}
 
 		/// <summary>
@@ -306,7 +306,7 @@ namespace ActionGameFramework.Helpers
 		/// <param name="gravity">Gravitational constant (Vertical only. Positive = down)</param>
 		/// <returns>Time in seconds to complete arc to target. NaN if no valid solution.</returns>
 		public static float CalculateBallisticFlightTime(Vector3 firePosition, Vector3 targetPosition, float launchSpeed,
-		                                                 float fireAngle, float gravity)
+														 float fireAngle, float gravity)
 		{
 			float relativeY = firePosition.y - targetPosition.y;
 
@@ -322,7 +322,7 @@ namespace ActionGameFramework.Helpers
 
 			float a = (launchSpeed * Mathf.Sin(fireAngle)) / gravity;
 			float b = Mathf.Sqrt((launchSpeed * launchSpeed * (sinFireAngle * sinFireAngle)) + (2 * gravity * relativeY)) /
-			          gravity;
+					  gravity;
 
 			float flightTime1 = a + b;
 			float flightTime2 = a - b;
@@ -351,10 +351,10 @@ namespace ActionGameFramework.Helpers
 		/// <param name="fireAngle">The angle in degrees that the projectile was fired at.</param>
 		/// <returns>Time in seconds to complete arc to target. NaN if no valid solution.</returns>
 		public static float CalculateBallisticFlightTime(Vector3 firePosition, Vector3 targetPosition,
-		                                                 float launchSpeed, float fireAngle)
+														 float launchSpeed, float fireAngle)
 		{
 			return CalculateBallisticFlightTime(firePosition, targetPosition, launchSpeed, fireAngle,
-			                                    Mathf.Abs(Physics.gravity.y));
+												Mathf.Abs(Physics.gravity.y));
 		}
 
 		/// <summary>
@@ -370,9 +370,9 @@ namespace ActionGameFramework.Helpers
 		/// <param name="gravity">Gravitational constant (Vertical only. Positive = down)</param>
 		/// <returns>Vector3 representing the leading target point. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticLeadingTargetPointWithSpeed(Vector3 firePosition, Vector3 targetPosition,
-		                                                                    Vector3 targetVelocity, float launchSpeed,
-		                                                                    BallisticArcHeight arcHeight, float gravity,
-		                                                                    int precision = 2)
+																			Vector3 targetVelocity, float launchSpeed,
+																			BallisticArcHeight arcHeight, float gravity,
+																			int precision = 2)
 		{
 			// No precision means no leading, so we early-out.
 			if (precision <= 1)
@@ -412,11 +412,11 @@ namespace ActionGameFramework.Helpers
 		/// <param name="precision">Number of iterations to approximate the correct position. Higher precision is better for faster targets.</param>
 		/// <returns>Vector3 representing the leading target point. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticLeadingTargetPointWithSpeed(Vector3 firePosition, Vector3 targetPosition,
-		                                                                    Vector3 targetVelocity, float launchSpeed,
-		                                                                    BallisticArcHeight arcHeight, int precision = 2)
+																			Vector3 targetVelocity, float launchSpeed,
+																			BallisticArcHeight arcHeight, int precision = 2)
 		{
 			return CalculateBallisticLeadingTargetPointWithSpeed(firePosition, targetPosition, targetVelocity, launchSpeed,
-			                                                     arcHeight, Mathf.Abs(Physics.gravity.y), precision);
+																 arcHeight, Mathf.Abs(Physics.gravity.y), precision);
 		}
 
 		/// <summary>
@@ -433,10 +433,10 @@ namespace ActionGameFramework.Helpers
 		/// <param name="precision">Number of iterations to approximate the correct position. Higher precision is better for faster targets.</param>
 		/// <returns>Vector3 representing the leading target point. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticLeadingTargetPointWithAngle(Vector3 firePosition,
-		                                                                    Vector3 targetPosition,
-		                                                                    Vector3 targetVelocity, float launchAngle,
-		                                                                    BallisticArcHeight arcHeight, float gravity,
-		                                                                    int precision = 2)
+																			Vector3 targetPosition,
+																			Vector3 targetVelocity, float launchAngle,
+																			BallisticArcHeight arcHeight, float gravity,
+																			int precision = 2)
 		{
 			// No precision means no leading, so we early-out.
 			if (precision <= 1)
@@ -477,13 +477,13 @@ namespace ActionGameFramework.Helpers
 		/// <param name="precision">Number of iterations to approximate the correct position. Higher precision is better for faster targets.</param>
 		/// <returns>Vector3 representing the leading target point. Vector3.zero if no solution.</returns>
 		public static Vector3 CalculateBallisticLeadingTargetPointWithAngle(Vector3 firePosition,
-		                                                                    Vector3 targetPosition,
-		                                                                    Vector3 targetVelocity, float launchAngle,
-		                                                                    BallisticArcHeight arcHeight, int precision = 2)
+																			Vector3 targetPosition,
+																			Vector3 targetVelocity, float launchAngle,
+																			BallisticArcHeight arcHeight, int precision = 2)
 		{
 			return CalculateBallisticLeadingTargetPointWithAngle(firePosition, targetPosition, targetVelocity,
-			                                                     launchAngle, arcHeight, Mathf.Abs(Physics.gravity.y),
-			                                                     precision);
+																 launchAngle, arcHeight, Mathf.Abs(Physics.gravity.y),
+																 precision);
 		}
 	}
 }

@@ -311,9 +311,6 @@ ahk.add_hotkey('$!`', callback=open_logbook)
 ahk.add_hotkey('$!insert', callback=ytdlp)
 ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
 
-ahk.add_hotkey('^f9', callback=indeed_job_title)
-ahk.add_hotkey('^f10', callback=linked_in_auto)
-
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
 ahk.add_hotkey('$!^+space', callback=lambda: ahk.send('{u+206b}')) # rtl embedding
@@ -365,8 +362,8 @@ ahk.add_hotkey('f5 up', callback=quick_on_play)
 # ahk.add_hotkey('~mbutton & rbutton', callback=lambda: ahk.send('{media_next}'))
 ahk.add_hotkey('$!;', callback=lambda: ahk.send('{u+2014}'))
 # ahk.add_hotkey('$!q', callback=lambda: ahk.send('{volume_up}'))
-ahk.add_hotkey('$!f2 up', callback=lambda: ahk.send('{media_play_pause}'))
-ahk.add_hotkey('$!f3 up', callback=lambda: ahk.send('{media_next}'))
+# ahk.add_hotkey('$!f2 up', callback=lambda: ahk.send('{media_play_pause}'))
+# ahk.add_hotkey('$!f3 up', callback=lambda: ahk.send('{media_next}'))
 
 # ahk.add_hotkey('ralt & wheeldown', callback=lambda: ahk.send('{volume_down}'))
 # ahk.add_hotkey('ralt & wheelup', callback=lambda: ahk.send('{volume_up}'))
@@ -388,6 +385,20 @@ ahk.add_hotkey('$!f3 up', callback=lambda: ahk.send('{media_next}'))
 
 # ahk.add_hotkey('!f5', callback=lambda: update_window())
 # ahk.add_hotkey('!pgup', callback=lambda: send_pgup())
+
+def matsune():
+	last_window = ahk.win_get_title('A')
+	speech_input = ahk.input_box(height=99)
+	if speech_input:
+		speech_input = speech_input.replace(' ', '-')
+	ahk.win_activate('ahk_exe CeVIO AI.exe')
+	if 'CeVIO AI' in ahk.win_get_title('A'):
+		ahk.send('{f2}')
+		ahk.send_input(speech_input)
+		ahk.send('{enter}')
+		ahk.win_activate(last_window)
+
+ahk.add_hotkey('!enter', callback=lambda: matsune())
 
 ahk.start_hotkeys()
 ahk.block_forever()
