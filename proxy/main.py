@@ -34,7 +34,7 @@ class Main:
 		self.mitmproxy_process = Popen(sniffer_args)
 		self.browser = DesktopBrowser(
 			self.proxy_port,
-			0, # initial left position of window
+			1280, # initial left position of window
 			0, # initial top position of window
 			1280, # window viewport width
 			720, # window viewport height
