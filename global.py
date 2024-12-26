@@ -370,6 +370,11 @@ ahk.add_hotkey('$!;', callback=lambda: ahk.send('{u+2014}'))
 # ahk.add_hotkey('ralt & lbutton', callback=lambda: ahk.send('{media_play_pause}'))
 # ahk.add_hotkey('ralt & rbutton', callback=lambda: ahk.send('{media_next}'))
 
+ahk.add_hotkey('ralt & left', callback=lambda: mouse.move(-1, 0))
+ahk.add_hotkey('ralt & right', callback=lambda: mouse.move(1, 0))
+ahk.add_hotkey('ralt & up', callback=lambda: mouse.move(0, -1))
+ahk.add_hotkey('ralt & down', callback=lambda: mouse.move(0, 1))
+
 # def update_window():
 # 	global target_window
 # 	target_window = ahk.win_get('a')
