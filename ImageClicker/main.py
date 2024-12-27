@@ -11,21 +11,23 @@ monitor = {
 
 with mss() as sct:
 	input_points = np.float32([
-		[520, 120],
-		[1400, 120],
-		[1560, 840],
-		[360, 840],
+		[600, 150],
+		[1320, 150],
+		[1460, 740],
+		[450, 740],
 	])
 	output_points = np.float32([
 		[0, 0],
-		[1920, 0],
-		[1920, 1080],
-		[0, 1080],
+		[900, 0],
+		[900, 900],
+		[0, 900],
 	])
 	img = np.array(sct.grab(monitor))
 	mat = cv2.getPerspectiveTransform(input_points, output_points)
-	out = cv2.warpPerspective(img, mat, (1920, 1080), flags=cv2.INTER_LINEAR)
-	cv2.imwrite('output.jpg', out)
+	out = cv2.warpPerspective(img, mat, (900, 900), flags=cv2.INTER_LINEAR)
+	# cv2.imwrite('output.jpg', out)
+	cv2.imshow('output', out)
+	cv2.waitKey(0)
 	
 
 # img = ImageGrab.grab()

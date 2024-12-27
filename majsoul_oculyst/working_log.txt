@@ -1,0 +1,30 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20241227102204
+Username: MALDIUS-MAXIMUS\User
+RunAs User: MALDIUS-MAXIMUS\User
+Configuration Name: 
+Machine: MALDIUS-MAXIMUS (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Program Files\VSCodium\resources\app\out\vs\workbench\contrib\terminal\browser\media\shellIntegration.ps1" } catch {}
+Process ID: 6092
+PSVersion: 5.1.19041.4291
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4291
+BuildVersion: 10.0.19041.4291
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is log.txt
+]633;D;0]633;A]633;P;Cwd=C:\x5cHome\x5cRepos\x5cpython-projects\x5cmajsoul_oculystPS C:\Home\Repos\python-projects\majsoul_oculyst> ]633;B
+PS>mitmdump -s sniffer.py
+
+PS>TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+]633;D;1]633;A]633;P;Cwd=C:\x5cHome\x5cRepos\x5cpython-projects\x5cmajsoul_oculystPS C:\Home\Repos\python-projects\majsoul_oculyst> ]633;B
+PS>Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20241227103017
+**********************

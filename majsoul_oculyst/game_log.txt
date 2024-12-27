@@ -1,0 +1,1727 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20241226223038
+Username: MALDIUS-MAXIMUS\User
+RunAs User: MALDIUS-MAXIMUS\User
+Configuration Name: 
+Machine: MALDIUS-MAXIMUS (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 5004
+PSVersion: 5.1.19041.4291
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4291
+BuildVersion: 10.0.19041.4291
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is log.txt
+PS C:\Home\Repos\python-projects\majsoul_oculyst> mitmdump -s sniffer.py
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x97\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x97\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+[22:43:58.824][127.0.0.1:54355] client connect
+
+### b'\x02\x98\x01\n!.lq.FastTest.fetchGamePlayerState\x12\x00'
+@@@ b'\x03\x98\x01\n\x00\x12\x06\x12\x04\x03\x03\x03\x03'
+
+
+json req: {}
+json resp: {'state_list': ['READY', 'READY', 'READY', 'READY']}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:43:59.140][127.0.0.1:54355] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+127.0.0.1:54355: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
+              << 200 OK 0b
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x99\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x99\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9a\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x9a\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:44:03.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:44:03.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9b\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x9b\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9c\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022z(\x000\x048\x00'
+@@@ b'\x03\x9c\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '2z', 'timeuse': 4, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x01\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x01\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 1, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9d\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x9d\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x02\x12\x0eActionDealTile\x1a\x06\x9dtq&f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x02\x12\x0eActionDealTile\x1a\x06\x9dtq&f\xcc'
+
+
+json req: {'step': 2, 'name': 'ActionDealTile', 'data': 'nXRxJmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9e\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x9e\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x03\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x03\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 3, 'name': 'ActionDiscardTile', 'data': 'lXxjaFekTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x04\x12\x0eActionDealTile\x1a\x06\x9duq!f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x04\x12\x0eActionDealTile\x1a\x06\x9duq!f\xcc'
+
+
+json req: {'step': 4, 'name': 'ActionDealTile', 'data': 'nXVxIWbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x9f\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x9f\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x05\x12\x11ActionDiscardTile\x1a\x0e\x95}chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x05\x12\x11ActionDiscardTile\x1a\x0e\x95}chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 5, 'name': 'ActionDiscardTile', 'data': 'lX1jaFKuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x06\x12\x0eActionDealTile\x1a\x06\x9dvq f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x06\x12\x0eActionDealTile\x1a\x06\x9dvq f\xcc'
+
+
+json req: {'step': 6, 'name': 'ActionDealTile', 'data': 'nXZxIGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa0\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12;\x08\x07\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb9\x9dh\xb6U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1&\x83\
+x99\xe6\xa9hj\x8c\xd0\x16\x955#\x07E\xf7u\xfe'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12;\x08\x07\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb9\x9dh\xb6U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1&\x83\
+x99\xe6\xa9hj\x8c\xd0\x16\x955#\x07E\xf7u\xfe'
+
+
+json req: {'step': 7, 'name': 'ActionDiscardTile', 'data': 'v5SZhrmdaLZV8Mu7o6QTn/GhJoOZ5qloaozQFpU1IwdF93X+'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa2\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x02'
+@@@ b'\x03\xa2\x01\n\x00\x12\x00'
+
+
+json req: {'cancel_operation': True, 'timeuse': 2, 'type': 0, 'index': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x08\x12\x0eActionDealTile\x1a\x19\x9art]n\xa4S\xd0p\xb2\x96\x90\x9e\x8a\xfey\x9e\xdfp\xca\xe81\x92\x1b\xa
+5'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x08\x12\x0eActionDealTile\x1a\x19\x9art]n\xa4S\xd0p\xb2\x96\x90\x9e\x8a\xfey\x9e\xdfp\xca\xe81\x92\x1b\xa
+5'
+
+
+json req: {'step': 8, 'name': 'ActionDealTile', 'data': 'mnJ0XW6kU9BwspaQnor+eZ7fcMroMZIbpQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa6\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022s(\x000\x068\x00'
+@@@ b'\x03\xa7\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '2s', 'timeuse': 6, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\t\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\t\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 9, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSnTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:44:23.455][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:44:23.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\n\x12\x0eActionDealTile\x1a\x06\x9dtq"f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\n\x12\x0eActionDealTile\x1a\x06\x9dtq"f\xcc'
+
+
+json req: {'step': 10, 'name': 'ActionDealTile', 'data': 'nXRxImbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54355: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
+              << 200 OK 0b
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0b\x12\x11ActionDiscardTile\x1a\x0e\x95|chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0b\x12\x11ActionDiscardTile\x1a\x0e\x95|chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 11, 'name': 'ActionDiscardTile', 'data': 'lXxjaFKuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xa9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xa9\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0c\x12\x0eActionDealTile\x1a\x06\x9duq]f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0c\x12\x0eActionDealTile\x1a\x06\x9duq]f\xcc'
+
+
+json req: {'step': 12, 'name': 'ActionDealTile', 'data': 'nXVxXWbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xaa\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xaa\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\r\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\r\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 13, 'name': 'ActionDiscardTile', 'data': 'lX1jaFOuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0e\x12\x0eActionDealTile\x1a\x06\x9dvq\\f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0e\x12\x0eActionDealTile\x1a\x06\x9dvq\\f\xcc'
+
+
+json req: {'step': 14, 'name': 'ActionDealTile', 'data': 'nXZxXGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xab\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xab\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xac\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xac\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0f\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0f\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 15, 'name': 'ActionDiscardTile', 'data': 'lX5jaF+kTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x10\x12\x0eActionDealTile\x1a\x19\x9art]n\xb3S\xacp\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
+5'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x10\x12\x0eActionDealTile\x1a\x19\x9art]n\xb3S\xacp\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
+5'
+
+
+json req: {'step': 16, 'name': 'ActionDealTile', 'data': 'mnJ0XW6zU6xwspaQnor+eZ7HeMroMZIbpQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xad\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xad\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xae\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xae\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xaf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xaf\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb0\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x026z(\x000\x058\x00'
+@@@ b'\x03\xb0\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '6z', 'timeuse': 5, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x11\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x11\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 17, 'name': 'ActionDiscardTile', 'data': 'lX9jaFCuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x12\x12\x0eActionDealTile\x1a\x06\x9dtq^f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x12\x12\x0eActionDealTile\x1a\x06\x9dtq^f\xcc'
+
+
+json req: {'step': 18, 'name': 'ActionDealTile', 'data': 'nXRxXmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:44:43.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:44:43.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb2\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x13\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x13\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 19, 'name': 'ActionDiscardTile', 'data': 'lXxjaFekTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x14\x12\x0eActionDealTile\x1a\x06\x9duqYf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x14\x12\x0eActionDealTile\x1a\x06\x9duqYf\xcc'
+
+
+json req: {'step': 20, 'name': 'ActionDealTile', 'data': 'nXVxWWbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x15\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x15\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 21, 'name': 'ActionDiscardTile', 'data': 'lX1jaFOuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x16\x12\x0eActionDealTile\x1a\x06\x9dvqXf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x16\x12\x0eActionDealTile\x1a\x06\x9dvqXf\xcc'
+
+
+json req: {'step': 22, 'name': 'ActionDealTile', 'data': 'nXZxWGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x17\x12\x11ActionDiscardTile\x1a\x0e\x95~chR\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x17\x12\x11ActionDiscardTile\x1a\x0e\x95~chR\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 23, 'name': 'ActionDiscardTile', 'data': 'lX5jaFKuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb6\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x18\x12\x0eActionDealTile\x1a\x19\x9art]c\xb9S\xa8p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
+5'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x18\x12\x0eActionDealTile\x1a\x19\x9art]c\xb9S\xa8p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
+5'
+
+
+json req: {'step': 24, 'name': 'ActionDealTile', 'data': 'mnJ0XWO5U6hwspaQnor+eZ7HeMroMZIbpQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb7\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xb8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xb9\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x025z(\x000\x058\x00'
+@@@ b'\x03\xb9\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '5z', 'timeuse': 5, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x19\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x19\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 25, 'name': 'ActionDiscardTile', 'data': 'lX9jaFOuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1a\x12\x0eActionDealTile\x1a\x06\x9dtqZf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1a\x12\x0eActionDealTile\x1a\x06\x9dtqZf\xcc'
+
+
+json req: {'step': 26, 'name': 'ActionDealTile', 'data': 'nXRxWmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xba\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xba\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xbb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xbb\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1b\x12\x11ActionDiscardTile\x1a\x0e\x95|chS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1b\x12\x11ActionDiscardTile\x1a\x0e\x95|chS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 27, 'name': 'ActionDiscardTile', 'data': 'lXxjaFOuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1c\x12\x0eActionDealTile\x1a\x06\x9duqUf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1c\x12\x0eActionDealTile\x1a\x06\x9duqUf\xcc'
+
+
+json req: {'step': 28, 'name': 'ActionDealTile', 'data': 'nXVxVWbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xbc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xbc\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1d\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1d\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 29, 'name': 'ActionDiscardTile', 'data': 'lX1jaF+nTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1e\x12\x0eActionDealTile\x1a\x06\x9dvqTf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1e\x12\x0eActionDealTile\x1a\x06\x9dvqTf\xcc'
+
+
+json req: {'step': 30, 'name': 'ActionDealTile', 'data': 'nXZxVGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:45:03.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:45:03.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xbd\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xbd\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xbe\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xbe\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1f\x12\x11ActionDiscardTile\x1a\x0e\x95~chQ\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1f\x12\x11ActionDiscardTile\x1a\x0e\x95~chQ\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 31, 'name': 'ActionDiscardTile', 'data': 'lX5jaFGuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xbf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xbf\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc0\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x122\x08 \x12\x11ActionChiPengGang\x1a\x1b\x98ot\\C\xc5~\xf5J\xbf\xab\xeb\x90\x84\xc3\x0c\x9e~\xea\xc9\xbc\x8f\xb3
+k\xa1\xe9\xaa'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x122\x08 \x12\x11ActionChiPengGang\x1a\x1b\x98ot\\C\xc5~\xf5J\xbf\xab\xeb\x90\x84\xc3\x0c\x9e~\xea\xc9\xbc\x8f\xb3
+k\xa1\xe9\xaa'
+
+
+json req: {'step': 32, 'name': 'ActionChiPengGang', 'data': 'mG90XEPFfvVKv6vrkITDDJ5+6sm8j7Nroemq'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc2\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08!\x12\x11ActionDiscardTile\x1a\x0e\x95|chP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08!\x12\x11ActionDiscardTile\x1a\x0e\x95|chP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 33, 'name': 'ActionDiscardTile', 'data': 'lXxjaFCuTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08"\x12\x0eActionDealTile\x1a\x06\x9duqWf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08"\x12\x0eActionDealTile\x1a\x06\x9duqWf\xcc'
+
+
+json req: {'step': 34, 'name': 'ActionDealTile', 'data': 'nXVxV2bM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08#\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08#\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 35, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08$\x12\x0eActionDealTile\x1a\x06\x9dvqVf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08$\x12\x0eActionDealTile\x1a\x06\x9dvqVf\xcc'
+
+
+json req: {'step': 36, 'name': 'ActionDealTile', 'data': 'nXZxVmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08%\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08%\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 37, 'name': 'ActionDiscardTile', 'data': 'lX5jaF+5Tpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12-\x08&\x12\x0eActionDealTile\x1a\x19\x9art]o\xb9S\xa2p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08&\x12\x0eActionDealTile\x1a\x19\x9art]o\xb9S\xa2p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
+
+
+json req: {'step': 38, 'name': 'ActionDealTile', 'data': 'mnJ0XW+5U6JwspaQnor+eZ7HeMroMZIbpQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc6\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x021m(\x000\x018\x00'
+@@@ b'\x03\xc7\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '1m', 'timeuse': 1, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b"\x01\n\x13.lq.ActionPrototype\x12%\x08'\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchW\xb9N\x9cu\xca\x99\x9e\xdf\x93"
+@@@ b"\x01\n\x13.lq.ActionPrototype\x12%\x08'\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchW\xb9N\x9cu\xca\x99\x9e\xdf\x93"
+
+
+json req: {'step': 39, 'name': 'ActionDiscardTile', 'data': 'lX9jaFe5Tpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08(\x12\x0eActionDealTile\x1a\x06\x9dtqPf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08(\x12\x0eActionDealTile\x1a\x06\x9dtqPf\xcc'
+
+
+json req: {'step': 40, 'name': 'ActionDealTile', 'data': 'nXRxUGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:45:23.460][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:45:23.461][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:45:24.632][127.0.0.1:54347] client disconnect
+[22:45:24.633][127.0.0.1:54347] server disconnect profile.accounts.firefox.com:443 (34.110.207.168:443)
+[22:45:25.644][[::1]:54348] client disconnect
+[22:45:25.646][[::1]:54348] server disconnect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xc9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xc9\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08)\x12\x11ActionDiscardTile\x1a\x0e\x95|chQ\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08)\x12\x11ActionDiscardTile\x1a\x0e\x95|chQ\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 41, 'name': 'ActionDiscardTile', 'data': 'lXxjaFG5Tpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08*\x12\x0eActionDealTile\x1a\x06\x9duqSf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08*\x12\x0eActionDealTile\x1a\x06\x9duqSf\xcc'
+
+
+json req: {'step': 42, 'name': 'ActionDealTile', 'data': 'nXVxU2bM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xca\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xca\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08+\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08+\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 43, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08,\x12\x0eActionDealTile\x1a\x06\x9dvqRf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08,\x12\x0eActionDealTile\x1a\x06\x9dvqRf\xcc'
+
+
+json req: {'step': 44, 'name': 'ActionDealTile', 'data': 'nXZxUmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xcb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xcb\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:45:30.118][127.0.0.1:54355] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+
+### b'\x01\n\x13.lq.ActionPrototype\x12B\x08-\x12\x11ActionDiscardTile\x1a+\xc8\x9d\x86\x8f\xbe\x87a\xbf\xa2\xf6\xc4\xc2\xa8\xa6,\xa4\xfe\xa8,\x89\x92
+\xdf\x93C\xd6!\xaa;\x1fk4\xa8\xea\x01n\x8fS{Hq=\xe3-'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12B\x08-\x12\x11ActionDiscardTile\x1a+\xc8\x9d\x86\x8f\xbe\x87a\xbf\xa2\xf6\xc4\xc2\xa8\xa6,\xa4\xfe\xa8,\x89\x92
+\xdf\x93C\xd6!\xaa;\x1fk4\xa8\xea\x01n\x8fS{Hq=\xe3-'
+
+
+json req: {'step': 45, 'name': 'ActionDiscardTile', 'data': 'yJ2Gj76HYb+i9sTCqKYspP6oLImS35ND1iGqOx9rNKjqAW6PU3tIcT3jLQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xcc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xcc\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xcd\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x01'
+@@@ b'\x03\xcd\x01\n\x00\x12\x00'
+
+
+json req: {'cancel_operation': True, 'timeuse': 1, 'type': 0, 'index': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12-\x08.\x12\x0eActionDealTile\x1a\x19\x9art]n\xbaS\xbep\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08.\x12\x0eActionDealTile\x1a\x19\x9art]n\xbaS\xbep\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
+
+
+json req: {'step': 46, 'name': 'ActionDealTile', 'data': 'mnJ0XW66U75wspaQnor+eZ7HeMroMZIbpQ=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xce\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xce\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xcf\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022p(\x000\x028\x00'
+@@@ b'\x03\xcf\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '2p', 'timeuse': 2, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd0\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08/\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08/\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 47, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSkTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x080\x12\x0eActionDealTile\x1a\x06\x9dtqLf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x080\x12\x0eActionDealTile\x1a\x06\x9dtqLf\xcc'
+
+
+json req: {'step': 48, 'name': 'ActionDealTile', 'data': 'nXRxTGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd2\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:45:43.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:45:43.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x081\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x081\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 49, 'name': 'ActionDiscardTile', 'data': 'lXxjaFSnTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x082\x12\x0eActionDealTile\x1a\x06\x9duqOf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x082\x12\x0eActionDealTile\x1a\x06\x9duqOf\xcc'
+
+
+json req: {'step': 50, 'name': 'ActionDealTile', 'data': 'nXVxT2bM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd6\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x083\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x083\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xa7N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 51, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCnTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd7\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x084\x12\x0eActionDealTile\x1a\x06\x9dvqNf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x084\x12\x0eActionDealTile\x1a\x06\x9dvqNf\xcc'
+
+
+json req: {'step': 52, 'name': 'ActionDealTile', 'data': 'nXZxTmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12;\x085\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb7\x9dh\xb7U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1)\x83\x99
+\xe7\xa9hr\x84\xd0\x16\x955#\x07E\xf7u\xfe'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12;\x085\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb7\x9dh\xb7U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1)\x83\x99
+\xe7\xa9hr\x84\xd0\x16\x955#\x07E\xf7u\xfe'
+
+
+json req: {'step': 53, 'name': 'ActionDiscardTile', 'data': 'v5SZhredaLdV8Mu7o6QTn/GhKYOZ56locoTQFpU1IwdF93X+'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xd9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xd9\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xda\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xda\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xdb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xdb\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xdc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xdc\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xdd\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x06'
+@@@ b'\x03\xdd\x01\n\x00\x12\x00'
+
+
+json req: {'cancel_operation': True, 'timeuse': 6, 'type': 0, 'index': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x127\x086\x12\x0eActionDealTile\x1a#\xb0\x94\x9e\x87\xb3\x9ci\x9cZ\xe8\xcc\xba\xa0\xac\x14\x9f\xc4u\x9e\xf0\xceW\x
+fcc\xc3\x19\xd0/\x82\x86\r\x10w\xc0>'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x127\x086\x12\x0eActionDealTile\x1a#\xb0\x94\x9e\x87\xb3\x9ci\x9cZ\xe8\xcc\xba\xa0\xac\x14\x9f\xc4u\x9e\xf0\xceW\x
+fcc\xc3\x19\xd0/\x82\x86\r\x10w\xc0>'
+
+
+json req: {'step': 54, 'name': 'ActionDealTile', 'data': 'sJSeh7OcaZxa6My6oKwUn8R1nvDOV/xjwxnQL4KGDRB3wD4='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xde\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xde\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:46:03.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:46:03.456][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xdf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xdf\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe0\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe2\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe6\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x029m(\x000\x128\x00'
+@@@ b'\x03\xe7\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '9m', 'timeuse': 18, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_s
+tates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x087\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x087\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 55, 'name': 'ActionDiscardTile', 'data': 'lX9jaF+5Tpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x088\x12\x0eActionDealTile\x1a\x06\x9dtqHf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x088\x12\x0eActionDealTile\x1a\x06\x9dtqHf\xcc'
+
+
+json req: {'step': 56, 'name': 'ActionDealTile', 'data': 'nXRxSGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:46:21.017][127.0.0.1:54355] client disconnect
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xe9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xe9\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:46:23.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:46:23.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x089\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x089\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 57, 'name': 'ActionDiscardTile', 'data': 'lXxjaFSuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xea\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xea\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xeb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xeb\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08:\x12\x0eActionDealTile\x1a\x06\x9duqKf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08:\x12\x0eActionDealTile\x1a\x06\x9duqKf\xcc'
+
+
+json req: {'step': 58, 'name': 'ActionDealTile', 'data': 'nXVxS2bM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xec\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xec\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08;\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08;\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 59, 'name': 'ActionDiscardTile', 'data': 'lX1jaF+5Tpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08<\x12\x0eActionDealTile\x1a\x06\x9dvqJf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08<\x12\x0eActionDealTile\x1a\x06\x9dvqJf\xcc'
+
+
+json req: {'step': 60, 'name': 'ActionDealTile', 'data': 'nXZxSmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xed\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xed\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12A\x08=\x12\x11ActionDiscardTile\x1a*\xc9\xa2\x87\x8c\xbf\x88b\xc0\xa3\xf4\xc5\xc1\xa9\xa7-\xa5\xff\xab/\x8a\x93
+\xde\x94@\xd1,\xab4\x10l5\x99X)\xcf/]UyBv\xac'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12A\x08=\x12\x11ActionDiscardTile\x1a*\xc9\xa2\x87\x8c\xbf\x88b\xc0\xa3\xf4\xc5\xc1\xa9\xa7-\xa5\xff\xab/\x8a\x93
+\xde\x94@\xd1,\xab4\x10l5\x99X)\xcf/]UyBv\xac'
+
+
+json req: {'step': 61, 'name': 'ActionDiscardTile', 'data': 'yaKHjL+IYsCj9MXBqactpf+rL4qT3pRA0SyrNBBsNZlYKc8vXVV5Qnas'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xee\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xee\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xef\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xef\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf0\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x03'
+@@@ b'\x03\xf0\x01\n\x00\x12\x00'
+
+
+json req: {'cancel_operation': True, 'timeuse': 3, 'type': 0, 'index': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12,\x08>\x12\x0eActionDealTile\x1a\x18\x9bqubj\xa7T\xb5q\xcc\x97\x97\x9f\x8b\xffx\x9f\x08\xca\xe4I\x9d\x8e$'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12,\x08>\x12\x0eActionDealTile\x1a\x18\x9bqubj\xa7T\xb5q\xcc\x97\x97\x9f\x8b\xffx\x9f\x08\xca\xe4I\x9d\x8e$'
+
+
+json req: {'step': 62, 'name': 'ActionDealTile', 'data': 'm3F1YmqnVLVxzJeXn4v/eJ8IyuRJnY4k'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf1\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf2\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf3\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf4\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:46:43.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:46:43.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf5\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf6\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x026m(\x010\n8\x00'
+@@@ b'\x03\xf6\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '6m', 'moqie': True, 'timeuse': 10, 'index': 0, 'cancel_operation': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08?\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xb9N\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08?\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xb9N\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 63, 'name': 'ActionDiscardTile', 'data': 'lX9jaFC5Tpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf7\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08@\x12\x0eActionDealTile\x1a\x06\x9dtqDf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08@\x12\x0eActionDealTile\x1a\x06\x9dtqDf\xcc'
+
+
+json req: {'step': 64, 'name': 'ActionDealTile', 'data': 'nXRxRGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf8\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xf9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xf9\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xfa\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xfa\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08A\x12\x11ActionDiscardTile\x1a\x0e\x95|chU\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08A\x12\x11ActionDiscardTile\x1a\x0e\x95|chU\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 65, 'name': 'ActionDiscardTile', 'data': 'lXxjaFWuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08B\x12\x0eActionDealTile\x1a\x06\x9duqGf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08B\x12\x0eActionDealTile\x1a\x06\x9duqGf\xcc'
+
+
+json req: {'step': 66, 'name': 'ActionDealTile', 'data': 'nXVxR2bM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xfb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xfb\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:46:56.524][127.0.0.1:54357] client connect
+[22:46:56.534][127.0.0.1:54357] server connect profile.accounts.firefox.com:443 (34.110.207.168:443)
+127.0.0.1:54357: GET https://profile.accounts.firefox.com/v1/profile HTTP/2.0
+     << HTTP/2.0 304 Not Modified 0b
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08C\x12\x11ActionDiscardTile\x1a\x0e\x95}chW\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08C\x12\x11ActionDiscardTile\x1a\x0e\x95}chW\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 67, 'name': 'ActionDiscardTile', 'data': 'lX1jaFeuTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08D\x12\x0eActionDealTile\x1a\x06\x9dvqFf\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08D\x12\x0eActionDealTile\x1a\x06\x9dvqFf\xcc'
+
+
+json req: {'step': 68, 'name': 'ActionDealTile', 'data': 'nXZxRmbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xfc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xfc\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08E\x12\x11ActionDiscardTile\x1a\x0e\x95~chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08E\x12\x11ActionDiscardTile\x1a\x0e\x95~chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
+
+
+json req: {'step': 69, 'name': 'ActionDiscardTile', 'data': 'lX5jaFekTpx1y5me35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12+\x08F\x12\x0eActionDealTile\x1a\x17\x8c`JSt\xd6%\xa0f\xba\x98\x86lx\xe0k\x90q\xf65\x95\x93\xa7'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12+\x08F\x12\x0eActionDealTile\x1a\x17\x8c`JSt\xd6%\xa0f\xba\x98\x86lx\xe0k\x90q\xf65\x95\x93\xa7'
+
+
+json req: {'step': 70, 'name': 'ActionDealTile', 'data': 'jGBKU3TWJaBmupiGbHjga5Bx9jWVk6c='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xfd\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xfd\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xfe\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x029p(\x000\x008\x00'
+@@@ b'\x03\xfe\x01\n\x00\x12\x00'
+
+
+json req: {'type': 1, 'tile': '9p', 'index': 0, 'cancel_operation': False, 'moqie': False, 'timeuse': 0, 'tile_state': 0, 'change_tiles': [], 'tile_st
+ates': [], 'gap_type': 0}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12%\x08G\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08G\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
+
+
+json req: {'step': 71, 'name': 'ActionDiscardTile', 'data': 'lX9jaF+kTpx1ypme35M='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08H\x12\x0eActionDealTile\x1a\x06\x9dtq@f\xcc'
+@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08H\x12\x0eActionDealTile\x1a\x06\x9dtq@f\xcc'
+
+
+json req: {'step': 72, 'name': 'ActionDealTile', 'data': 'nXRxQGbM'}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\xff\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\xff\x01\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b"\x01\n\x13.lq.ActionPrototype\x12\xcf\x01\x08I\x12\nActionHule\x1a\xbe\x01'p\x0b\xf8\xc5\t\xec.\xd973,\x12N\x9b\x11lj\x8ddm$Z\xbcw\xf6M\xb6\xa7\
+xfb\x8b\x7f\xdd\x1e\xb9v\xd9\xb3\xbf\xac\x92k\x88\xee\xcak\x97\x8b\xf3\xe0?\xeb:\xb4\x17-u!\x1ep\xc1I\xdbho=\x051\xa7!%*\xa3\x199b\x06\xcd,\x90E\xc3\x
+b9\x9f\xe7\x95\x81\x93\xc6\x02\xee:\xc04\xb9\x8a\xaa~\xae\x1cc\xf1E\x83\xf3\xd4\xd7\xd4\xe1)\x1d\xac\x13\x823x\xb3wWxs\x85\xac-F\x06\xb1\x8e\xd7\xe9n*
+\xf7\xa3\xffE\xae(6\x98\x1d\xa9{\x80)!.59\xcbI\x03B+\xdd\x03\x08\x0c\x9e\x1c\xd6\x15\xa87\xa7\xd8\xdfq\xef\xa9\xe8{\x9cY{Ao\x94\x81\x80\x18\x91u\xec{p
+\xcd\xb19\xde"
+@@@ b"\x01\n\x13.lq.ActionPrototype\x12\xcf\x01\x08I\x12\nActionHule\x1a\xbe\x01'p\x0b\xf8\xc5\t\xec.\xd973,\x12N\x9b\x11lj\x8ddm$Z\xbcw\xf6M\xb6\xa7\
+xfb\x8b\x7f\xdd\x1e\xb9v\xd9\xb3\xbf\xac\x92k\x88\xee\xcak\x97\x8b\xf3\xe0?\xeb:\xb4\x17-u!\x1ep\xc1I\xdbho=\x051\xa7!%*\xa3\x199b\x06\xcd,\x90E\xc3\x
+b9\x9f\xe7\x95\x81\x93\xc6\x02\xee:\xc04\xb9\x8a\xaa~\xae\x1cc\xf1E\x83\xf3\xd4\xd7\xd4\xe1)\x1d\xac\x13\x823x\xb3wWxs\x85\xac-F\x06\xb1\x8e\xd7\xe9n*
+\xf7\xa3\xffE\xae(6\x98\x1d\xa9{\x80)!.59\xcbI\x03B+\xdd\x03\x08\x0c\x9e\x1c\xd6\x15\xa87\xa7\xd8\xdfq\xef\xa9\xe8{\x9cY{Ao\x94\x81\x80\x18\x91u\xec{p
+\xcd\xb19\xde"
+
+
+json req: {'step': 73, 'name': 'ActionHule', 'data': 'J3AL+MUJ7C7ZNzMsEk6bEWxqjWRtJFq8d/ZNtqf7i3/dHrl22bO/rJJriO7Ka5eL8+A/6zq0Fy11IR5wwUnbaG89BTGnISUq
+oxk5YgbNLJBFw7mf55WBk8YC7jrANLmKqn6uHGPxRYPz1NfU4SkdrBOCM3izd1d4c4WsLUYGsY7X6W4q96P/Ra4oNpgdqXuAKSEuNTnLSQNCK90DCAyeHNYVqDen2N9x76noe5xZe0FvlIGAGJF17H
+twzbE53g=='}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+
+### b"\x01\n\x17.lq.NotifyGameEndResult\x12i\ng\n\x10\x08\x00\x10\xc4\xdb\x01\x18\xd4\xa9\x02 \x00('0\x00\n\x0f\x08\x01\x10\xa4\r\x18\xc4\xa9\x01 \x00
+(\x070\x00\n \x08\x03\x10\xe8\xbc\xff\xff\xff\xff\xff\xff\xff\x01\x18\x98\xa7\x01 \x00(\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00\n \x08\x02\x10\xb
+0\xda\xfe\xff\xff\xff\xff\xff\xff\x01\x18\xf0\x92\x01 \x00(\xeb\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00"
+@@@ b"\x01\n\x17.lq.NotifyGameEndResult\x12i\ng\n\x10\x08\x00\x10\xc4\xdb\x01\x18\xd4\xa9\x02 \x00('0\x00\n\x0f\x08\x01\x10\xa4\r\x18\xc4\xa9\x01 \x00
+(\x070\x00\n \x08\x03\x10\xe8\xbc\xff\xff\xff\xff\xff\xff\xff\x01\x18\x98\xa7\x01 \x00(\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00\n \x08\x02\x10\xb
+0\xda\xfe\xff\xff\xff\xff\xff\xff\x01\x18\xf0\x92\x01 \x00(\xeb\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00"
+
+
+json req: {'result': {'players': [{'total_point': 28100, 'part_point_1': 38100, 'grading_score': 39, 'seat': 0, 'part_point_2': 0, 'gold': 0}, {'seat'
+: 1, 'total_point': 1700, 'part_point_1': 21700, 'grading_score': 7, 'part_point_2': 0, 'gold': 0}, {'seat': 3, 'total_point': -8600, 'part_point_1':
+21400, 'grading_score': -8, 'part_point_2': 0, 'gold': 0}, {'seat': 2, 'total_point': -21200, 'part_point_1': 18800, 'grading_score': -21, 'part_point
+_2': 0, 'gold': 0}]}}
+json resp: None
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+[22:47:03.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
+[22:47:03.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
+
+### b'\x02\x00\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x00\x02\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+[22:47:04.690][127.0.0.1:54359] client connect
+[22:47:04.714][127.0.0.1:54359] server connect push.services.mozilla.com:443 (34.107.243.93:443)
+[22:47:04.731][127.0.0.1:54361] client connect
+[22:47:04.767][127.0.0.1:54361] server connect push.services.mozilla.com:443 (34.107.243.93:443)
+[22:47:04.770][127.0.0.1:54361] client disconnect
+[22:47:04.771][127.0.0.1:54361] server disconnect push.services.mozilla.com:443 (34.107.243.93:443)
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x01\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x01\x02\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x02\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x02\x02\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x03\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x03\x02\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
+
+### b'\x02\x04\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
+@@@ b'\x03\x04\x02\n\x00\x12\x00'
+
+
+json req: {}
+json resp: {}
+127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
+WebSocket connection closed by client: 1005
+[22:47:12.704][127.0.0.1:54317] server disconnect engame.mahjongsoul.com:443 (104.18.28.151:443)
+[22:47:12.706][127.0.0.1:54317] client disconnect
+[22:47:14.780][127.0.0.1:54363] client connect
+[22:47:14.791][127.0.0.1:54363] server connect push.services.mozilla.com:443 (34.107.243.93:443)
+127.0.0.1:54363: GET https://push.services.mozilla.com/
+              << 101 Switching Protocols 0b
+[22:47:14.888] Addon error: 1: An unsupported WebSocket message type.
+Traceback (most recent call last):
+  File "sniffer.py", line 56, in websocket_message
+    raise RuntimeError(msg)
+RuntimeError: 1: An unsupported WebSocket message type.
+127.0.0.1:54363 -> WebSocket text message -> push.services.mozilla.com:443/
+[22:47:14.971] Addon error: 1: An unsupported WebSocket message type.
+Traceback (most recent call last):
+  File "sniffer.py", line 56, in websocket_message
+    raise RuntimeError(msg)
+RuntimeError: 1: An unsupported WebSocket message type.
+127.0.0.1:54363 <- WebSocket text message <- push.services.mozilla.com:443/
+[22:47:15.515][127.0.0.1:54365] client connect
+[22:47:15.836][127.0.0.1:54365] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+127.0.0.1:54365: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
+              << 200 OK 0b
+127.0.0.1:54365: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
+              << 200 OK 0b
+[22:47:25.567][127.0.0.1:54367] client connect
+[22:47:25.873][127.0.0.1:54367] server connect mahjongsoul.game.yo-star.com:443 (104.18.25.135:443)
+127.0.0.1:54367: GET https://mahjongsoul.game.yo-star.com/v0.11.1.w/en/myres2/loading_3que1/mid_0.png HTTP/2.0
+     << HTTP/2.0 200 OK 38.8k
+127.0.0.1:54367: GET https://mahjongsoul.game.yo-star.com/version.json?randv=1261104627990931 HTTP/2.0
+     << HTTP/2.0 200 OK 69b
+Error in WebSocket connection to push.services.mozilla.com:443: WebSocket Error: ABNORMAL_CLOSURE
+PS C:\Home\Repos\python-projects\majsoul_oculyst> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Home\Repos\python-projects\majsoul_oculyst> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20241226224757
+**********************

@@ -1,11 +1,4 @@
-1234506789m 1234506789s 1234506789p 1234567z
-eswn : 1234z, bai fa hong = 567z
-
-player board coords
-	row 1: 770,540 ~ 1140,600
-	row 2: 765,605 ~ 1145,665
-	row 3: 760,670 ~ 1150,730
-
-side player board coords
-	columns 1~6
-	
+// mitmdump -s sniffer.py | tee log.txt 
+Start-Transcript log.txt
+mitmdump -s sniffer.py --flow-detail 0
+Stop-Transcript
