@@ -350,10 +350,10 @@ ahk.add_hotkey('$!wheelup', callback=right_click_stack)
 # ahk.add_hotkey('$~*rbutton up', callback=rbutton_up_hook)
 # ahk.add_hotkey('$~*backspace', callback=lalt_hook)
 
-ahk.add_hotkey('f8 up', callback=save_dice_position)
-ahk.add_hotkey('f7 up', callback=save_card_position)
-ahk.add_hotkey('f6 up', callback=retarget_mass)
-ahk.add_hotkey('f5 up', callback=quick_on_play)
+# ahk.add_hotkey('f8 up', callback=save_dice_position)
+# ahk.add_hotkey('f7 up', callback=save_card_position)
+# ahk.add_hotkey('f6 up', callback=retarget_mass)
+# ahk.add_hotkey('f5 up', callback=quick_on_play)
 
 # media controls
 # ahk.add_hotkey('~mbutton & wheeldown', callback=lambda: ahk.send('{volume_down}'))

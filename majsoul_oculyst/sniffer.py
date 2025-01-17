@@ -6,6 +6,7 @@ import re
 from ipaddress import ip_address
 from logging import getLogger
 from typing import Any
+from board import Board
 
 import wsproto.frame_protocol
 from mitmproxy import http
@@ -161,27 +162,6 @@ class Sniffer:
 				raise RuntimeError(msg)
 			assert direction == "inbound"
 		
-		# # Encode to JSON format so that
-		# # it can be enqueueed to message queue.
-		# encoded_request = base64.b64encode(request).decode(encoding="utf-8")
-		# if response is not None:
-		# 	encoded_response = base64.b64encode(response).decode(
-		# 		encoding="utf-8",
-		# 	)
-		# else:
-		# 	encoded_response = None
-		# now = datetime.datetime.now(tz=datetime.UTC)
-		# data = {
-		# 	"request_direction": request_direction,
-		# 	"request": encoded_request,
-		# 	"response": encoded_response,
-		# 	"timestamp": now.timestamp(),
-		# }
-
-		# data_str = json.dumps(data, allow_nan=False, separators=(",", ":"))
-		# data_bytes = data_str.encode(encoding="utf-8")
-		# self._socket.send_multipart([b"ws", data_bytes])
-		
 		def unwrap_message(message: bytes) -> tuple[str, bytes]:
 			wrapper = liqi_pb2.Wrapper()  # type: ignore[attr-defined]
 			wrapper.ParseFromString(message)
@@ -201,9 +181,6 @@ class Sniffer:
 			case _:
 				msg = f"{request[0]}: unknown request type."
 				raise RuntimeError(msg)
-		
-		if name == ".lq.FastTest.checkNetworkDelay" or name == ".lq.FastTest.inputOperation":
-			return
 		
 		if response is not None:
 			if response[0] != 3:  # noqa: PLR2004
@@ -304,10 +281,21 @@ class Sniffer:
 
 			return step, name, result
 		
+		# if name == ".lq.FastTest.checkNetworkDelay" or name == ".lq.FastTest.inputOperation":
+		# 	return
+		
 		match name:
 			case ".lq.ActionPrototype":
 				if jsonized_request is not None:
-					step, name, result = parse_action(jsonized_request)
-					print(f'#### {step} {name} {result}')
+					request_step, request_name, request_result = parse_action(jsonized_request)
+					print(f'#### {request_step} {request_name} {request_result}')
+					match request_name:
+						case "ActionNewRound":
+							self.board = Board(request_result)
+						case "ActionDiscardTile":
+							self.board.process_discard(request_result)
+						case "ActionChiPengGang":
+							self.board.process_meld(request_result)
+					
 
 addons = [Sniffer()]

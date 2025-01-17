@@ -1,1727 +1,606 @@
-﻿**********************
-Windows PowerShell transcript start
-Start time: 20241226223038
-Username: MALDIUS-MAXIMUS\User
-RunAs User: MALDIUS-MAXIMUS\User
-Configuration Name: 
-Machine: MALDIUS-MAXIMUS (Microsoft Windows NT 10.0.19044.0)
-Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 5004
-PSVersion: 5.1.19041.4291
-PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.4291
-BuildVersion: 10.0.19041.4291
-CLRVersion: 4.0.30319.42000
-WSManStackVersion: 3.0
-PSRemotingProtocolVersion: 2.3
-SerializationVersion: 1.1.0.1
-**********************
-Transcript started, output file is log.txt
-PS C:\Home\Repos\python-projects\majsoul_oculyst> mitmdump -s sniffer.py
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x97\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x97\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-[22:43:58.824][127.0.0.1:54355] client connect
-
-### b'\x02\x98\x01\n!.lq.FastTest.fetchGamePlayerState\x12\x00'
-@@@ b'\x03\x98\x01\n\x00\x12\x06\x12\x04\x03\x03\x03\x03'
-
-
-json req: {}
-json resp: {'state_list': ['READY', 'READY', 'READY', 'READY']}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:43:59.140][127.0.0.1:54355] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
-127.0.0.1:54355: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
-              << 200 OK 0b
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x99\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x99\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9a\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x9a\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:44:03.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:44:03.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9b\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x9b\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9c\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022z(\x000\x048\x00'
-@@@ b'\x03\x9c\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '2z', 'timeuse': 4, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x01\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x01\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 1, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9d\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x9d\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x02\x12\x0eActionDealTile\x1a\x06\x9dtq&f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x02\x12\x0eActionDealTile\x1a\x06\x9dtq&f\xcc'
-
-
-json req: {'step': 2, 'name': 'ActionDealTile', 'data': 'nXRxJmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9e\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x9e\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x03\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x03\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 3, 'name': 'ActionDiscardTile', 'data': 'lXxjaFekTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x04\x12\x0eActionDealTile\x1a\x06\x9duq!f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x04\x12\x0eActionDealTile\x1a\x06\x9duq!f\xcc'
-
-
-json req: {'step': 4, 'name': 'ActionDealTile', 'data': 'nXVxIWbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x9f\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x9f\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x05\x12\x11ActionDiscardTile\x1a\x0e\x95}chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x05\x12\x11ActionDiscardTile\x1a\x0e\x95}chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 5, 'name': 'ActionDiscardTile', 'data': 'lX1jaFKuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x06\x12\x0eActionDealTile\x1a\x06\x9dvq f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x06\x12\x0eActionDealTile\x1a\x06\x9dvq f\xcc'
-
-
-json req: {'step': 6, 'name': 'ActionDealTile', 'data': 'nXZxIGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa0\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12;\x08\x07\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb9\x9dh\xb6U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1&\x83\
-x99\xe6\xa9hj\x8c\xd0\x16\x955#\x07E\xf7u\xfe'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12;\x08\x07\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb9\x9dh\xb6U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1&\x83\
-x99\xe6\xa9hj\x8c\xd0\x16\x955#\x07E\xf7u\xfe'
-
-
-json req: {'step': 7, 'name': 'ActionDiscardTile', 'data': 'v5SZhrmdaLZV8Mu7o6QTn/GhJoOZ5qloaozQFpU1IwdF93X+'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa2\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x02'
-@@@ b'\x03\xa2\x01\n\x00\x12\x00'
-
-
-json req: {'cancel_operation': True, 'timeuse': 2, 'type': 0, 'index': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x08\x12\x0eActionDealTile\x1a\x19\x9art]n\xa4S\xd0p\xb2\x96\x90\x9e\x8a\xfey\x9e\xdfp\xca\xe81\x92\x1b\xa
-5'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x08\x12\x0eActionDealTile\x1a\x19\x9art]n\xa4S\xd0p\xb2\x96\x90\x9e\x8a\xfey\x9e\xdfp\xca\xe81\x92\x1b\xa
-5'
-
-
-json req: {'step': 8, 'name': 'ActionDealTile', 'data': 'mnJ0XW6kU9BwspaQnor+eZ7fcMroMZIbpQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa6\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022s(\x000\x068\x00'
-@@@ b'\x03\xa7\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '2s', 'timeuse': 6, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\t\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\t\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 9, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSnTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:44:23.455][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:44:23.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\n\x12\x0eActionDealTile\x1a\x06\x9dtq"f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\n\x12\x0eActionDealTile\x1a\x06\x9dtq"f\xcc'
-
-
-json req: {'step': 10, 'name': 'ActionDealTile', 'data': 'nXRxImbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54355: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
-              << 200 OK 0b
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0b\x12\x11ActionDiscardTile\x1a\x0e\x95|chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0b\x12\x11ActionDiscardTile\x1a\x0e\x95|chR\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 11, 'name': 'ActionDiscardTile', 'data': 'lXxjaFKuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xa9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xa9\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0c\x12\x0eActionDealTile\x1a\x06\x9duq]f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0c\x12\x0eActionDealTile\x1a\x06\x9duq]f\xcc'
-
-
-json req: {'step': 12, 'name': 'ActionDealTile', 'data': 'nXVxXWbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xaa\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xaa\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\r\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\r\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 13, 'name': 'ActionDiscardTile', 'data': 'lX1jaFOuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0e\x12\x0eActionDealTile\x1a\x06\x9dvq\\f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x0e\x12\x0eActionDealTile\x1a\x06\x9dvq\\f\xcc'
-
-
-json req: {'step': 14, 'name': 'ActionDealTile', 'data': 'nXZxXGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xab\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xab\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xac\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xac\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0f\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x0f\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 15, 'name': 'ActionDiscardTile', 'data': 'lX5jaF+kTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x10\x12\x0eActionDealTile\x1a\x19\x9art]n\xb3S\xacp\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
-5'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x10\x12\x0eActionDealTile\x1a\x19\x9art]n\xb3S\xacp\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
-5'
-
-
-json req: {'step': 16, 'name': 'ActionDealTile', 'data': 'mnJ0XW6zU6xwspaQnor+eZ7HeMroMZIbpQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xad\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xad\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xae\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xae\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xaf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xaf\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb0\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x026z(\x000\x058\x00'
-@@@ b'\x03\xb0\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '6z', 'timeuse': 5, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x11\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x11\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 17, 'name': 'ActionDiscardTile', 'data': 'lX9jaFCuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x12\x12\x0eActionDealTile\x1a\x06\x9dtq^f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x12\x12\x0eActionDealTile\x1a\x06\x9dtq^f\xcc'
-
-
-json req: {'step': 18, 'name': 'ActionDealTile', 'data': 'nXRxXmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:44:43.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:44:43.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb2\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x13\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x13\x12\x11ActionDiscardTile\x1a\x0e\x95|chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 19, 'name': 'ActionDiscardTile', 'data': 'lXxjaFekTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x14\x12\x0eActionDealTile\x1a\x06\x9duqYf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x14\x12\x0eActionDealTile\x1a\x06\x9duqYf\xcc'
-
-
-json req: {'step': 20, 'name': 'ActionDealTile', 'data': 'nXVxWWbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x15\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x15\x12\x11ActionDiscardTile\x1a\x0e\x95}chS\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 21, 'name': 'ActionDiscardTile', 'data': 'lX1jaFOuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x16\x12\x0eActionDealTile\x1a\x06\x9dvqXf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x16\x12\x0eActionDealTile\x1a\x06\x9dvqXf\xcc'
-
-
-json req: {'step': 22, 'name': 'ActionDealTile', 'data': 'nXZxWGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x17\x12\x11ActionDiscardTile\x1a\x0e\x95~chR\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x17\x12\x11ActionDiscardTile\x1a\x0e\x95~chR\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 23, 'name': 'ActionDiscardTile', 'data': 'lX5jaFKuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb6\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x18\x12\x0eActionDealTile\x1a\x19\x9art]c\xb9S\xa8p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
-5'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08\x18\x12\x0eActionDealTile\x1a\x19\x9art]c\xb9S\xa8p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa
-5'
-
-
-json req: {'step': 24, 'name': 'ActionDealTile', 'data': 'mnJ0XWO5U6hwspaQnor+eZ7HeMroMZIbpQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb7\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xb8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xb9\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x025z(\x000\x058\x00'
-@@@ b'\x03\xb9\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '5z', 'timeuse': 5, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x19\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x19\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 25, 'name': 'ActionDiscardTile', 'data': 'lX9jaFOuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1a\x12\x0eActionDealTile\x1a\x06\x9dtqZf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1a\x12\x0eActionDealTile\x1a\x06\x9dtqZf\xcc'
-
-
-json req: {'step': 26, 'name': 'ActionDealTile', 'data': 'nXRxWmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xba\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xba\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xbb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xbb\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1b\x12\x11ActionDiscardTile\x1a\x0e\x95|chS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1b\x12\x11ActionDiscardTile\x1a\x0e\x95|chS\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 27, 'name': 'ActionDiscardTile', 'data': 'lXxjaFOuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1c\x12\x0eActionDealTile\x1a\x06\x9duqUf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1c\x12\x0eActionDealTile\x1a\x06\x9duqUf\xcc'
-
-
-json req: {'step': 28, 'name': 'ActionDealTile', 'data': 'nXVxVWbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xbc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xbc\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1d\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1d\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 29, 'name': 'ActionDiscardTile', 'data': 'lX1jaF+nTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1e\x12\x0eActionDealTile\x1a\x06\x9dvqTf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08\x1e\x12\x0eActionDealTile\x1a\x06\x9dvqTf\xcc'
-
-
-json req: {'step': 30, 'name': 'ActionDealTile', 'data': 'nXZxVGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:45:03.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:45:03.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xbd\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xbd\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xbe\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xbe\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1f\x12\x11ActionDiscardTile\x1a\x0e\x95~chQ\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08\x1f\x12\x11ActionDiscardTile\x1a\x0e\x95~chQ\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 31, 'name': 'ActionDiscardTile', 'data': 'lX5jaFGuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xbf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xbf\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc0\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x122\x08 \x12\x11ActionChiPengGang\x1a\x1b\x98ot\\C\xc5~\xf5J\xbf\xab\xeb\x90\x84\xc3\x0c\x9e~\xea\xc9\xbc\x8f\xb3
-k\xa1\xe9\xaa'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x122\x08 \x12\x11ActionChiPengGang\x1a\x1b\x98ot\\C\xc5~\xf5J\xbf\xab\xeb\x90\x84\xc3\x0c\x9e~\xea\xc9\xbc\x8f\xb3
-k\xa1\xe9\xaa'
-
-
-json req: {'step': 32, 'name': 'ActionChiPengGang', 'data': 'mG90XEPFfvVKv6vrkITDDJ5+6sm8j7Nroemq'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc2\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08!\x12\x11ActionDiscardTile\x1a\x0e\x95|chP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08!\x12\x11ActionDiscardTile\x1a\x0e\x95|chP\xaeN\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 33, 'name': 'ActionDiscardTile', 'data': 'lXxjaFCuTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08"\x12\x0eActionDealTile\x1a\x06\x9duqWf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08"\x12\x0eActionDealTile\x1a\x06\x9duqWf\xcc'
-
-
-json req: {'step': 34, 'name': 'ActionDealTile', 'data': 'nXVxV2bM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08#\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08#\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 35, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08$\x12\x0eActionDealTile\x1a\x06\x9dvqVf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08$\x12\x0eActionDealTile\x1a\x06\x9dvqVf\xcc'
-
-
-json req: {'step': 36, 'name': 'ActionDealTile', 'data': 'nXZxVmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08%\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08%\x12\x11ActionDiscardTile\x1a\x0e\x95~ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 37, 'name': 'ActionDiscardTile', 'data': 'lX5jaF+5Tpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12-\x08&\x12\x0eActionDealTile\x1a\x19\x9art]o\xb9S\xa2p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08&\x12\x0eActionDealTile\x1a\x19\x9art]o\xb9S\xa2p\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
-
-
-json req: {'step': 38, 'name': 'ActionDealTile', 'data': 'mnJ0XW+5U6JwspaQnor+eZ7HeMroMZIbpQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc6\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x021m(\x000\x018\x00'
-@@@ b'\x03\xc7\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '1m', 'timeuse': 1, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b"\x01\n\x13.lq.ActionPrototype\x12%\x08'\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchW\xb9N\x9cu\xca\x99\x9e\xdf\x93"
-@@@ b"\x01\n\x13.lq.ActionPrototype\x12%\x08'\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchW\xb9N\x9cu\xca\x99\x9e\xdf\x93"
-
-
-json req: {'step': 39, 'name': 'ActionDiscardTile', 'data': 'lX9jaFe5Tpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08(\x12\x0eActionDealTile\x1a\x06\x9dtqPf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08(\x12\x0eActionDealTile\x1a\x06\x9dtqPf\xcc'
-
-
-json req: {'step': 40, 'name': 'ActionDealTile', 'data': 'nXRxUGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:45:23.460][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:45:23.461][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:45:24.632][127.0.0.1:54347] client disconnect
-[22:45:24.633][127.0.0.1:54347] server disconnect profile.accounts.firefox.com:443 (34.110.207.168:443)
-[22:45:25.644][[::1]:54348] client disconnect
-[22:45:25.646][[::1]:54348] server disconnect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xc9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xc9\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08)\x12\x11ActionDiscardTile\x1a\x0e\x95|chQ\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08)\x12\x11ActionDiscardTile\x1a\x0e\x95|chQ\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 41, 'name': 'ActionDiscardTile', 'data': 'lXxjaFG5Tpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08*\x12\x0eActionDealTile\x1a\x06\x9duqSf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08*\x12\x0eActionDealTile\x1a\x06\x9duqSf\xcc'
-
-
-json req: {'step': 42, 'name': 'ActionDealTile', 'data': 'nXVxU2bM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xca\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xca\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08+\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08+\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 43, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08,\x12\x0eActionDealTile\x1a\x06\x9dvqRf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08,\x12\x0eActionDealTile\x1a\x06\x9dvqRf\xcc'
-
-
-json req: {'step': 44, 'name': 'ActionDealTile', 'data': 'nXZxUmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xcb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xcb\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:45:30.118][127.0.0.1:54355] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
-
-### b'\x01\n\x13.lq.ActionPrototype\x12B\x08-\x12\x11ActionDiscardTile\x1a+\xc8\x9d\x86\x8f\xbe\x87a\xbf\xa2\xf6\xc4\xc2\xa8\xa6,\xa4\xfe\xa8,\x89\x92
-\xdf\x93C\xd6!\xaa;\x1fk4\xa8\xea\x01n\x8fS{Hq=\xe3-'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12B\x08-\x12\x11ActionDiscardTile\x1a+\xc8\x9d\x86\x8f\xbe\x87a\xbf\xa2\xf6\xc4\xc2\xa8\xa6,\xa4\xfe\xa8,\x89\x92
-\xdf\x93C\xd6!\xaa;\x1fk4\xa8\xea\x01n\x8fS{Hq=\xe3-'
-
-
-json req: {'step': 45, 'name': 'ActionDiscardTile', 'data': 'yJ2Gj76HYb+i9sTCqKYspP6oLImS35ND1iGqOx9rNKjqAW6PU3tIcT3jLQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xcc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xcc\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xcd\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x01'
-@@@ b'\x03\xcd\x01\n\x00\x12\x00'
-
-
-json req: {'cancel_operation': True, 'timeuse': 1, 'type': 0, 'index': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12-\x08.\x12\x0eActionDealTile\x1a\x19\x9art]n\xbaS\xbep\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12-\x08.\x12\x0eActionDealTile\x1a\x19\x9art]n\xbaS\xbep\xb2\x96\x90\x9e\x8a\xfey\x9e\xc7x\xca\xe81\x92\x1b\xa5'
-
-
-json req: {'step': 46, 'name': 'ActionDealTile', 'data': 'mnJ0XW66U75wspaQnor+eZ7HeMroMZIbpQ=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xce\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xce\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xcf\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x022p(\x000\x028\x00'
-@@@ b'\x03\xcf\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '2p', 'timeuse': 2, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd0\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08/\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08/\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchT\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 47, 'name': 'ActionDiscardTile', 'data': 'lX9jaFSkTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x080\x12\x0eActionDealTile\x1a\x06\x9dtqLf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x080\x12\x0eActionDealTile\x1a\x06\x9dtqLf\xcc'
-
-
-json req: {'step': 48, 'name': 'ActionDealTile', 'data': 'nXRxTGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd2\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:45:43.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:45:43.457][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x081\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x081\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 49, 'name': 'ActionDiscardTile', 'data': 'lXxjaFSnTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x082\x12\x0eActionDealTile\x1a\x06\x9duqOf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x082\x12\x0eActionDealTile\x1a\x06\x9duqOf\xcc'
-
-
-json req: {'step': 50, 'name': 'ActionDealTile', 'data': 'nXVxT2bM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd6\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x083\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x083\x12\x11ActionDiscardTile\x1a\x0e\x95}chP\xa7N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 51, 'name': 'ActionDiscardTile', 'data': 'lX1jaFCnTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd7\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x084\x12\x0eActionDealTile\x1a\x06\x9dvqNf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x084\x12\x0eActionDealTile\x1a\x06\x9dvqNf\xcc'
-
-
-json req: {'step': 52, 'name': 'ActionDealTile', 'data': 'nXZxTmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12;\x085\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb7\x9dh\xb7U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1)\x83\x99
-\xe7\xa9hr\x84\xd0\x16\x955#\x07E\xf7u\xfe'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12;\x085\x12\x11ActionDiscardTile\x1a$\xbf\x94\x99\x86\xb7\x9dh\xb7U\xf0\xcb\xbb\xa3\xa4\x13\x9f\xf1\xa1)\x83\x99
-\xe7\xa9hr\x84\xd0\x16\x955#\x07E\xf7u\xfe'
-
-
-json req: {'step': 53, 'name': 'ActionDiscardTile', 'data': 'v5SZhredaLdV8Mu7o6QTn/GhKYOZ56locoTQFpU1IwdF93X+'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xd9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xd9\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xda\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xda\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xdb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xdb\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xdc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xdc\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xdd\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x06'
-@@@ b'\x03\xdd\x01\n\x00\x12\x00'
-
-
-json req: {'cancel_operation': True, 'timeuse': 6, 'type': 0, 'index': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x127\x086\x12\x0eActionDealTile\x1a#\xb0\x94\x9e\x87\xb3\x9ci\x9cZ\xe8\xcc\xba\xa0\xac\x14\x9f\xc4u\x9e\xf0\xceW\x
-fcc\xc3\x19\xd0/\x82\x86\r\x10w\xc0>'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x127\x086\x12\x0eActionDealTile\x1a#\xb0\x94\x9e\x87\xb3\x9ci\x9cZ\xe8\xcc\xba\xa0\xac\x14\x9f\xc4u\x9e\xf0\xceW\x
-fcc\xc3\x19\xd0/\x82\x86\r\x10w\xc0>'
-
-
-json req: {'step': 54, 'name': 'ActionDealTile', 'data': 'sJSeh7OcaZxa6My6oKwUn8R1nvDOV/xjwxnQL4KGDRB3wD4='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xde\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xde\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:46:03.456][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:46:03.456][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xdf\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xdf\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe0\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe0\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe2\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe6\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe6\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe7\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x029m(\x000\x128\x00'
-@@@ b'\x03\xe7\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '9m', 'timeuse': 18, 'index': 0, 'cancel_operation': False, 'moqie': False, 'tile_state': 0, 'change_tiles': [], 'tile_s
-tates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x087\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x087\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 55, 'name': 'ActionDiscardTile', 'data': 'lX9jaF+5Tpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x088\x12\x0eActionDealTile\x1a\x06\x9dtqHf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x088\x12\x0eActionDealTile\x1a\x06\x9dtqHf\xcc'
-
-
-json req: {'step': 56, 'name': 'ActionDealTile', 'data': 'nXRxSGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:46:21.017][127.0.0.1:54355] client disconnect
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xe9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xe9\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:46:23.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:46:23.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x089\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x089\x12\x11ActionDiscardTile\x1a\x0e\x95|chT\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 57, 'name': 'ActionDiscardTile', 'data': 'lXxjaFSuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xea\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xea\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xeb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xeb\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08:\x12\x0eActionDealTile\x1a\x06\x9duqKf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08:\x12\x0eActionDealTile\x1a\x06\x9duqKf\xcc'
-
-
-json req: {'step': 58, 'name': 'ActionDealTile', 'data': 'nXVxS2bM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xec\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xec\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08;\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08;\x12\x11ActionDiscardTile\x1a\x0e\x95}ch_\xb9N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 59, 'name': 'ActionDiscardTile', 'data': 'lX1jaF+5Tpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08<\x12\x0eActionDealTile\x1a\x06\x9dvqJf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08<\x12\x0eActionDealTile\x1a\x06\x9dvqJf\xcc'
-
-
-json req: {'step': 60, 'name': 'ActionDealTile', 'data': 'nXZxSmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xed\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xed\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12A\x08=\x12\x11ActionDiscardTile\x1a*\xc9\xa2\x87\x8c\xbf\x88b\xc0\xa3\xf4\xc5\xc1\xa9\xa7-\xa5\xff\xab/\x8a\x93
-\xde\x94@\xd1,\xab4\x10l5\x99X)\xcf/]UyBv\xac'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12A\x08=\x12\x11ActionDiscardTile\x1a*\xc9\xa2\x87\x8c\xbf\x88b\xc0\xa3\xf4\xc5\xc1\xa9\xa7-\xa5\xff\xab/\x8a\x93
-\xde\x94@\xd1,\xab4\x10l5\x99X)\xcf/]UyBv\xac'
-
-
-json req: {'step': 61, 'name': 'ActionDiscardTile', 'data': 'yaKHjL+IYsCj9MXBqactpf+rL4qT3pRA0SyrNBBsNZlYKc8vXVV5Qnas'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xee\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xee\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xef\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xef\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf0\x01\n\x1d.lq.FastTest.inputChiPengGang\x12\x04\x18\x010\x03'
-@@@ b'\x03\xf0\x01\n\x00\x12\x00'
-
-
-json req: {'cancel_operation': True, 'timeuse': 3, 'type': 0, 'index': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12,\x08>\x12\x0eActionDealTile\x1a\x18\x9bqubj\xa7T\xb5q\xcc\x97\x97\x9f\x8b\xffx\x9f\x08\xca\xe4I\x9d\x8e$'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12,\x08>\x12\x0eActionDealTile\x1a\x18\x9bqubj\xa7T\xb5q\xcc\x97\x97\x9f\x8b\xffx\x9f\x08\xca\xe4I\x9d\x8e$'
-
-
-json req: {'step': 62, 'name': 'ActionDealTile', 'data': 'm3F1YmqnVLVxzJeXn4v/eJ8IyuRJnY4k'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf1\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf1\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf2\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf2\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf3\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf3\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf4\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf4\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:46:43.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:46:43.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf5\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf5\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf6\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x026m(\x010\n8\x00'
-@@@ b'\x03\xf6\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '6m', 'moqie': True, 'timeuse': 10, 'index': 0, 'cancel_operation': False, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08?\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xb9N\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08?\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fchP\xb9N\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 63, 'name': 'ActionDiscardTile', 'data': 'lX9jaFC5Tpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf7\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf7\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08@\x12\x0eActionDealTile\x1a\x06\x9dtqDf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08@\x12\x0eActionDealTile\x1a\x06\x9dtqDf\xcc'
-
-
-json req: {'step': 64, 'name': 'ActionDealTile', 'data': 'nXRxRGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf8\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf8\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xf9\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xf9\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xfa\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xfa\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08A\x12\x11ActionDiscardTile\x1a\x0e\x95|chU\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08A\x12\x11ActionDiscardTile\x1a\x0e\x95|chU\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 65, 'name': 'ActionDiscardTile', 'data': 'lXxjaFWuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08B\x12\x0eActionDealTile\x1a\x06\x9duqGf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08B\x12\x0eActionDealTile\x1a\x06\x9duqGf\xcc'
-
-
-json req: {'step': 66, 'name': 'ActionDealTile', 'data': 'nXVxR2bM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xfb\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xfb\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:46:56.524][127.0.0.1:54357] client connect
-[22:46:56.534][127.0.0.1:54357] server connect profile.accounts.firefox.com:443 (34.110.207.168:443)
-127.0.0.1:54357: GET https://profile.accounts.firefox.com/v1/profile HTTP/2.0
-     << HTTP/2.0 304 Not Modified 0b
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08C\x12\x11ActionDiscardTile\x1a\x0e\x95}chW\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08C\x12\x11ActionDiscardTile\x1a\x0e\x95}chW\xaeN\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 67, 'name': 'ActionDiscardTile', 'data': 'lX1jaFeuTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08D\x12\x0eActionDealTile\x1a\x06\x9dvqFf\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08D\x12\x0eActionDealTile\x1a\x06\x9dvqFf\xcc'
-
-
-json req: {'step': 68, 'name': 'ActionDealTile', 'data': 'nXZxRmbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xfc\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xfc\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08E\x12\x11ActionDiscardTile\x1a\x0e\x95~chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08E\x12\x11ActionDiscardTile\x1a\x0e\x95~chW\xa4N\x9cu\xcb\x99\x9e\xdf\x93'
-
-
-json req: {'step': 69, 'name': 'ActionDiscardTile', 'data': 'lX5jaFekTpx1y5me35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12+\x08F\x12\x0eActionDealTile\x1a\x17\x8c`JSt\xd6%\xa0f\xba\x98\x86lx\xe0k\x90q\xf65\x95\x93\xa7'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12+\x08F\x12\x0eActionDealTile\x1a\x17\x8c`JSt\xd6%\xa0f\xba\x98\x86lx\xe0k\x90q\xf65\x95\x93\xa7'
-
-
-json req: {'step': 70, 'name': 'ActionDealTile', 'data': 'jGBKU3TWJaBmupiGbHjga5Bx9jWVk6c='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xfd\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xfd\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xfe\x01\n\x1b.lq.FastTest.inputOperation\x12\x0c\x08\x01\x1a\x029p(\x000\x008\x00'
-@@@ b'\x03\xfe\x01\n\x00\x12\x00'
-
-
-json req: {'type': 1, 'tile': '9p', 'index': 0, 'cancel_operation': False, 'moqie': False, 'timeuse': 0, 'tile_state': 0, 'change_tiles': [], 'tile_st
-ates': [], 'gap_type': 0}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12%\x08G\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12%\x08G\x12\x11ActionDiscardTile\x1a\x0e\x95\x7fch_\xa4N\x9cu\xca\x99\x9e\xdf\x93'
-
-
-json req: {'step': 71, 'name': 'ActionDiscardTile', 'data': 'lX9jaF+kTpx1ypme35M='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08H\x12\x0eActionDealTile\x1a\x06\x9dtq@f\xcc'
-@@@ b'\x01\n\x13.lq.ActionPrototype\x12\x1a\x08H\x12\x0eActionDealTile\x1a\x06\x9dtq@f\xcc'
-
-
-json req: {'step': 72, 'name': 'ActionDealTile', 'data': 'nXRxQGbM'}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\xff\x01\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\xff\x01\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b"\x01\n\x13.lq.ActionPrototype\x12\xcf\x01\x08I\x12\nActionHule\x1a\xbe\x01'p\x0b\xf8\xc5\t\xec.\xd973,\x12N\x9b\x11lj\x8ddm$Z\xbcw\xf6M\xb6\xa7\
-xfb\x8b\x7f\xdd\x1e\xb9v\xd9\xb3\xbf\xac\x92k\x88\xee\xcak\x97\x8b\xf3\xe0?\xeb:\xb4\x17-u!\x1ep\xc1I\xdbho=\x051\xa7!%*\xa3\x199b\x06\xcd,\x90E\xc3\x
-b9\x9f\xe7\x95\x81\x93\xc6\x02\xee:\xc04\xb9\x8a\xaa~\xae\x1cc\xf1E\x83\xf3\xd4\xd7\xd4\xe1)\x1d\xac\x13\x823x\xb3wWxs\x85\xac-F\x06\xb1\x8e\xd7\xe9n*
-\xf7\xa3\xffE\xae(6\x98\x1d\xa9{\x80)!.59\xcbI\x03B+\xdd\x03\x08\x0c\x9e\x1c\xd6\x15\xa87\xa7\xd8\xdfq\xef\xa9\xe8{\x9cY{Ao\x94\x81\x80\x18\x91u\xec{p
-\xcd\xb19\xde"
-@@@ b"\x01\n\x13.lq.ActionPrototype\x12\xcf\x01\x08I\x12\nActionHule\x1a\xbe\x01'p\x0b\xf8\xc5\t\xec.\xd973,\x12N\x9b\x11lj\x8ddm$Z\xbcw\xf6M\xb6\xa7\
-xfb\x8b\x7f\xdd\x1e\xb9v\xd9\xb3\xbf\xac\x92k\x88\xee\xcak\x97\x8b\xf3\xe0?\xeb:\xb4\x17-u!\x1ep\xc1I\xdbho=\x051\xa7!%*\xa3\x199b\x06\xcd,\x90E\xc3\x
-b9\x9f\xe7\x95\x81\x93\xc6\x02\xee:\xc04\xb9\x8a\xaa~\xae\x1cc\xf1E\x83\xf3\xd4\xd7\xd4\xe1)\x1d\xac\x13\x823x\xb3wWxs\x85\xac-F\x06\xb1\x8e\xd7\xe9n*
-\xf7\xa3\xffE\xae(6\x98\x1d\xa9{\x80)!.59\xcbI\x03B+\xdd\x03\x08\x0c\x9e\x1c\xd6\x15\xa87\xa7\xd8\xdfq\xef\xa9\xe8{\x9cY{Ao\x94\x81\x80\x18\x91u\xec{p
-\xcd\xb19\xde"
-
-
-json req: {'step': 73, 'name': 'ActionHule', 'data': 'J3AL+MUJ7C7ZNzMsEk6bEWxqjWRtJFq8d/ZNtqf7i3/dHrl22bO/rJJriO7Ka5eL8+A/6zq0Fy11IR5wwUnbaG89BTGnISUq
-oxk5YgbNLJBFw7mf55WBk8YC7jrANLmKqn6uHGPxRYPz1NfU4SkdrBOCM3izd1d4c4WsLUYGsY7X6W4q96P/Ra4oNpgdqXuAKSEuNTnLSQNCK90DCAyeHNYVqDen2N9x76noe5xZe0FvlIGAGJF17H
-twzbE53g=='}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-
-### b"\x01\n\x17.lq.NotifyGameEndResult\x12i\ng\n\x10\x08\x00\x10\xc4\xdb\x01\x18\xd4\xa9\x02 \x00('0\x00\n\x0f\x08\x01\x10\xa4\r\x18\xc4\xa9\x01 \x00
-(\x070\x00\n \x08\x03\x10\xe8\xbc\xff\xff\xff\xff\xff\xff\xff\x01\x18\x98\xa7\x01 \x00(\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00\n \x08\x02\x10\xb
-0\xda\xfe\xff\xff\xff\xff\xff\xff\x01\x18\xf0\x92\x01 \x00(\xeb\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00"
-@@@ b"\x01\n\x17.lq.NotifyGameEndResult\x12i\ng\n\x10\x08\x00\x10\xc4\xdb\x01\x18\xd4\xa9\x02 \x00('0\x00\n\x0f\x08\x01\x10\xa4\r\x18\xc4\xa9\x01 \x00
-(\x070\x00\n \x08\x03\x10\xe8\xbc\xff\xff\xff\xff\xff\xff\xff\x01\x18\x98\xa7\x01 \x00(\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00\n \x08\x02\x10\xb
-0\xda\xfe\xff\xff\xff\xff\xff\xff\x01\x18\xf0\x92\x01 \x00(\xeb\xff\xff\xff\xff\xff\xff\xff\xff\x010\x00"
-
-
-json req: {'result': {'players': [{'total_point': 28100, 'part_point_1': 38100, 'grading_score': 39, 'seat': 0, 'part_point_2': 0, 'gold': 0}, {'seat'
-: 1, 'total_point': 1700, 'part_point_1': 21700, 'grading_score': 7, 'part_point_2': 0, 'gold': 0}, {'seat': 3, 'total_point': -8600, 'part_point_1':
-21400, 'grading_score': -8, 'part_point_2': 0, 'gold': 0}, {'seat': 2, 'total_point': -21200, 'part_point_1': 18800, 'grading_score': -21, 'part_point
-_2': 0, 'gold': 0}]}}
-json resp: None
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-[22:47:03.458][127.0.0.1:54317] Received WebSocket ping from server (payload: b'')
-[22:47:03.459][127.0.0.1:54317] Received WebSocket pong from client (payload: b'')
-
-### b'\x02\x00\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x00\x02\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-[22:47:04.690][127.0.0.1:54359] client connect
-[22:47:04.714][127.0.0.1:54359] server connect push.services.mozilla.com:443 (34.107.243.93:443)
-[22:47:04.731][127.0.0.1:54361] client connect
-[22:47:04.767][127.0.0.1:54361] server connect push.services.mozilla.com:443 (34.107.243.93:443)
-[22:47:04.770][127.0.0.1:54361] client disconnect
-[22:47:04.771][127.0.0.1:54361] server disconnect push.services.mozilla.com:443 (34.107.243.93:443)
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x01\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x01\x02\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x02\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x02\x02\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x03\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x03\x02\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-127.0.0.1:54317 -> WebSocket binary message -> engame.mahjongsoul.com:443/game-gateway-zone
-
-### b'\x02\x04\x02\n\x1e.lq.FastTest.checkNetworkDelay\x12\x00'
-@@@ b'\x03\x04\x02\n\x00\x12\x00'
-
-
-json req: {}
-json resp: {}
-127.0.0.1:54317 <- WebSocket binary message <- engame.mahjongsoul.com:443/game-gateway-zone
-WebSocket connection closed by client: 1005
-[22:47:12.704][127.0.0.1:54317] server disconnect engame.mahjongsoul.com:443 (104.18.28.151:443)
-[22:47:12.706][127.0.0.1:54317] client disconnect
-[22:47:14.780][127.0.0.1:54363] client connect
-[22:47:14.791][127.0.0.1:54363] server connect push.services.mozilla.com:443 (34.107.243.93:443)
-127.0.0.1:54363: GET https://push.services.mozilla.com/
-              << 101 Switching Protocols 0b
-[22:47:14.888] Addon error: 1: An unsupported WebSocket message type.
-Traceback (most recent call last):
-  File "sniffer.py", line 56, in websocket_message
-    raise RuntimeError(msg)
-RuntimeError: 1: An unsupported WebSocket message type.
-127.0.0.1:54363 -> WebSocket text message -> push.services.mozilla.com:443/
-[22:47:14.971] Addon error: 1: An unsupported WebSocket message type.
-Traceback (most recent call last):
-  File "sniffer.py", line 56, in websocket_message
-    raise RuntimeError(msg)
-RuntimeError: 1: An unsupported WebSocket message type.
-127.0.0.1:54363 <- WebSocket text message <- push.services.mozilla.com:443/
-[22:47:15.515][127.0.0.1:54365] client connect
-[22:47:15.836][127.0.0.1:54365] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
-127.0.0.1:54365: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
-              << 200 OK 0b
-127.0.0.1:54365: GET https://majsoul-hk-client.cn-hongkong.log.aliyuncs.com/logstores/client/track?APIVersion=0.6.0&client_type=web&device_type=pc…
-              << 200 OK 0b
-[22:47:25.567][127.0.0.1:54367] client connect
-[22:47:25.873][127.0.0.1:54367] server connect mahjongsoul.game.yo-star.com:443 (104.18.25.135:443)
-127.0.0.1:54367: GET https://mahjongsoul.game.yo-star.com/v0.11.1.w/en/myres2/loading_3que1/mid_0.png HTTP/2.0
-     << HTTP/2.0 200 OK 38.8k
-127.0.0.1:54367: GET https://mahjongsoul.game.yo-star.com/version.json?randv=1261104627990931 HTTP/2.0
-     << HTTP/2.0 200 OK 69b
-Error in WebSocket connection to push.services.mozilla.com:443: WebSocket Error: ABNORMAL_CLOSURE
-PS C:\Home\Repos\python-projects\majsoul_oculyst> TerminatingError(): "The pipeline has been stopped."
->> TerminatingError(): "The pipeline has been stopped."
+﻿#### 76 ActionDealTile {'tile': '4z', 'left_tile_count': 36, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 77 ActionDiscardTile {'tile': '4z', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 78 ActionDealTile {'seat': 1, 'left_tile_count': 35, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 79 ActionDiscardTile {'seat': 1, 'tile': '1m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 80 ActionHule {'hules': [{'hand': ['1m', '1m', '7p', '8p', '9p', '6s', '6s'], 'ming': ['kezi(3z,3z,3z)', 'minggang(7z,7z,7z,7z)'], 'hu_tile': '1m', 'seat': 3, 'doras': ['5m', '5m', '5p'], 'count': 1, 'fans': [{'val': 1, 'id': 9, 'name': ''}], 'fu': 50, 'point_rong': 1600, 'point_zimo_qin': 800, 'point_zimo_xian': 400, 'point_sum': 1600, 'dadian': 1600, 'zimo': False, 'qinjia': False, 'liqi': False, 'li_doras': [], 'yiman': False, 'title': '', 'title_id': 0, 'baopai': 0, 'baopai_seats': [], 'lines': [], 'tianming_bonus': 0}], 'old_scores': [26300, 25000, 24700, 24000], 'delta_scores': [0, -1600, 0, 1600], 'scores': [26300, 23400, 24700, 25600], 'wait_timeout': 0, 'doras': [], 'baopai': 0}
+[11:59:43.753][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[11:59:43.754][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 0 ActionNewRound {'ju': 3, 'tiles': ['3m', '1m', '8s', '6s', '8s', '3z', '1p', '3s', '5z', '2m', '9p', '9p', '9s'], 'scores': [26300, 23400, 24700, 25600], 'al': True, 'left_tile_count': 69, 'doras': ['8m'], 'opens': [{'seat': 0, 'tiles': [], 'count': []}, {'seat': 1, 'tiles': [], 'count': []}, {'seat': 2, 'tiles': [], 'count': []}, {'seat': 3, 'tiles': [], 'count': []}], 'sha256': '9897164dd4b4f9875d7868ac65d57b701ae6ca8452181b77414ce927c93f80cb', 'saltSha256': '1783566d3d4742c7eab1e528a4f38e37e7b4d9e8cba4d2d891015804e7d2feb3', 'chang': 0, 'ben': 0, 'dora': '', 'liqibang': 0, 'tingpais0': [], 'tingpais1': [], 'md5': '', 'ju_count': 0, 'field_spell': 0}
+[11:59:56.001][127.0.0.1:57859] client connect
+[11:59:56.250][127.0.0.1:57859] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:00:03.758][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:00:03.759][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 1 ActionDiscardTile {'seat': 3, 'tile': '2z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 2 ActionDealTile {'tile': '4s', 'left_tile_count': 68, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}#### 3 ActionDiscardTile {'tile': '3z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 4 ActionDealTile {'seat': 1, 'left_tile_count': 67, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 5 ActionDiscardTile {'seat': 1, 'tile': '4z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 6 ActionDealTile {'seat': 2, 'left_tile_count': 66, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 7 ActionDiscardTile {'seat': 2, 'tile': '2m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 8 ActionDealTile {'seat': 3, 'left_tile_count': 65, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 9 ActionDiscardTile {'seat': 3, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:00:23.762][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:00:23.763][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 10 ActionDealTile {'tile': '6p', 'left_tile_count': 64, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 11 ActionDiscardTile {'tile': '1p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 12 ActionDealTile {'seat': 1, 'left_tile_count': 63, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 13 ActionDiscardTile {'seat': 1, 'tile': '2z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 14 ActionDealTile {'seat': 2, 'left_tile_count': 62, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 15 ActionDiscardTile {'seat': 2, 'tile': '2z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 16 ActionDealTile {'seat': 3, 'left_tile_count': 61, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:00:43.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:00:43.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 17 ActionDiscardTile {'seat': 3, 'tile': '7m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 18 ActionDealTile {'tile': '1m', 'left_tile_count': 60, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 19 ActionDiscardTile {'tile': '5z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 20 ActionDealTile {'seat': 1, 'left_tile_count': 59, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 21 ActionDiscardTile {'seat': 1, 'tile': '1z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 22 ActionDealTile {'seat': 2, 'left_tile_count': 58, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 23 ActionDiscardTile {'seat': 2, 'tile': '1s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 24 ActionDealTile {'seat': 3, 'left_tile_count': 57, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:01:03.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:01:03.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 25 ActionDiscardTile {'seat': 3, 'tile': '1z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 26 ActionDealTile {'tile': '9s', 'left_tile_count': 56, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 27 ActionDiscardTile {'tile': '6s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 28 ActionDealTile {'seat': 1, 'left_tile_count': 55, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:01:08.007][127.0.0.1:57859] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 29 ActionDiscardTile {'seat': 1, 'tile': '4z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 30 ActionDealTile {'seat': 2, 'left_tile_count': 54, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 31 ActionDiscardTile {'seat': 2, 'tile': '7z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 32 ActionDealTile {'seat': 3, 'left_tile_count': 53, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 33 ActionDiscardTile {'seat': 3, 'tile': '2p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 34 ActionDealTile {'tile': '9m', 'left_tile_count': 52, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:01:23.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:01:23.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 35 ActionDiscardTile {'tile': '9m', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 36 ActionDealTile {'seat': 1, 'left_tile_count': 51, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 37 ActionDiscardTile {'seat': 1, 'tile': '1p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 38 ActionDealTile {'seat': 2, 'left_tile_count': 50, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 39 ActionDiscardTile {'seat': 2, 'tile': '5z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 40 ActionDealTile {'seat': 3, 'left_tile_count': 49, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 41 ActionDiscardTile {'seat': 3, 'tile': '5p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 42 ActionDealTile {'tile': '7z', 'left_tile_count': 48, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 43 ActionDiscardTile {'tile': '7z', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 44 ActionDealTile {'seat': 1, 'left_tile_count': 47, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:01:43.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:01:43.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 45 ActionDiscardTile {'seat': 1, 'tile': '7z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 46 ActionDealTile {'seat': 2, 'left_tile_count': 46, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 47 ActionDiscardTile {'seat': 2, 'tile': '8s', 'operation': {'operation_list': [{'type': 3, 'combination': ['8s|8s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:01:52.787][127.0.0.1:57862] client connect
+[12:01:52.819][127.0.0.1:57862] server connect safebrowsing.googleapis.com:443 (142.250.69.74:443)
+[12:01:52.886][127.0.0.1:57862] client disconnect
+[12:01:52.886][127.0.0.1:57862] server disconnect safebrowsing.googleapis.com:443 (142.250.69.74:443)
+#### 48 ActionChiPengGang {'type': 1, 'tiles': ['8s', '8s', '8s'], 'froms': [0, 0, 2], 'operation': {'operation_list': [{'type': 1, 'combination': ['8s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 49 ActionDiscardTile {'tile': '6p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:01:58.444][127.0.0.1:57859] client disconnect
+[12:02:03.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:02:03.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 50 ActionChiPengGang {'seat': 1, 'tiles': ['7p', '8p', '6p'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 51 ActionDiscardTile {'seat': 1, 'tile': '9m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 52 ActionDealTile {'seat': 2, 'left_tile_count': 45, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 53 ActionDiscardTile {'seat': 2, 'tile': '4p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 54 ActionDealTile {'seat': 3, 'left_tile_count': 44, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 55 ActionDiscardTile {'seat': 3, 'tile': '9s', 'operation': {'operation_list': [{'type': 3, 'combination': ['9s|9s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 56 ActionChiPengGang {'type': 1, 'tiles': ['9s', '9s', '9s'], 'froms': [0, 0, 3], 'operation': {'operation_list': [{'type': 1, 'combination': ['9s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '1m', 'infos': [{'tile': '2s', 'fu': 30, 'fu_zimo': 30, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}, {'tile': '5s', 'fu': 30, 'fu_zimo': 30, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}], 'zhenting': False}], 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'scores': [], 'liqibang': 0}
+#### 57 ActionDiscardTile {'tile': '2m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 58 ActionDealTile {'seat': 1, 'left_tile_count': 43, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 59 ActionDiscardTile {'seat': 1, 'tile': '5p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:02:23.754][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:02:23.755][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 60 ActionDealTile {'seat': 2, 'left_tile_count': 42, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 61 ActionDiscardTile {'seat': 2, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 62 ActionDealTile {'seat': 3, 'left_tile_count': 41, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 63 ActionDiscardTile {'seat': 3, 'tile': '4z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 64 ActionDealTile {'tile': '3m', 'left_tile_count': 40, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 65 ActionDiscardTile {'tile': '3s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:02:43.755][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:02:43.756][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 66 ActionDealTile {'seat': 1, 'left_tile_count': 39, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 67 ActionDiscardTile {'seat': 1, 'tile': '7z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 68 ActionDealTile {'seat': 2, 'left_tile_count': 38, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 69 ActionDiscardTile {'seat': 2, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 70 ActionDealTile {'seat': 3, 'left_tile_count': 37, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 71 ActionDiscardTile {'seat': 3, 'tile': '9p', 'operation': {'operation_list': [{'type': 3, 'combination': ['9p|9p'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 72 ActionChiPengGang {'type': 1, 'tiles': ['9p', '9p', '9p'], 'froms': [0, 0, 3], 'operation': {'operation_list': [{'type': 1, 'combination': ['9p'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '4s', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 
+'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'scores': [], 'liqibang': 0}
+#### 73 ActionDiscardTile {'tile': '4s', 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 74 ActionDealTile {'seat': 1, 'left_tile_count': 36, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:03:02.854][127.0.0.1:57865] client connect
+[12:03:03.144][127.0.0.1:57865] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:03:03.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:03:03.753][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 75 ActionDiscardTile {'seat': 1, 'tile': '4p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 76 ActionDealTile {'seat': 2, 'left_tile_count': 35, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 77 ActionDiscardTile {'seat': 2, 'tile': '4z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 78 ActionDealTile {'seat': 3, 'left_tile_count': 34, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 79 ActionDiscardTile {'seat': 3, 'tile': '2s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 80 ActionDealTile {'tile': '8m', 'left_tile_count': 33, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '8m', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 
+'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 81 ActionDiscardTile {'tile': '8m', 'moqie': True, 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 82 ActionChiPengGang {'seat': 1, 'tiles': ['6m', '7m', '8m'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 83 ActionDiscardTile {'seat': 1, 'tile': '1s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 84 ActionDealTile {'seat': 2, 'left_tile_count': 32, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:03:23.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:03:23.753][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 85 ActionDiscardTile {'seat': 2, 'tile': '7m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 86 ActionDealTile {'seat': 3, 'left_tile_count': 31, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 87 ActionDiscardTile {'seat': 3, 'tile': '6s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 88 ActionDealTile {'tile': '4m', 'left_tile_count': 30, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '3m', 'zhenting': True, 'infos': [{'tile': '2m', 'fu': 30, 'fu_zimo': 40, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}, {'tile': '5m', 'fu': 30, 'fu_zimo': 40, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}]}, {'tile': '4m', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 89 ActionDiscardTile {'tile': '4m', 'moqie': True, 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 90 ActionChiPengGang {'seat': 1, 'tiles': ['3m', '5m', '4m'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 91 ActionDiscardTile {'seat': 1, 'tile': '7s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:03:43.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:03:43.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 92 ActionDealTile {'seat': 2, 'left_tile_count': 29, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:03:48.972][127.0.0.1:57869] client connect
+[12:03:48.973][127.0.0.1:57870] client connect
+[12:03:48.988][127.0.0.1:57869] server connect profile.accounts.firefox.com:443 (34.110.207.168:443)
+[12:03:48.989][127.0.0.1:57870] server connect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
+#### 93 ActionDiscardTile {'seat': 2, 'tile': '6p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 94 ActionDealTile {'seat': 3, 'left_tile_count': 28, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 95 ActionDiscardTile {'seat': 3, 'tile': '2m', 'operation': {'operation_list': [{'type': 2, 'combination': ['1m|3m'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 96 ActionDealTile {'tile': '8s', 'left_tile_count': 27, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}, {'type': 6, 'combination': ['8s|8s|8s|8s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '8s', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 97 ActionAnGangAddGang {'type': 2, 'tiles': '8s', 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'doras': [], 'zhenting': False}
+#### 98 ActionDealTile {'tile': '5z', 'left_tile_count': 26, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'doras': ['8m'], 'tingpais': [{'tile': '5z', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 99 ActionDiscardTile {'tile': '5z', 'moqie': True, 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'doras': ['8m', '4s'], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 100 ActionDealTile {'seat': 1, 'left_tile_count': 25, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:04:03.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:04:03.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 101 ActionDiscardTile {'seat': 1, 'tile': '4m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 102 ActionDealTile {'seat': 2, 'left_tile_count': 24, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:04:08.827][127.0.0.1:57865] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 103 ActionDiscardTile {'seat': 2, 'tile': '6z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 104 ActionDealTile {'seat': 3, 'left_tile_count': 23, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 105 ActionDiscardTile {'seat': 3, 'tile': '9p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 106 ActionDealTile {'tile': '4m', 'left_tile_count': 22, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '3m', 'zhenting': True, 'infos': [{'tile': '2m', 'fu': 40, 'fu_zimo': 40, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}, {'tile': '5m', 'fu': 40, 'fu_zimo': 40, 'haveyi': False, 'yiman': False, 'count': 0, 'biao_dora_count': 0, 'yiman_zimo': False, 'count_zimo': 0}]}, {'tile': '4m', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 107 ActionDiscardTile {'tile': '4m', 'moqie': True, 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 108 ActionDealTile {'seat': 1, 'left_tile_count': 21, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 109 ActionDiscardTile {'seat': 1, 'tile': '1p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 110 ActionDealTile {'seat': 2, 'left_tile_count': 20, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:04:23.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:04:23.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 111 ActionDiscardTile {'seat': 2, 'tile': '6z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 112 ActionDealTile {'seat': 3, 'left_tile_count': 19, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 113 ActionDiscardTile {'seat': 3, 'tile': '4m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 114 ActionDealTile {'tile': '6p', 'left_tile_count': 18, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '6p', 'infos': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 115 ActionDiscardTile {'tile': '6p', 'moqie': True, 'tingpais': [{'tile': '3m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '1m', 'haveyi': True, 'count': 2, 'fu': 40, 'count_zimo': 2, 'fu_zimo': 50, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 116 ActionDealTile {'seat': 1, 'left_tile_count': 17, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 117 ActionDiscardTile {'seat': 1, 'tile': '6p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 118 ActionDealTile {'seat': 2, 'left_tile_count': 16, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 119 ActionDiscardTile {'seat': 2, 'tile': '3m', 'operation': {'operation_list': [{'type': 3, 'combination': ['3m|3m'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}, {'type': 9, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'zhenting': True, 'is_liqi': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0} 
+#### 120 ActionHule {'hules': [{'hand': ['1m', '1m', '3m', '3m'], 'ming': ['minggang(8s,8s,8s,8s)', 'kezi(9s,9s,9s)', 'kezi(9p,9p,9p)'], 'hu_tile': '3m', 'doras': ['8m', '4s'], 'count': 2, 'fans': [{'val': 2, 'id': 21, 'name': ''}], 'fu': 40, 'point_rong': 2600, 'point_zimo_qin': 1300, 'point_zimo_xian': 700, 'point_sum': 3900, 
+'dadian': 2600, 'seat': 0, 'zimo': False, 'qinjia': False, 'liqi': False, 'li_doras': [], 'yiman': False, 'title': '', 'title_id': 0, 'baopai': 0, 'baopai_seats': [], 'lines': [], 'tianming_bonus': 0}], 'old_scores': [26300, 23400, 24700, 25600], 'delta_scores': [2600, 0, -2600, 0], 'scores': [28900, 23400, 22100, 25600], 'wait_timeout': 0, 'doras': [], 'baopai': 0}
+[12:04:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:04:43.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 0 ActionNewRound {'chang': 1, 'tiles': ['2z', '8m', '7p', '4p', '6z', '7z', '9p', '8s', '4p', '2z', '9m', '1s', '4z', '2m'], 'scores': [28900, 23400, 22100, 25600], 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 
+8000, 'seat': 0}, 'left_tile_count': 69, 'doras': ['7z'], 'opens': [{'seat': 0, 'tiles': [], 'count': []}, {'seat': 1, 'tiles': [], 'count': []}, {'seat': 2, 'tiles': [], 'count': []}, {'seat': 3, 'tiles': [], 'count': []}], 'sha256': '362818235c598ec376c0fa9cb25fa002b7aecca040f82fd70403a1a3b221c35c', 'saltSha256': 'd1c32bbf9fd2bba4b211ebc2ee0a04cace9820f107486f29b36e1cf8b1f499f1', 'ju': 0, 'ben': 0, 'dora': '', 'liqibang': 0, 'tingpais0': [], 'tingpais1': [], 'al': False, 'md5': '', 'ju_count': 0, 'field_spell': 0}
+[12:04:54.221][127.0.0.1:57865] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 1 ActionDiscardTile {'tile': '4z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 2 ActionDealTile {'seat': 1, 'left_tile_count': 68, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:05:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:05:03.749][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 3 ActionDiscardTile {'seat': 1, 'tile': '7z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 4 ActionDealTile {'seat': 2, 'left_tile_count': 67, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 5 ActionDiscardTile {'seat': 2, 'tile': '9m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 6 ActionDealTile {'seat': 3, 'left_tile_count': 66, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 7 ActionDiscardTile {'seat': 3, 'tile': '9s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 8 ActionDealTile {'tile': '7p', 'left_tile_count': 65, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}#### 9 ActionDiscardTile {'tile': '1s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 10 ActionDealTile {'seat': 1, 'left_tile_count': 64, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 11 ActionDiscardTile {'seat': 1, 'tile': '2z', 'operation': {'operation_list': [{'type': 3, 'combination': ['2z|2z'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:05:23.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:05:23.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 12 ActionDealTile {'seat': 2, 'left_tile_count': 63, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 13 ActionDiscardTile {'seat': 2, 'tile': '2s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 14 ActionDealTile {'seat': 3, 'left_tile_count': 62, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 15 ActionDiscardTile {'seat': 3, 'tile': '6s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 16 ActionDealTile {'tile': '1p', 'left_tile_count': 61, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 17 ActionDiscardTile {'tile': '2m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 18 ActionDealTile {'seat': 1, 'left_tile_count': 60, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:05:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:05:43.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 19 ActionDiscardTile {'seat': 1, 'tile': '8p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 20 ActionDealTile {'seat': 2, 'left_tile_count': 59, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 21 ActionDiscardTile {'seat': 2, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 22 ActionDealTile {'seat': 3, 'left_tile_count': 58, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 23 ActionDiscardTile {'seat': 3, 'tile': '6s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 24 ActionDealTile {'tile': '9m', 'left_tile_count': 57, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 25 ActionDiscardTile {'tile': '6z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:05:59.959][127.0.0.1:57865] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 26 ActionDealTile {'seat': 1, 'left_tile_count': 56, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 27 ActionDiscardTile {'seat': 1, 'tile': '5z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:06:03.141][127.0.0.1:57865] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:06:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:06:03.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 28 ActionChiPengGang {'seat': 2, 'type': 1, 'tiles': ['5z', '5z', '5z'], 'froms': [2, 2, 1], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:06:04.250][[::1]:57882] client connect
+[12:06:04.251][[::1]:57883] client connect
+[12:06:04.291][[::1]:57882] server connect ctldl.windowsupdate.com:80 (217.20.52.101:80)
+[12:06:04.292][[::1]:57883] server connect ctldl.windowsupdate.com:80 (217.20.52.101:80)
+#### 29 ActionDiscardTile {'seat': 2, 'tile': '8s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 30 ActionChiPengGang {'seat': 1, 'type': 1, 'tiles': ['8s', '8s', '8s'], 'froms': [1, 1, 2], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 31 ActionDiscardTile {'seat': 1, 'tile': '3m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 32 ActionDealTile {'seat': 2, 'left_tile_count': 55, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 33 ActionDiscardTile {'seat': 2, 'tile': '9m', 'operation': {'operation_list': [{'type': 3, 'combination': ['9m|9m'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 34 ActionDealTile {'seat': 3, 'left_tile_count': 54, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:06:23.755][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:06:23.756][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 35 ActionDiscardTile {'seat': 3, 'tile': '8m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 36 ActionDealTile {'tile': '7s', 'left_tile_count': 53, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 37 ActionDiscardTile {'tile': '7z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 38 ActionDealTile {'seat': 1, 'left_tile_count': 52, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 39 ActionDiscardTile {'seat': 1, 'tile': '4p', 'operation': {'operation_list': [{'type': 3, 'combination': ['4p|4p'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 40 ActionChiPengGang {'seat': 2, 'tiles': ['5p', '6p', '4p'], 'froms': [2, 2, 1], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:06:39.929][127.0.0.1:57870] client disconnect
+[12:06:39.930][127.0.0.1:57869] client disconnect
+[12:06:39.931][127.0.0.1:57870] server disconnect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
+[12:06:39.931][127.0.0.1:57869] server disconnect profile.accounts.firefox.com:443 (34.110.207.168:443)
+#### 41 ActionDiscardTile {'seat': 2, 'tile': '5p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 42 ActionDealTile {'seat': 3, 'left_tile_count': 51, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:06:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:06:43.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 43 ActionDiscardTile {'seat': 3, 'tile': '1p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 44 ActionDealTile {'tile': '0p', 'left_tile_count': 50, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 45 ActionDiscardTile {'tile': '1p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 46 ActionDealTile {'seat': 1, 'left_tile_count': 49, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 47 ActionDiscardTile {'seat': 1, 'tile': '2p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 48 ActionDealTile {'seat': 2, 'left_tile_count': 48, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 49 ActionDiscardTile {'seat': 2, 'tile': '6p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 50 ActionDealTile {'seat': 3, 'left_tile_count': 47, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:07:03.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:07:03.753][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+[12:07:04.316][[::1]:57883] server disconnect ctldl.windowsupdate.com:80 (217.20.52.101:80)
+[12:07:04.317][[::1]:57882] server disconnect ctldl.windowsupdate.com:80 (217.20.52.101:80)
+[12:07:04.381][[::1]:57887] client connect
+[12:07:04.408][[::1]:57887] server connect ctldl.windowsupdate.com:80 (151.101.138.172:80)
+[12:07:04.466][[::1]:57887] server connect c.pki.goog:80 (142.250.69.99:80)
+[12:07:04.511][[::1]:57887] server connect x1.c.lencr.org:80 (23.223.217.105:80)
+[12:07:04.526][[::1]:57887] server disconnect x1.c.lencr.org:80 (23.223.217.105:80)
+[12:07:04.527][[::1]:57887] client disconnect
+[12:07:04.528][[::1]:57887] server disconnect ctldl.windowsupdate.com:80 (151.101.138.172:80)
+[12:07:04.529][[::1]:57887] server disconnect c.pki.goog:80 (142.250.69.99:80)
+[12:07:04.536][[::1]:57891] client connect
+[12:07:04.551][[::1]:57891] server connect c.pki.goog:80 (142.250.69.99:80)
+[12:07:04.611][[::1]:57891] server connect oneocsp.microsoft.com:80 (204.79.197.203:80)
+[12:07:04.655][[::1]:57891] server connect ctldl.windowsupdate.com:80 (151.101.138.172:80)
+[12:07:09.098][127.0.0.1:57865] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 51 ActionDiscardTile {'seat': 3, 'tile': '2p', 'is_liqi': True, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 52 ActionDealTile {'tile': '8m', 'left_tile_count': 46, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'liqi': {'seat': 3, 'score': 24600, 'liqibang': 1, 'failed': False}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 53 ActionDiscardTile {'tile': '8m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 54 ActionDealTile {'seat': 1, 'left_tile_count': 45, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 55 ActionDiscardTile {'seat': 1, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 56 ActionDealTile {'seat': 2, 'left_tile_count': 44, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:07:23.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:07:23.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 57 ActionDiscardTile {'seat': 2, 'tile': '1z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 58 ActionDealTile {'seat': 3, 'left_tile_count': 43, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 59 ActionDiscardTile {'seat': 3, 'tile': '5m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 60 ActionDealTile {'tile': '1s', 'left_tile_count': 42, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 61 ActionDiscardTile {'tile': '8m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 62 ActionDealTile {'seat': 1, 'left_tile_count': 41, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 63 ActionDiscardTile {'seat': 1, 'tile': '7z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 64 ActionDealTile {'seat': 2, 'left_tile_count': 40, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 65 ActionDiscardTile {'seat': 2, 'tile': '9s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 66 ActionDealTile {'seat': 3, 'left_tile_count': 39, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:07:43.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:07:43.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 67 ActionDiscardTile {'seat': 3, 'tile': '6z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 68 ActionDealTile {'tile': '6s', 'left_tile_count': 38, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 69 ActionDiscardTile {'tile': '2z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 70 ActionDealTile {'seat': 1, 'left_tile_count': 37, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 71 ActionDiscardTile {'seat': 1, 'tile': '3z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 72 ActionDealTile {'seat': 2, 'left_tile_count': 36, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 73 ActionDiscardTile {'seat': 2, 'tile': '9p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 74 ActionDealTile {'seat': 3, 'left_tile_count': 35, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 75 ActionDiscardTile {'seat': 3, 'tile': '7s', 'operation': {'operation_list': [{'type': 2, 'combination': ['6s|8s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:07:55.659][[::1]:57882] client disconnect
+[12:07:55.659][[::1]:57883] client disconnect
+#### 76 ActionDealTile {'tile': '8p', 'left_tile_count': 34, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 77 ActionDiscardTile {'tile': '2z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 78 ActionDealTile {'seat': 1, 'left_tile_count': 33, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:07:59.136][127.0.0.1:57865] client disconnect
+#### 79 ActionDiscardTile {'seat': 1, 'tile': '6m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 80 ActionChiPengGang {'seat': 2, 'type': 1, 'tiles': ['6m', '6m', '6m'], 'froms': [2, 2, 1], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:08:03.748][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:08:03.749][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+[12:08:04.697][[::1]:57891] client disconnect
+[12:08:04.698][[::1]:57891] server disconnect c.pki.goog:80 (142.250.69.99:80)
+[12:08:04.699][[::1]:57891] server disconnect oneocsp.microsoft.com:80 (204.79.197.203:80)
+[12:08:04.699][[::1]:57891] server disconnect ctldl.windowsupdate.com:80 (151.101.138.172:80)
+#### 81 ActionDiscardTile {'seat': 2, 'tile': '0s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 82 ActionDealTile {'seat': 3, 'left_tile_count': 32, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 83 ActionDiscardTile {'seat': 3, 'tile': '9s', 'operation': {'operation_list': [{'type': 2, 'combination': ['7s|8s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 84 ActionDealTile {'tile': '3m', 'left_tile_count': 31, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 85 ActionDiscardTile {'tile': '9p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 86 ActionDealTile {'seat': 1, 'left_tile_count': 30, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 87 ActionDiscardTile {'seat': 1, 'tile': '1m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 88 ActionDealTile {'seat': 2, 'left_tile_count': 29, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 89 ActionDiscardTile {'seat': 2, 'tile': '6z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 90 ActionDealTile {'seat': 3, 'left_tile_count': 28, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 91 ActionDiscardTile {'seat': 3, 'tile': '1p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 92 ActionDealTile {'tile': '1z', 'left_tile_count': 27, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:08:23.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:08:23.752][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 93 ActionDiscardTile {'tile': '1z', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 94 ActionDealTile {'seat': 1, 'left_tile_count': 26, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 95 ActionDiscardTile {'seat': 1, 'tile': '7m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 96 ActionDealTile {'seat': 2, 'left_tile_count': 25, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 97 ActionDiscardTile {'seat': 2, 'tile': '4z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 98 ActionDealTile {'seat': 3, 'left_tile_count': 24, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 99 ActionDiscardTile {'seat': 3, 'tile': '5m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 100 ActionDealTile {'tile': '6p', 'left_tile_count': 23, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 
+0}
+#### 101 ActionDiscardTile {'tile': '9m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:08:43.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:08:43.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 102 ActionDealTile {'seat': 1, 'left_tile_count': 22, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 103 ActionDiscardTile {'seat': 1, 'tile': '7m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 104 ActionDealTile {'seat': 2, 'left_tile_count': 21, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 105 ActionDiscardTile {'seat': 2, 'tile': '5s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 106 ActionDealTile {'seat': 3, 'left_tile_count': 20, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 107 ActionDiscardTile {'seat': 3, 'tile': '1z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 108 ActionDealTile {'tile': '5p', 'left_tile_count': 19, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 
+0}
+#### 109 ActionDiscardTile {'tile': '9m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 110 ActionDealTile {'seat': 1, 'left_tile_count': 18, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 111 ActionDiscardTile {'seat': 1, 'tile': '8m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 112 ActionDealTile {'seat': 2, 'left_tile_count': 17, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 113 ActionDiscardTile {'seat': 2, 'tile': '4z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 114 ActionDealTile {'seat': 3, 'left_tile_count': 16, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 115 ActionDiscardTile {'seat': 3, 'tile': '8p', 'operation': {'operation_list': [{'type': 2, 'combination': ['6p|7p'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 116 ActionDealTile {'tile': '4s', 'left_tile_count': 15, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 
+0}
+#### 117 ActionDiscardTile {'tile': '8p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 118 ActionDealTile {'seat': 1, 'left_tile_count': 14, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:09:02.902][127.0.0.1:57895] client connect
+[12:09:03.210][127.0.0.1:57895] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:09:03.748][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:09:03.749][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 119 ActionDiscardTile {'seat': 1, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 120 ActionDealTile {'seat': 2, 'left_tile_count': 13, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 121 ActionDiscardTile {'seat': 2, 'tile': '5m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 122 ActionDealTile {'seat': 3, 'left_tile_count': 12, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 123 ActionDiscardTile {'seat': 3, 'tile': '3s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 124 ActionDealTile {'tile': '5z', 'left_tile_count': 11, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 
+0}
+#### 125 ActionDiscardTile {'tile': '8s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 126 ActionChiPengGang {'seat': 1, 'tiles': ['6s', '7s', '8s'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 127 ActionDiscardTile {'seat': 1, 'tile': '9s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 128 ActionDealTile {'seat': 2, 'left_tile_count': 10, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 129 ActionDiscardTile {'seat': 2, 'tile': '9p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 130 ActionDealTile {'seat': 3, 'left_tile_count': 9, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 131 ActionDiscardTile {'seat': 3, 'tile': '3s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 132 ActionDealTile {'tile': '4p', 'left_tile_count': 8, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 133 ActionDiscardTile {'tile': '5z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 134 ActionDealTile {'seat': 1, 'left_tile_count': 7, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:09:23.747][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:09:23.748][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 135 ActionDiscardTile {'seat': 1, 'tile': '7s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 136 ActionDealTile {'seat': 2, 'left_tile_count': 6, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 137 ActionDiscardTile {'seat': 2, 'tile': '1z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 138 ActionDealTile {'seat': 3, 'left_tile_count': 5, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 139 ActionDiscardTile {'seat': 3, 'tile': '5s', 'operation': {'operation_list': [{'type': 2, 'combination': ['4s|6s', '6s|7s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 140 ActionDealTile {'tile': '1m', 'left_tile_count': 4, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 141 ActionDiscardTile {'tile': '7s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 142 ActionDealTile {'seat': 1, 'left_tile_count': 3, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 143 ActionDiscardTile {'seat': 1, 'tile': '2z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 144 ActionDealTile {'seat': 2, 'left_tile_count': 2, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 145 ActionDiscardTile {'seat': 2, 'tile': '5s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 146 ActionDealTile {'seat': 3, 'left_tile_count': 1, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 147 ActionDiscardTile {'seat': 3, 'tile': '7m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 148 ActionDealTile {'tile': '4z', 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 17000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'left_tile_count': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 149 ActionDiscardTile {'tile': '6s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 150 ActionNoTile {'players': [{'tingpai': False, 'hand': [], 'tings': [], 'already_hule': False}, {'tingpai': False, 'hand': [], 'tings': [], 'already_hule': False}, {'tingpai': True, 'hand': ['2m', '2m', '3p', '3p'], 'tings': [{'tile': '2m', 'haveyi': True, 'count': 1, 'fu': 30, 'biao_dora_count': 3, 'count_zimo': 1, 'fu_zimo': 40, 'yiman': False, 'yiman_zimo': False}, {'tile': '3p', 'haveyi': True, 'count': 1, 'fu': 30, 'biao_dora_count': 3, 'count_zimo': 1, 'fu_zimo': 40, 'yiman': False, 'yiman_zimo': False}], 'already_hule': False}, {'tingpai': True, 'hand': ['1m', '2m', '4m', '4m', '4m', '4m', '0m', '6m', '6p', '7p', '8p', '3s', '3s'], 'tings': [{'tile': '3m', 'haveyi': True, 'count': 1, 'fu': 40, 'biao_dora_count': 1, 'count_zimo': 2, 'fu_zimo': 30, 'yiman': False, 'yiman_zimo': False}], 'already_hule': False}], 'scores': [{'old_scores': [28900, 23400, 22100, 24600], 'delta_scores': [-1500, -1500, 1500, 1500], 'seat': 0, 'hand': [], 'ming': [], 'doras': [], 'score': 0, 'taxes': [], 'lines': []}], 'liujumanguan': False, 'gameend': False, 'hules_history': []}
+[12:09:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:09:43.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 0 ActionNewRound {'chang': 1, 'ju': 1, 'ben': 1, 'tiles': ['7z', '9s', '1m', '4s', '5p', '3s', '7p', '6m', '7z', '1z', '7p', '6m', '3m'], 'scores': [27400, 21900, 23600, 26100], 'liqibang': 1, 'left_tile_count': 69, 'doras': ['6s'], 'opens': [{'seat': 0, 'tiles': [], 'count': []}, {'seat': 1, 'tiles': [], 'count': []}, {'seat': 2, 'tiles': [], 'count': []}, {'seat': 3, 'tiles': [], 'count': []}], 'sha256': '7c33945a90c3cd8b80b9c00e437a9a3f2aa823560fe7c8a9840aad9b1e2bbf5f', 'saltSha256': 'a724f8409b5584e4352afa47326a546f8eea2ff1da561a64d58080958571ba22', 'dora': '', 'tingpais0': [], 'tingpais1': [], 'al': False, 'md5': '', 'ju_count': 0, 'field_spell': 0}
+#### 1 ActionDiscardTile {'seat': 1, 'tile': '1z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 2 ActionDealTile {'seat': 2, 'left_tile_count': 68, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:10:03.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:10:03.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 3 ActionDiscardTile {'seat': 2, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 4 ActionDealTile {'seat': 3, 'left_tile_count': 67, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 5 ActionDiscardTile {'seat': 3, 'tile': '2z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 6 ActionDealTile {'tile': '2s', 'left_tile_count': 66, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}#### 7 ActionDiscardTile {'tile': '1z', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 8 ActionDealTile {'seat': 1, 'left_tile_count': 65, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 9 ActionDiscardTile {'seat': 1, 'tile': '3z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 10 ActionDealTile {'seat': 2, 'left_tile_count': 64, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 11 ActionDiscardTile {'seat': 2, 'tile': '8p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 12 ActionDealTile {'seat': 3, 'left_tile_count': 63, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:10:23.764][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:10:23.765][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 13 ActionDiscardTile {'seat': 3, 'tile': '1z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 14 ActionDealTile {'tile': '2s', 'left_tile_count': 62, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 15 ActionDiscardTile {'tile': '9s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 16 ActionDealTile {'seat': 1, 'left_tile_count': 61, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 17 ActionDiscardTile {'seat': 1, 'tile': '3z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 18 ActionDealTile {'seat': 2, 'left_tile_count': 60, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 19 ActionDiscardTile {'seat': 2, 'tile': '8s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 20 ActionDealTile {'seat': 3, 'left_tile_count': 59, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 21 ActionDiscardTile {'seat': 3, 'tile': '7z', 'operation': {'operation_list': [{'type': 3, 'combination': ['7z|7z'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 22 ActionChiPengGang {'type': 1, 'tiles': ['7z', '7z', '7z'], 'froms': [0, 0, 3], 'operation': {'operation_list': [{'type': 1, 'combination': ['7z'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 23 ActionDiscardTile {'tile': '1m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 24 ActionDealTile {'seat': 1, 'left_tile_count': 58, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:10:43.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:10:43.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 25 ActionDiscardTile {'seat': 1, 'tile': '9s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 26 ActionDealTile {'seat': 2, 'left_tile_count': 57, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 27 ActionDiscardTile {'seat': 2, 'tile': '8m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 28 ActionChiPengGang {'seat': 3, 'type': 1, 'tiles': ['8m', '8m', '8m'], 'froms': [3, 3, 2], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:10:59.627][127.0.0.1:57895] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 29 ActionDiscardTile {'seat': 3, 'tile': '8s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 30 ActionDealTile {'tile': '5z', 'left_tile_count': 56, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 31 ActionDiscardTile {'tile': '5z', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:11:03.751][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:11:03.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 32 ActionDealTile {'seat': 1, 'left_tile_count': 55, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 33 ActionDiscardTile {'seat': 1, 'tile': '7m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 34 ActionDealTile {'seat': 2, 'left_tile_count': 54, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 35 ActionDiscardTile {'seat': 2, 'tile': '6s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 36 ActionDealTile {'seat': 3, 'left_tile_count': 53, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 37 ActionDiscardTile {'seat': 3, 'tile': '2m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 38 ActionDealTile {'tile': '1p', 'left_tile_count': 52, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 39 ActionDiscardTile {'tile': '1p', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 40 ActionDealTile {'seat': 1, 'left_tile_count': 51, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:11:23.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:11:23.753][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 41 ActionDiscardTile {'seat': 1, 'tile': '8s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 42 ActionDealTile {'seat': 2, 'left_tile_count': 50, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 43 ActionDiscardTile {'seat': 2, 'tile': '6p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 44 ActionDealTile {'seat': 3, 'left_tile_count': 49, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 45 ActionDiscardTile {'seat': 3, 'tile': '4s', 'operation': {'operation_list': [{'type': 2, 'combination': ['2s|3s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 46 ActionDealTile {'tile': '7m', 'left_tile_count': 48, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 47 ActionDiscardTile {'tile': '3m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:11:43.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:11:43.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 48 ActionDealTile {'seat': 1, 'left_tile_count': 47, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 49 ActionDiscardTile {'seat': 1, 'tile': '7s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:11:49.631][127.0.0.1:57895] client disconnect
+#### 50 ActionDealTile {'seat': 2, 'left_tile_count': 46, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 51 ActionDiscardTile {'seat': 2, 'tile': '2s', 'operation': {'operation_list': [{'type': 3, 'combination': ['2s|2s'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': 
+False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 52 ActionChiPengGang {'type': 1, 'tiles': ['2s', '2s', '2s'], 'froms': [0, 0, 2], 'operation': {'operation_list': [{'type': 1, 'combination': ['2s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 53 ActionDiscardTile {'tile': '5p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 54 ActionDealTile {'seat': 1, 'left_tile_count': 45, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:12:02.942][127.0.0.1:57898] client connect
+[12:12:03.183][127.0.0.1:57898] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:12:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:12:03.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 55 ActionDiscardTile {'seat': 1, 'tile': '2z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 56 ActionDealTile {'seat': 2, 'left_tile_count': 44, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 57 ActionDiscardTile {'seat': 2, 'tile': '5m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 58 ActionDealTile {'seat': 3, 'left_tile_count': 43, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 59 ActionDiscardTile {'seat': 3, 'tile': '2m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 60 ActionDealTile {'tile': '3s', 'left_tile_count': 42, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 61 ActionDiscardTile {'tile': '7m', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 62 ActionDealTile {'seat': 1, 'left_tile_count': 41, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 63 ActionDiscardTile {'seat': 1, 'tile': '5z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 64 ActionDealTile {'seat': 2, 'left_tile_count': 40, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 65 ActionDiscardTile {'seat': 2, 'tile': '5s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 66 ActionDealTile {'seat': 3, 'left_tile_count': 39, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:12:23.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:12:23.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 67 ActionDiscardTile {'seat': 3, 'tile': '2z', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 68 ActionDealTile {'tile': '1p', 'left_tile_count': 38, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 69 ActionDiscardTile {'tile': '1p', 'moqie': True, 'seat': 0, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 70 ActionDealTile {'seat': 1, 'left_tile_count': 37, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 71 ActionDiscardTile {'seat': 1, 'tile': '6p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 72 ActionDealTile {'seat': 2, 'left_tile_count': 36, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 73 ActionDiscardTile {'seat': 2, 'tile': '1s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 74 ActionChiPengGang {'seat': 3, 'type': 1, 'tiles': ['1s', '1s', '1s'], 'froms': [3, 3, 2], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:12:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:12:43.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 75 ActionDiscardTile {'seat': 3, 'tile': '8s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 76 ActionDealTile {'tile': '2p', 'left_tile_count': 35, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 77 ActionDiscardTile {'tile': '4s', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 78 ActionDealTile {'seat': 1, 'left_tile_count': 34, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 79 ActionDiscardTile {'seat': 1, 'tile': '9m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 80 ActionDealTile {'seat': 2, 'left_tile_count': 33, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 81 ActionDiscardTile {'seat': 2, 'tile': '9p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 82 ActionDealTile {'seat': 3, 'left_tile_count': 32, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 83 ActionDiscardTile {'seat': 3, 'tile': '1m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 84 ActionDealTile {'tile': '4p', 'left_tile_count': 31, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'seat': 0, 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 85 ActionDiscardTile {'tile': '2p', 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 86 ActionDealTile {'seat': 1, 'left_tile_count': 30, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:13:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:13:03.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 87 ActionDiscardTile {'seat': 1, 'tile': '9s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 88 ActionDealTile {'seat': 2, 'left_tile_count': 29, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 89 ActionDiscardTile {'seat': 2, 'tile': '9p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 90 ActionDealTile {'seat': 3, 'left_tile_count': 28, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:13:08.888][127.0.0.1:57898] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+#### 91 ActionDiscardTile {'seat': 3, 'tile': '6m', 'operation': {'operation_list': [{'type': 3, 'combination': ['6m|6m'], 'change_tiles': [], 'change_tile_states': 
+[], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 92 ActionChiPengGang {'type': 1, 'tiles': ['6m', '6m', '6m'], 'froms': [0, 0, 3], 'operation': {'operation_list': [{'type': 1, 'combination': ['6m'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '4p', 'infos': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 
+'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'tile_states': [0, 0], 'seat': 0, 'zhenting': False, 'scores': [], 'liqibang': 0}
+#### 93 ActionDiscardTile {'tile': '4p', 'tingpais': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'moqie': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 94 ActionChiPengGang {'seat': 1, 'tiles': ['2p', '3p', '4p'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:13:23.752][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:13:23.753][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 95 ActionDiscardTile {'seat': 1, 'tile': '6s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 96 ActionDealTile {'seat': 2, 'left_tile_count': 27, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 97 ActionDiscardTile {'seat': 2, 'tile': '2s', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 98 ActionDealTile {'seat': 3, 'left_tile_count': 26, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 99 ActionDiscardTile {'seat': 3, 'tile': '3m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 100 ActionDealTile {'tile': '4s', 'left_tile_count': 25, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '3s', 'infos': [{'tile': '2s', 'haveyi': True, 'count': 1, 'fu': 30, 'count_zimo': 1, 'fu_zimo': 30, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '5s', 'haveyi': True, 'count': 1, 'fu': 30, 'count_zimo': 1, 'fu_zimo': 30, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}, {'tile': '4s', 'infos': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 101 ActionDiscardTile {'tile': '4s', 'moqie': True, 'tingpais': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 102 ActionDealTile {'seat': 1, 'left_tile_count': 24, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 103 ActionDiscardTile {'seat': 1, 'tile': '1p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:13:43.750][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:13:43.751][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 104 ActionDealTile {'seat': 2, 'left_tile_count': 23, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 105 ActionDiscardTile {'seat': 2, 'tile': '8p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:13:50.395][127.0.0.1:57900] client connect
+[12:13:50.395][127.0.0.1:57901] client connect
+[12:13:50.404][127.0.0.1:57901] server connect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
+[12:13:50.405][127.0.0.1:57900] server connect profile.accounts.firefox.com:443 (34.110.207.168:443)
+#### 106 ActionChiPengGang {'seat': 3, 'tiles': ['6p', '7p', '8p'], 'froms': [3, 3, 2], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+[12:14:00.209][127.0.0.1:57898] client disconnect
+[12:14:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:14:03.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 107 ActionDiscardTile {'seat': 3, 'tile': '2p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 108 ActionDealTile {'tile': '2m', 'left_tile_count': 22, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '2m', 'infos': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 109 ActionDiscardTile {'tile': '2m', 'moqie': True, 'tingpais': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 110 ActionChiPengGang {'seat': 1, 'tiles': ['3m', '4m', '2m'], 'froms': [1, 1, 0], 'tile_states': [0, 0], 'type': 0, 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 111 ActionDiscardTile {'seat': 1, 'tile': '1m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 112 ActionDealTile {'seat': 2, 'left_tile_count': 21, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 113 ActionDiscardTile {'seat': 2, 'tile': '2z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 114 ActionDealTile {'seat': 3, 'left_tile_count': 20, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+[12:14:23.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:14:23.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 115 ActionDiscardTile {'seat': 3, 'tile': '1z', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 116 ActionDealTile {'tile': '8p', 'left_tile_count': 19, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '7p', 'infos': [{'tile': '6p', 'haveyi': True, 'count': 1, 'fu': 30, 'count_zimo': 1, 'fu_zimo': 30, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '9p', 'haveyi': True, 'count': 1, 'fu': 30, 'count_zimo': 1, 'fu_zimo': 30, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}, {'tile': '8p', 'infos': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+#### 117 ActionDiscardTile {'tile': '8p', 'moqie': True, 'tingpais': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 118 ActionDealTile {'seat': 1, 'left_tile_count': 18, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 119 ActionDiscardTile {'seat': 1, 'tile': '1s', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 120 ActionDealTile {'seat': 2, 'left_tile_count': 17, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 121 ActionDiscardTile {'seat': 2, 'tile': '4m', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:14:43.755][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:14:43.757][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 122 ActionChiPengGang {'seat': 1, 'type': 1, 'tiles': ['4m', '4m', '4m'], 'froms': [1, 1, 2], 'tile_states': [0, 0], 'zhenting': False, 'tingpais': [], 'scores': [], 'liqibang': 0}
+#### 123 ActionDiscardTile {'seat': 1, 'tile': '5m', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 124 ActionDealTile {'seat': 2, 'left_tile_count': 16, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 125 ActionDiscardTile {'seat': 2, 'tile': '9p', 'moqie': True, 'is_liqi': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 127 ActionDiscardTile {'seat': 3, 'tile': '3p', 'is_liqi': False, 'moqie': False, 'zhenting': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+[12:15:02.974][127.0.0.1:57905] client connect
+#### 128 ActionDealTile {'tile': '9p', 'left_tile_count': 14, 'operation': {'operation_list': [{'type': 1, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'tingpais': [{'tile': '7p', 'zhenting': True, 'infos': [{'tile': '8p', 'haveyi': True, 'count': 1, 'fu': 30, 'count_zimo': 1, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}]}, {'tile': '9p', 'infos': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'zhenting': False}], 'seat': 0, 'doras': [], 'zhenting': False, 'tile_state': 0, 'tile_index': 0}
+[12:15:03.290][127.0.0.1:57905] server connect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:15:03.749][127.0.0.1:57848] Received WebSocket ping from server (payload: b'')
+[12:15:03.750][127.0.0.1:57848] Received WebSocket pong from client (payload: b'')
+#### 129 ActionDiscardTile {'tile': '9p', 'moqie': True, 'tingpais': [{'tile': '3s', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}, {'tile': '7p', 'haveyi': True, 'count': 3, 'fu': 30, 'count_zimo': 3, 'fu_zimo': 40, 'yiman': False, 'biao_dora_count': 0, 'yiman_zimo': False}], 'seat': 0, 'is_liqi': False, 'zhenting': False, 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}
+#### 130 ActionDealTile {'seat': 1, 'left_tile_count': 13, 'tile': '', 'doras': [], 'zhenting': False, 'tingpais': [], 'tile_state': 0, 'tile_index': 0}
+#### 131 ActionDiscardTile {'seat': 1, 'tile': '3s', 'operation': {'operation_list': [{'type': 3, 'combination': ['3s|3s'], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}, {'type': 9, 'combination': [], 'change_tiles': [], 'change_tile_states': [], 'gap_type': 0}], 'time_add': 20000, 'time_fixed': 5000, 'seat': 0}, 'zhenting': True, 'is_liqi': False, 'moqie': False, 'tingpais': [], 'doras': [], 'is_wliqi': False, 'tile_state': 0, 'revealed': False, 'scores': [], 'liqibang': 0}#### 132 ActionHule {'hules': [{'hand': ['7p', '7p', '3s', '3s'], 'ming': ['kezi(7z,7z,7z)', 'kezi(2s,2s,2s)', 'kezi(6m,6m,6m)'], 'hu_tile': '3s', 'doras': ['6s'], 'count': 3, 'fans': [{'val': 2, 'id': 21, 'name': ''}, {'val': 1, 'id': 9, 'name': ''}], 'fu': 30, 'point_rong': 3900, 'point_zimo_qin': 2000, 'point_zimo_xian': 1000, 'point_sum': 7800, 'dadian': 3900, 'seat': 0, 'zimo': False, 'qinjia': False, 'liqi': False, 'li_doras': [], 'yiman': False, 'title': '', 'title_id': 0, 'baopai': 
+0, 'baopai_seats': [], 'lines': [], 'tianming_bonus': 0}], 'old_scores': [27400, 21900, 23600, 26100], 'delta_scores': [5200, -4200, 0, 0], 'scores': [32600, 17700, 
+23600, 26100], 'wait_timeout': 0, 'doras': [], 'baopai': 0}
+[12:15:22.731][127.0.0.1:57848] server disconnect engame.mahjongsoul.com:443 (104.18.28.151:443)
+[12:15:22.732][127.0.0.1:57848] client disconnect
+[12:15:35.767][127.0.0.1:57907] client connect
+[12:15:35.896][127.0.0.1:57907] server connect mahjongsoul.game.yo-star.com:443 (104.18.25.135:443)
+[12:16:30.595][127.0.0.1:57905] server disconnect majsoul-hk-client.cn-hongkong.log.aliyuncs.com:443 (47.244.67.197:443)
+[12:16:41.876][127.0.0.1:57901] client disconnect
+[12:16:41.877][127.0.0.1:57900] client disconnect—
+[12:16:41.877][127.0.0.1:57901] server disconnect sync-1-us-west1-g.sync.services.mozilla.com:443 (35.186.227.140:443)
+[12:16:41.878][127.0.0.1:57900] server disconnect profile.accounts.firefox.com:443 (34.110.207.168:443)
+[12:17:20.896][127.0.0.1:57905] client disconnect
+[12:18:29.867][127.0.0.1:57907] client disconnect
+[12:18:29.868][127.0.0.1:57907] server disconnect mahjongsoul.game.yo-star.com:443 (104.18.25.135:443)
 PS C:\Home\Repos\python-projects\majsoul_oculyst> Stop-Transcript
-**********************
-Windows PowerShell transcript end
-End time: 20241226224757
-**********************
+Transcript stopped, output file is C:\Home\Repos\python-projects\majsoul_oculyst\log.txt
