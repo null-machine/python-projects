@@ -51,27 +51,11 @@ class State:
 		self.field[index_a] = self.field[index_b]
 		self.field[index_b] = buffer
 	
-	# def __eq__(self, other):
-	# 	return (self.field == state.field
-	# 		and self.hand == state.hand 
-	# 		and self.grave_extra == state.grave_extra
-	# 		and self.dead_groups == state.dead_groups
-	# 		and self.vaylantz_lock == state.vaylantz_lock
-	# 		and self.effect_lock == state.effect_lock)
-	
-	# def __ne__(self, other):
-	# 	return not self.__eq__(other)
-	
-	# def __hash__(self):
-	# 	return hash((self.field,
-	# 	self.hand,
-	# 	self.grave_extra,
-	# 	self.dead_groups,
-	# 	self.vaylantz_lock,
-	# 	self.effect_lock))
+	# def check_isomer(self, state: State):
+	# 	pass
 	
 	def to_string(self):
-		return f'Field: {self.field} | Hand: {self.hand} | Dead Groups: {self.dead_groups}@{self.grave_extra}{self.vaylantz_lock}{self.effect_lock}'
+		return f'Field: {self.field} | Hand: {self.hand} | Dead Groups: {self.dead_groups}'
 
 class Step:
 	
@@ -102,8 +86,7 @@ class Engine:
 		
 		# self.explored_states = 
 		self.state_queue: deque[State] = deque([state])
-		# self.combos: dict[State, list[list[str]]] = {state: [[]]}
-		self.combos: dict[str, list[list[str]]] = {state.to_string(): [[]]}
+		self.combos: dict[State, list[list[str]]] = {state: [[]]}
 	
 	def compute_combos(self):
 		print('[I] Computing combos...')
@@ -116,23 +99,23 @@ class Engine:
 					if step.group is not None:
 						next_state.dead_groups.add(step.group)
 					step.delta(next_state)
-					paths: list[list[str]] = copy.deepcopy(self.combos[state.to_string()])
+					paths: list[list[str]] = copy.deepcopy(self.combos[state])
 					for path in paths:
 						path.append(step.name)
-					if next_state.to_string() in self.combos:
+					if next_state in self.combos:
 						for path in paths:
-							self.combos[next_state.to_string()].append(path)
+							self.combos[next_state].append(path)
 					else:
-						self.combos[next_state.to_string()] = paths
-						self.state_queue.append(next_state)
+						self.combos[next_state] = paths
+					self.state_queue.append(next_state)
 					# print(f'completed {step.name}')
 	
 	def write_combos(self, filename='lines.txt'):
 		print('[I] Writing combos...')
 		with open(f'lines.txt', 'w') as file:
-			for key in self.combos:
-				file.write(f'{key.split('@')[0]}\n')
-				for line in self.combos[key]:
+			for state in self.combos:
+				file.write(f'{state.to_string()}\n')
+				for line in self.combos[state]:
 					file.write(f'\t{line}\n')
 				file.write(f'\n')
 			
