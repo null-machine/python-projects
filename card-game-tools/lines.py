@@ -5,7 +5,8 @@ import copy
 
 class Data:
 	
-	monster_zones: set[int] = [0, 1, 2, 3, 4, 10, 11]
+	monster_zones: set[int] = [5, 6, 7, 8, 9, 10, 11]
+	main_monster_zones: set[int] = [5, 6, 7, 8, 9]
 	
 	all_vaylantz: set[str] = {'priestess', 'baron', 'viscount', 'archer', 'ninja', 'marquis', 'duke', 'warrior'}
 	low_vaylantz: set[str] = {'priestess', 'baron', 'viscount', 'archer'}
@@ -51,27 +52,12 @@ class State:
 		self.field[index_a] = self.field[index_b]
 		self.field[index_b] = buffer
 	
-	# def __eq__(self, other):
-	# 	return (self.field == state.field
-	# 		and self.hand == state.hand 
-	# 		and self.grave_extra == state.grave_extra
-	# 		and self.dead_groups == state.dead_groups
-	# 		and self.vaylantz_lock == state.vaylantz_lock
-	# 		and self.effect_lock == state.effect_lock)
-	
-	# def __ne__(self, other):
-	# 	return not self.__eq__(other)
-	
-	# def __hash__(self):
-	# 	return hash((self.field,
-	# 	self.hand,
-	# 	self.grave_extra,
-	# 	self.dead_groups,
-	# 	self.vaylantz_lock,
-	# 	self.effect_lock))
+	# def check_isomer(self, state: State):
+	# 	pass
 	
 	def to_string(self):
 		return f'Field: {self.field} | Hand: {self.hand} | Dead Groups: {self.dead_groups}@{self.grave_extra}{self.vaylantz_lock}{self.effect_lock}'
+
 
 class Step:
 	
@@ -79,13 +65,13 @@ class Step:
 		self,
 		*,
 		name: str,
-		group: str | None = None,
+		groups: str | None = None,
 		check: Callable[[State], bool],
 		# delta: list[Callable[[State], None]],
 		delta: Callable[[State], None],
 	):
 		self.name = name
-		self.group = group
+		self.groups = groups
 		self.check = check
 		self.delta = delta
 
@@ -95,14 +81,7 @@ class Engine:
 		self.state = state
 		self.playbook = playbook
 		
-		# self.state_stack: list[State] = []
-		# self.step_stack: list[Step] = []
-		# self.state_links: dict[State, set[State]] = {}
-		# self.step_log: dict[tuple[State, State], Step] = {}
-		
-		# self.explored_states = 
 		self.state_queue: deque[State] = deque([state])
-		# self.combos: dict[State, list[list[str]]] = {state: [[]]}
 		self.combos: dict[str, list[list[str]]] = {state.to_string(): [[]]}
 	
 	def compute_combos(self):
@@ -110,11 +89,18 @@ class Engine:
 		while self.state_queue:
 			state = self.state_queue.popleft()
 			for step in self.playbook:
-				if step.group not in state.dead_groups and step.check(state):
+				groups_valid = True
+				if step.groups:
+					for group in step.groups:
+						if group in state.dead_groups:
+							groups_valid = False
+							break
+				if groups_valid and step.check(state):
 					# print(f'starting {step.name}')
 					next_state = copy.deepcopy(state)
-					if step.group is not None:
-						next_state.dead_groups.add(step.group)
+					if step.groups is not None:
+						for group in step.groups:
+							next_state.dead_groups.add(group)
 					step.delta(next_state)
 					paths: list[list[str]] = copy.deepcopy(self.combos[state.to_string()])
 					for path in paths:
@@ -125,7 +111,6 @@ class Engine:
 					else:
 						self.combos[next_state.to_string()] = paths
 						self.state_queue.append(next_state)
-					# print(f'completed {step.name}')
 	
 	def write_combos(self, filename='lines.txt'):
 		print('[I] Writing combos...')
@@ -147,6 +132,26 @@ playbook: list[Step] = []
 
 # weird code ahead to bypass late binding
 for card in Data.all_vaylantz:
+	
+	# if card not 'priestess':
+	# 	def check(card: str):
+	# 		def check(state: State):
+	# 			for i in Data.main_monster_zones:
+	# 				if state[i] == 'priestess':
+	# 					return True
+	# 			return False
+	# 		return check
+	# 	def delta(card: str):
+	# 		def delta(state: State):
+	# 			state.hand.append(card)
+	# 		return delta
+	# 	playbook.append(Step(
+	# 		name = f'priestess_search_{card}',
+	# 		groups = [f'{card}_deck', 'priestess_shift']
+	# 		check = check(card),
+	# 		delta = delta(card),
+	# 	))
+	
 	for i in [0, 4]:
 		
 		def check(i: int, card: str):
@@ -160,13 +165,9 @@ for card in Data.all_vaylantz:
 			return delta
 		playbook.append(Step(
 			name = f'{card}_scale_{i}',
-			group = None,
+			groups = None,
 			check = check(i, card),
 			delta = delta(i, card),
-			# check = lambda state, _card=card: _card in state.hand and state.field[i] == None,
-			# delta = [
-			# 	lambda state, _card=card: state.place_card_from_hand(_card, i),
-			# ]
 		))
 		
 		if card in Data.low_vaylantz:
@@ -181,16 +182,33 @@ for card in Data.all_vaylantz:
 				return delta
 			playbook.append(Step(
 				name = f'{card}_self_summon_{i + 5}',
-				group = f'{card}_self_summon',
+				groups = [f'{card}_self_summon'],
 				check = check(i, card),
 				delta = delta(i, card),
 			))
 		# elif card in Data.high_vaylantz:
-			
-		# priestess_search_ninja
+
+# 	def check(card: str):
+	# 		def check(state: State):
+	# 			for i in Data.main_monster_zones:
+	# 				if state[i] == 'priestess':
+	# 					return True
+	# 			return False
+	# 		return check
+	# 	def delta(card: str):
+	# 		def delta(state: State):
+	# 			state.hand.append(card)
+	# 		return delta
+	# 	playbook.append(Step(
+	# 		name = f'{card}_scale_{i}',
+	# 		groups = [f'{card}_deck', 'priestess_shift']
+	# 		check = check(card),
+	# 		delta = delta(card),
+	# 	))
 
 state: State = State()
 state.hand = ['priestess', 'baron', 'archer', 'viscount', 'marquis']
+# state.hand = ['priestess']
 
 engine: Engine = Engine(state, playbook)
 engine.compute_combos()
