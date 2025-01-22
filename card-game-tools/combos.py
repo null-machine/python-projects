@@ -1,19 +1,17 @@
 
+# the loop
+# start from a board state
+# generate possible moves
+# for each move, generate another board state
+# 
 
 
 class Data:
 	
 	def __init__(self):
 		
-		# occupancy, true when occupied
-		self.extra_monster_zones = [ False, False ]
-		self.monster_zones = [ False, False, False, False, False ]
-		self.backrow_zones = [ False, False, False, False, False ]
-		self.field_zones = [ False, False ]
-		
 		# spells
-		self.shinra = [ False, False ] # present, used
-		self.konig = False # present
+		self.shinra = False
 		self.solo = [ False, False ] # present
 		
 		# vaylantz, sss regular hshift
