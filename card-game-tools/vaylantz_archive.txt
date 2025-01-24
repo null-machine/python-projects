@@ -1,3 +1,99 @@
+priestess | free deploy | search spell | search monster
+archer | free deploy | rng effect null or halve attack | rng pop or bounce
+ninja | water deploy | hshift | vshift
+
+baron | free deploy | hshift | pendulum to spell
+viscount | free deploy | extra to spell | extra to pendulum
+marquess | fire deploy | rng excavate | rng vshift
+dominator | fire deploy | seal set | control opposing
+
+genesis
+	hshift or sss
+	L5+ non-fusion vaylantz in zones 2 or 4
+	on summon, bounce bshift in opposing spell zone for attack gain and direct damage
+
+arktos
+	hshift or sss
+	2x L5+ vaylantz
+	quick effect swap 2 others in monster zones, once per turn untargeted pop when anything shifts horizontally
+
+generics
+
+electrumite
+	2x pendulum monsters
+	on summon, search pendulum to extra deck
+	once per turn destroys face-up to move pendulum from extra to hand
+	once per turn draws card when card in pendulum leaves field
+
+beyond the pendulum
+	1x pendulum, 1x effect
+	on summon, pay 1200, search pendulum to hand, effect null until pendulum summon
+	if pendulum summons under arrows are of different levels, pop 2
+
+konig wissen
+	enables fire deploy
+	bshift monster in controlled lane
+
+shinra bansho
+	enables water deploy
+	vshift
+
+---
+
+derived rules
+
+beyond and electrumite
+	after electrumite, viscount should be in hand and at least one unit should be on field
+	during beyond, viscount should be in a pendulum zone and the summoned units can be whatever
+	after beyond, viscount should vshift and place a high unit in slots 2 or 4
+
+unit acquisition priority
+	priestess
+	ninja (if no solo)
+	viscount
+	marquess (if solo)
+
+vshift priority
+	shinra before konig destruction
+	ninja before late extra summons
+	genesis and arktos
+	marquess
+
+hshift priority
+	baron before early extra summons
+	ninja before late extra summons
+	arktos if something still needs to be shifted by then
+	genesis or arktos in pendulum if vshift surplus
+	solo due to genericness
+
+viscount strings
+	pace genesis and arktos with viscount
+	viscount genesis for pendulum summoning generally leads to good boards and recovery
+	genesis or arktos can be used as link material and returned with viscount and self summon
+
+placements
+	keep sidelanes clear in general
+	deploying L5+ from spell zones 2 or 4 with viscount and vshift leads to genesis
+	keep zones 1 3 5 clean for beyond
+	position electrumite and beyond for vshift
+	deprioritize threats in opposing monster zones 3 and 5
+	during beyond the pendulum, position viscount in 1 or 5 to set up viscount hshift genesis free deploy
+
+monster zone requirements
+
+1				5	vaylantz deployment
+	2		4		vaylantz hshift
+1		3		5	beyond the pendulum
+	2		4		genesis vshift
+
+
+---
+
+combo notes
+	remember xenophobia only affects hand when psummoning
+	if no priestess, electrumite into monkeyboard
+	use fields to block imperm and lstorm
+	never summon exceed if scales are missing
 
 ---
 
@@ -341,3 +437,31 @@ bad hands = hands failing condition A + hands failing condition B - hands failin
 
 e.g. hand needs small world (3/40) + bridger (12/40) + shifter (6/40)
 
+
+	no normal summon, solo
+		priestess fields viscount (bshift)
+		priestess → artemis
+		viscount shinra summon priestess
+		priestess artemis → beyond search monkeyboard
+		scale monkeyboard duelist psummon priestess
+			monsters: beyond priestess viscount
+			scale: monkeyboard duelist
+		priestess viscount → electrumite monkeyboard → search ninja (draw)
+			monsters: beyond electrumite
+			scale: ninja duelist
+		ninja beyond → exceed summon ninja → genesis
+		
+	
+	// stupid power null
+	no normal summon, solo (otk, beyond, fields, marquess, draw)
+		priestess fields viscount (bshift)
+		priestess viscount → beyond search monkeyboard
+		scale monkeyboard duelist psummon viscount priestess → artemis
+		viscount shinra summon priestess
+						bey
+					vis	pri	art
+			mon				due
+		priestess beyond → exceed summon priestess
+		artemis exceed → accesscode
+		priestess viscount → electrumite monkeyboard → search marquess (draw, excavate)
+		5300 + 1700 + 1800

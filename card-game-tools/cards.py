@@ -4,38 +4,41 @@ import itertools
 hand_size = 6
 
 input_deck = [
-	['small world', 3],
+	['veiler', 1],
+	['maxx', 3],
+	['ash', 3],
+	['fossil', 1],
+	['golem', 3],
+	['nibiru', 1],
 	['priestess', 3],
-	['archer', 1],
-	['ninja', 1],
 	['baron', 1],
-	['viscount', 1],
-	['marquess', 1],
-	['field', 4],
-	['solo', 3],
-	['monkeyboard', 1],
+	['eccentrick', 1],
 	['skullcrobat', 1],
 	['duelist', 1],
-	['pegasus', 1],
-	['village', 1],
-	['golem', 3],
-	['jizukiru', 1],
-	['maxx', 3],
-	['ash', 2],
-	['fossil', 1],
+	['archer', 1],
+	['viscount', 1],
+	['monkeyboard', 1],
+	['ninja', 1],
+	['marquess', 1],
+	['duster', 1],
+	['tactics', 1],
+	['small world', 3],
+	['solo', 3],
+	['field', 4],
 	['called', 2],
-	['storm', 1],
-	['imperm', 1],
-	['veiler', 1],
-	['belle', 1],
 	['crossout', 1],
+	['imperm', 1],
+	# ['pegasus', 1],
+	# ['village', 1],
+	# ['jizukiru', 1],
+	# ['belle', 1],
 ]
 # if a hand meets any rule, it is treated as valid
 
 any_vaylantz = ['priestess', 'baron', 'viscount', 'archer', 'ninja', 'marquess', 'dominator']
 high_vaylantz = ['ninja', 'marquess', 'dominator']
 low_vaylantz = ['baron', 'viscount', 'archer']
-small_world_priestess = ['ash', 'archer', 'fossil', 'skullcrobat', 'veiler', 'viscount', 'maxx', 'golem', 'jizukiru', 'belle']
+small_world_priestess = ['ash', 'archer', 'fossil', 'eccentrick', 'nibiru', 'ninja', 'skullcrobat', 'veiler', 'viscount', 'maxx', 'golem', 'jizukiru', 'belle']
 
 # basic rules are in the form of product of sums
 # duplicates not supported, don't put the same cards in multiple groups
@@ -63,19 +66,6 @@ def adversarial(hand):
 		fieldable_count -= high_count
 	
 	return count >= 3 and fieldable_count >= 2
-	# buffer = set(hand)
-	# overlap = len(buffer & set(low_vaylantz))
-	# if overlap >= 2:
-	# for unit in low_vaylantz:
-	# 	if hand.count(unit) >= 3:
-	# 		return True
-	# 	if hand.count(unit) >= 2:
-	# 		if 'field' in hand or 'wars' in hand:
-	# 			return True
-	# 		for high in high_vaylantz:
-	# 			if high in hand:
-	# 				return True
-
 
 advanced_rules = [
 	# lambda hand: 'marquess' in hand and 'dominator' in hand,

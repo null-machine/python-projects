@@ -38,10 +38,6 @@ class State:
 		self.vaylantz_lock = False
 		self.effect_lock = False
 	
-	def update_field(self, index: int, card: str):
-		# bypass issue related to subscript assignment
-		self.field[index] = card
-	
 	def place_card_from_hand(self, card: str, index: int):
 		# print(f'place card from hand {card} {self.hand}')
 		self.hand.remove(card)
@@ -130,6 +126,20 @@ if __name__ != '__main__':
 
 playbook: list[Step] = []
 
+def check(state: State):
+	for i in Data.main_monster_zones:
+		if state.field[i] == 'priestess':
+			return True
+	return False
+def delta(state: State):
+	state.hand.append('solo')
+playbook.append(Step(
+	name = f'priestess_search_solo',
+	groups = [f'priestess_ignite'],
+	check = check,
+	delta = delta,
+))
+
 # weird code ahead to bypass late binding
 for card in Data.all_vaylantz:
 	
@@ -156,7 +166,6 @@ for card in Data.all_vaylantz:
 		
 		def check(i: int, card: str):
 			def check(state: State):
-				# print(f'scale check {card} {i} {card in state.hand} {state.field[i] == None}')
 				return card in state.hand and state.field[i] == None
 			return check
 		def delta(i: int, card: str):
@@ -187,6 +196,37 @@ for card in Data.all_vaylantz:
 				delta = delta(i, card),
 			))
 		# elif card in Data.high_vaylantz:
+		
+		if card == 'priestess':
+			def check(i: int, card: str):
+				def check(state: State):
+					return 'solo' in state.hand and state.field[i] == None
+				return check
+			def delta(i: int, card: str):
+				def delta(state: State):
+					state.field[i] = card
+				return delta
+			playbook.append(Step(
+				name = f'solo_scale_{card}_{i}',
+				groups = ['solo_cast'],
+				check = check(i, card),
+				delta = delta(i, card),
+			))
+		else:
+			def check(i: int, card: str):
+				def check(state: State):
+					return 'solo' in state.hand and state.field[i] == None
+				return check
+			def delta(i: int, card: str):
+				def delta(state: State):
+					state.field[i] = card
+				return delta
+			playbook.append(Step(
+				name = f'solo_scale_{card}_{i}',
+				groups = ['solo_cast', f'{card}_deck'],
+				check = check(i, card),
+				delta = delta(i, card),
+			))
 
 # 	def check(card: str):
 	# 		def check(state: State):
@@ -207,8 +247,8 @@ for card in Data.all_vaylantz:
 	# 	))
 
 state: State = State()
-state.hand = ['priestess', 'baron', 'archer', 'viscount', 'marquis']
-# state.hand = ['priestess']
+# state.hand = ['priestess', 'baron', 'archer', 'viscount', 'marquis']
+state.hand = ['priestess']
 
 engine: Engine = Engine(state, playbook)
 engine.compute_combos()
