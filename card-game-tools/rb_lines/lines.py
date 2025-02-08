@@ -6,8 +6,6 @@ import json
 
 class Data:
 	
-# 	monster_zones: set[int] = [5, 6, 7, 8, 9, 10, 11]
-# 	main_monster_zones: set[int] = [5, 6, 7, 8, 9]
 	monsters: set[str] = {'sbt', 'cannahawk', 'rampengu', 'apelio', 'pettlephin', 'elder', 'wen', 'winda'}
 	tamers: set[str] = {'sbt', 'elder', 'wen', 'winda'}
 	beasts: set[str] = {'sbt', 'cannahawk', 'rampengu', 'apelio', 'pettlephin'}
@@ -40,11 +38,6 @@ class Stage:
 			self.normal_summons == other.normal_summons)
 	
 	def __hash__(self):
-		# return hash((frozenset(self.hand.items()),
-		# 	frozenset(self.field.items()),
-		# 	frozenset(self.grave.items()),
-		# 	frozenset(self.exile.items()),
-		# 	self.normal_summons))
 		data = {
 			'hand': self.hand,
 			'field': self.field,
@@ -108,6 +101,7 @@ class Step:
 # 		self,
 # 		*,
 # 		name: str,
+#		global_steps: list[Step],
 # 		hand_steps: list[Step],
 # 		field_steps: list[Step],
 # 		grave_steps: list[Step],
@@ -163,8 +157,8 @@ if __name__ != '__main__':
 
 library: list[Step] = []
 
-# normal summons
 for card in Data.monsters:
+	# normal summons
 	def check(card: str) -> Callable[[Stage], bool]:
 		def check(stage: Stage) -> bool:
 			return stage.has('hand', card) and stage.normal_summons > 0
@@ -181,21 +175,18 @@ for card in Data.monsters:
 		check = check(card),
 		delta = delta(card),
 	))
-
-# cannahawk sopt
-for card in Data.monsters:
-	if card == 'cannahawk':
-		continue
-	def delta(card: str) -> Callable[[Stage], None]:
-		def delta(stage: Stage) -> None:
-			stage.add('exile', card)
-		return delta
-	library.append(Step(
-		name = f'cannahawk_sopt_{card}',
-		tags = {f'{card}_deck', 'cannahawk_sopt'},
-		check = lambda stage: stage.has('field', 'cannahawk'),
-		delta = delta(card),
-	))
+	# cannahawk sopt
+	if card != 'cannahawk':
+		def delta(card: str) -> Callable[[Stage], None]:
+			def delta(stage: Stage) -> None:
+				stage.add('exile', card)
+			return delta
+		library.append(Step(
+			name = f'cannahawk_sopt_{card}',
+			tags = {f'{card}_deck', 'cannahawk_sopt'},
+			check = lambda stage: stage.has('field', 'cannahawk'),
+			delta = delta(card),
+		))
 
 for tamer in Data.tamers:
 	for beast in Data.beasts:
