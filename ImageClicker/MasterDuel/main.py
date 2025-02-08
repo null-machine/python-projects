@@ -153,7 +153,7 @@ def main_loop():
 	# image_targets['qmark_choice.png'].offset = (50, 80)
 	# image_targets['skip.png'].action = skip_action
 	# image_targets['0win.png'].action = win_action
-	image_targets['exit.png'].action = exit_action
+	# image_targets['exit.png'].action = exit_action
 	
 	
 

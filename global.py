@@ -67,7 +67,7 @@ def check_window(title):
 # 		os.system(f'taskkill /f /pid {ahk.active_window.pid}')
 
 def open_logbook():
-	ahk.run_script('run \"C:\\Program Files\\VSCodium\\VSCodium.exe\" \"C:\\Home\\Repos\\game-saves\\"')
+	ahk.run_script('run \"C:\\Program Files\\VSCodium\\VSCodium.exe\" \"C:\\Home\\Repos\\library\\"')
 
 def click_stack():
 	for i in range(32):

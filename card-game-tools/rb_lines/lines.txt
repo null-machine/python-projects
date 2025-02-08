@@ -1,0 +1,519 @@
+Hand: {'cannahawk': 1, 'elder': 1}
+	[]
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1}
+	['cannahawk_normal']
+
+Field: {'elder': 1} | Hand: {'cannahawk': 1}
+	['elder_normal']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'rampengu': 1}
+	['cannahawk_normal', 'cannahawk_sopt_rampengu']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'wen': 1}
+	['cannahawk_normal', 'cannahawk_sopt_wen']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'sbt': 1}
+	['cannahawk_normal', 'cannahawk_sopt_sbt']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'winda': 1}
+	['cannahawk_normal', 'cannahawk_sopt_winda']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'apelio': 1}
+	['cannahawk_normal', 'cannahawk_sopt_apelio']
+
+Field: {'cannahawk': 1} | Hand: {'elder': 1} | Exile: {'pettlephin': 1}
+	['cannahawk_normal', 'cannahawk_sopt_pettlephin']
+
+Field: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'elder': 1, 'rampengu': 1} | Exile: {'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'elder': 1, 'sbt': 1} | Exile: {'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_sbt']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'elder': 1, 'apelio': 1} | Exile: {'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_apelio']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk']
+
+Field: {'elder': 1, 'pettlephin': 1} | Exile: {'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_pettlephin']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'cannahawk': 1, 'elder': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_rampengu', 'ultihawk_contact_elder_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1, 'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1, 'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'rampengu': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_winda']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_apelio']
+
+Field: {'wen': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1, 'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'wen': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_winda']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_apelio']
+
+Field: {'sbt': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1, 'winda': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'sbt': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'cannahawk': 1, 'elder': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_sbt', 'ultihawk_contact_elder_sbt']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_rampengu']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'wen': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_wen']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_sbt']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_apelio']
+
+Field: {'winda': 1, 'cannahawk': 1} | Exile: {'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'winda': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'winda': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'cannahawk': 1, 'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_apelio', 'ultihawk_contact_elder_apelio']
+
+Field: {'elder': 1, 'cannahawk': 1} | Exile: {'apelio': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio']
+
+Field: {'ultihawk': 1} | Exile: {'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'cannahawk': 1, 'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_pettlephin', 'ultihawk_contact_elder_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'wen': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'sbt': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'winda': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'rampengu': 1, 'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'rampengu': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'sbt': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'winda': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'apelio': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'pettlephin': 1, 'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_wen_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'sbt': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'winda': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'rampengu': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'wen': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'winda': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'apelio': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'pettlephin': 1, 'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_sbt_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'winda': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'rampengu': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'wen': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'sbt': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'apelio': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'pettlephin': 1, 'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_winda_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'apelio': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'ultihawk': 1} | Exile: {'apelio': 1, 'pettlephin': 1, 'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk']
+
+Field: {'wen': 1, 'rampengu': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_rampengu']
+
+Field: {'sbt': 1, 'rampengu': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_rampengu']
+
+Field: {'winda': 1, 'rampengu': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_rampengu']
+
+Field: {'elder': 1, 'rampengu': 1} | Exile: {'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_rampengu']
+
+Field: {'elder': 1, 'sbt': 1} | Exile: {'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_sbt']
+
+Field: {'elder': 1, 'apelio': 1} | Exile: {'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_apelio']
+
+Field: {'elder': 1, 'pettlephin': 1} | Exile: {'wen': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_pettlephin']
+
+Field: {'wen': 1, 'sbt': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_sbt']
+
+Field: {'wen': 1, 'apelio': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_apelio']
+
+Field: {'wen': 1, 'pettlephin': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_pettlephin']
+
+Field: {'elder': 1, 'rampengu': 1} | Exile: {'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_rampengu']
+
+Field: {'elder': 1, 'apelio': 1} | Exile: {'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_apelio']
+
+Field: {'elder': 1, 'pettlephin': 1} | Exile: {'sbt': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_pettlephin']
+
+Field: {'winda': 1, 'sbt': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_sbt']
+
+Field: {'sbt': 1, 'apelio': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_apelio']
+
+Field: {'sbt': 1, 'pettlephin': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_pettlephin']
+
+Field: {'elder': 1, 'rampengu': 1} | Exile: {'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_rampengu']
+
+Field: {'elder': 1, 'sbt': 1} | Exile: {'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_sbt']
+
+Field: {'elder': 1, 'apelio': 1} | Exile: {'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_apelio']
+
+Field: {'elder': 1, 'pettlephin': 1} | Exile: {'winda': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_pettlephin']
+
+Field: {'winda': 1, 'apelio': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_apelio']
+
+Field: {'winda': 1, 'pettlephin': 1} | Exile: {'elder': 1, 'cannahawk': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1, 'wen': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_rampengu', 'ultihawk_contact_wen_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_rampengu', 'ultihawk_contact_wen_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_rampengu', 'ultihawk_contact_elder_rampengu']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1, 'sbt': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_rampengu', 'ultihawk_contact_sbt_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_rampengu', 'ultihawk_contact_sbt_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_rampengu', 'ultihawk_contact_elder_rampengu']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1, 'winda': 1, 'rampengu': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_rampengu', 'ultihawk_contact_winda_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_rampengu', 'ultihawk_contact_winda_rampengu']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_rampengu', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_rampengu', 'ultihawk_contact_elder_rampengu']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'cannahawk': 1, 'elder': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_sbt', 'ultihawk_contact_elder_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_sbt', 'ultihawk_contact_wen_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_sbt', 'ultihawk_contact_wen_sbt']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'cannahawk': 1, 'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_apelio', 'ultihawk_contact_elder_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_apelio', 'ultihawk_contact_wen_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_apelio', 'ultihawk_contact_wen_apelio']
+
+Field: {'ultihawk': 1} | Exile: {'wen': 1, 'cannahawk': 1, 'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_wen_cannahawk', 'ultihawk_bounce_elder_pettlephin', 'ultihawk_contact_elder_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_pettlephin', 'ultihawk_contact_wen_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_wen', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_wen_pettlephin', 'ultihawk_contact_wen_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'cannahawk': 1, 'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_apelio', 'ultihawk_contact_elder_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_apelio', 'ultihawk_contact_sbt_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_apelio', 'ultihawk_contact_sbt_apelio']
+
+Field: {'ultihawk': 1} | Exile: {'sbt': 1, 'cannahawk': 1, 'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_sbt_cannahawk', 'ultihawk_bounce_elder_pettlephin', 'ultihawk_contact_elder_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_pettlephin', 'ultihawk_contact_sbt_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_sbt_pettlephin', 'ultihawk_contact_sbt_pettlephin']
+
+Field: {'ultihawk': 1} | Exile: {'elder': 1, 'cannahawk': 1, 'winda': 1, 'sbt': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_sbt', 'ultihawk_contact_winda_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_sbt', 'ultihawk_contact_winda_sbt']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_sbt', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_sbt', 'ultihawk_contact_elder_sbt']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'cannahawk': 1, 'elder': 1, 'apelio': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_apelio', 'ultihawk_contact_elder_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_apelio', 'ultihawk_contact_winda_apelio']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_apelio', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_apelio', 'ultihawk_contact_winda_apelio']
+
+Field: {'ultihawk': 1} | Exile: {'winda': 1, 'cannahawk': 1, 'elder': 1, 'pettlephin': 1}
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_winda_cannahawk', 'ultihawk_bounce_elder_pettlephin', 'ultihawk_contact_elder_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_pettlephin', 'ultihawk_contact_winda_pettlephin']
+	['elder_normal', 'cannahawk_normal', 'cannahawk_sopt_pettlephin', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_elder_cannahawk', 'cannahawk_sopt_winda', 'ultihawk_contact_elder_cannahawk', 'ultihawk_bounce_winda_pettlephin', 'ultihawk_contact_winda_pettlephin']
+
