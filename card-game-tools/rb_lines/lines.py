@@ -80,7 +80,7 @@ class Stage:
 		# 	data.append(f'{self.tags}')
 		return ' | '.join(data)
 
-class Step:
+class Rule:
 	
 	def __init__(
 		self,
@@ -95,27 +95,27 @@ class Step:
 		self.check = check
 		self.delta = delta
 
-# class Playbook: # implement to make scan step O(n) instead of theta(n)
+class Playbook:
 	
-# 	def __init__(
-# 		self,
-# 		*,
-# 		name: str,
-#		global_steps: list[Step],
-# 		hand_steps: list[Step],
-# 		field_steps: list[Step],
-# 		grave_steps: list[Step],
-# 		exile_steps: list[Step],
-# 	) -> None:
-# 		self.name = name
-# 		self.hand_steps = hand_steps
-# 		self.field_steps = field_steps
-# 		self.grave_steps = grave_steps
-# 		self.exile_steps = exile_steps
+	def __init__(
+		self,
+		*,
+		name: str,
+		global_rules: list[Rule],
+		hand_rules: list[Rule],
+		field_rules: list[Rule],
+		grave_rules: list[Rule],
+		exile_rules: list[Rule],
+	) -> None:
+		self.name = name
+		self.hand_rules = hand_rules
+		self.field_rules = field_rules
+		self.grave_rules = grave_rules
+		self.exile_rules = exile_rules
 
 class Engine:
 	
-	def __init__(self, stage: Stage, library: list[Step]):
+	def __init__(self, stage: Stage, library: list[Rule]):
 		self.stage = stage
 		self.library = library
 		
@@ -126,16 +126,16 @@ class Engine:
 		print(f'[I] Computing lines with {len(self.library)} rules')
 		while self.stage_queue:
 			stage = self.stage_queue.popleft()
-			for step in self.library:
-				tags_valid = not step.tags or not bool(step.tags & stage.tags)
-				if tags_valid and step.check(stage):
+			for rule in self.library:
+				tags_valid = not rule.tags or not bool(rule.tags & stage.tags)
+				if tags_valid and rule.check(stage):
 					next_state = copy.deepcopy(stage)
-					if step.tags is not None:
-						next_state.tags = next_state.tags | step.tags
-					step.delta(next_state)
+					if rule.tags is not None:
+						next_state.tags = next_state.tags | rule.tags
+					rule.delta(next_state)
 					paths: list[list[str]] = copy.deepcopy(self.lines[stage])
 					for path in paths:
-						path.append(step.name)
+						path.append(rule.name)
 					if next_state in self.lines:
 						for path in paths:
 							self.lines[next_state].append(path)
@@ -155,7 +155,7 @@ class Engine:
 if __name__ != '__main__':
 	exit()
 
-library: list[Step] = []
+library: list[Rule] = []
 
 for card in Data.monsters:
 	# normal summons
@@ -169,7 +169,7 @@ for card in Data.monsters:
 			if card != 'elder':
 				stage.normal_summons -= 1
 		return delta
-	library.append(Step(
+	library.append(Rule(
 		name = f'{card}_normal',
 		tags = None,
 		check = check(card),
@@ -181,7 +181,7 @@ for card in Data.monsters:
 			def delta(stage: Stage) -> None:
 				stage.add('exile', card)
 			return delta
-		library.append(Step(
+		library.append(Rule(
 			name = f'cannahawk_sopt_{card}',
 			tags = {f'{card}_deck', 'cannahawk_sopt'},
 			check = lambda stage: stage.has('field', 'cannahawk'),
@@ -204,7 +204,7 @@ for tamer in Data.tamers:
 				stage.add('field', 'ultihawk')
 				stage.tags -= {f'{tamer}_sopt', f'{beast}_sopt'}
 			return delta
-		library.append(Step(
+		library.append(Rule(
 			name = f'ultihawk_contact_{tamer}_{beast}',
 			tags = {'ultihawk_deck'},
 			check = check(tamer, beast),
@@ -222,7 +222,7 @@ for tamer in Data.tamers:
 				stage.move('exile', 'field', beast)
 				stage.tags -= {'ultihawk_deck'}
 			return delta
-		library.append(Step(
+		library.append(Rule(
 			name = f'ultihawk_bounce_{tamer}_{beast}',
 			tags = {f'{tamer}_special', f'{beast}_special'},
 			check = check(tamer, beast),
