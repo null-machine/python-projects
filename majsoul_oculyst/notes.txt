@@ -1,4 +1,0 @@
-// mitmdump -s sniffer.py | tee log.txt 
-Start-Transcript log.txt
-mitmdump -s sniffer.py --flow-detail 0
-Stop-Transcript

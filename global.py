@@ -276,18 +276,6 @@ def stop_pixel_watch():
 def ytdlp():
 	ahk.run_script(f'run \"C:\\Home\\yt-dlp\\yt-dlp.exe" {get_clipboard_text()}')
 
-def indeed_job_title():
-	ahk.send('Full Stack Developer\tWind River Software\t\n')
-
-def linked_in_auto():
-	ahk.send('{ctrl down}{backspace}{ctrl up}437-264-0413{tab}{tab}{enter}')
-	small_sleep()
-	ahk.send('{tab}{enter}')
-	long_sleep()
-	ahk.send('{shift down}{tab}{shift up}{down}{down}{down}{enter}{esc}{esc}')
-	# time.sleep(1)
-	# ahk.send('{tab}{tab}{tab}{tab}{enter}')
-
 # def wheel_pgup():
 # 	if not check_window('Terraria'):
 # 		return
@@ -314,7 +302,6 @@ ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
 ahk.add_hotkey('$!^+space', callback=lambda: ahk.send('{u+206b}')) # rtl embedding
-ahk.add_hotkey('$!8', callback=lambda: ahk.send('{u+2730}')) # star
 # ahk.add_hotkey('space', callback=lambda: ahk.send('{u+200a}')) # thin space
 # ahk.add_hotkey('space', callback=lambda: ahk.send('{u+2002}')) # thin space
 # ahk.add_hotkey('!;', callback=lambda: ahk.send('{u+2014}')) # emdash
@@ -323,15 +310,10 @@ ahk.add_hotkey('$!]', callback=lambda: ahk.send('{u+2192}')) # arrow right
 ahk.add_hotkey('$!/', callback=lambda: ahk.send('{u+00f7}')) # division symbol
 # ahk.add_hotkey('!0', callback=lambda: ahk.send('{u+00d8}')) # null symbol
 ahk.add_hotkey('$!s', callback=lambda: ahk.send('{u+00a7}')) # section sign
-ahk.add_hotkey('$!0', callback=lambda: ahk.send('{u+25ae}')) # cuniform+
-# 00bf inverted qmark
-ahk.add_hotkey('$!x', callback=lambda: ahk.send('{u+00d7}')) # cuniform+
 
 # game inputs
-ahk.add_hotkey('$!o', callback=lambda: keyboard.press(','))
 ahk.add_hotkey('rctrl & lbutton', callback=lambda: ahk.send('{lbutton down}'))
 ahk.add_hotkey('rctrl & rbutton', callback=lambda: ahk.send('{rbutton down}'))
-ahk.add_hotkey('$!,', callback=lambda: ahk.send('{, down}'))
 ahk.add_hotkey('$!wheeldown', callback=click_stack)
 ahk.add_hotkey('$!wheelup', callback=right_click_stack)
 

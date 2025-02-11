@@ -3,82 +3,14 @@ import typing
 from typing import Callable
 import copy
 import json
+from stage import Stage
 
 class Data:
 	
 	monsters: set[str] = {'sbt', 'cannahawk', 'rampengu', 'apelio', 'pettlephin', 'elder', 'wen', 'winda'}
 	tamers: set[str] = {'sbt', 'elder', 'wen', 'winda'}
 	beasts: set[str] = {'sbt', 'cannahawk', 'rampengu', 'apelio', 'pettlephin'}
-	
 
-class Stage:
-	
-	def __init__(
-		self,
-		*,
-		hand: dict[str, int] = {},
-		field: dict[str, int] = {},
-		grave: dict[str, int] = {},
-		exile: dict[str, int] = {},
-		tags: set[str] = set(),
-		normal_summons: int = 1,
-	) -> bool:
-		self.hand = hand
-		self.field = field
-		self.grave = grave
-		self.exile = exile
-		self.tags = tags
-		self.normal_summons = normal_summons
-	
-	def __eq__(self, other):
-		return (self.hand == other.hand and
-			self.field == other.field and
-			self.grave == other.grave and
-			self.exile == other.exile and
-			self.normal_summons == other.normal_summons)
-	
-	def __hash__(self):
-		data = {
-			'hand': self.hand,
-			'field': self.field,
-			'grave': self.grave,
-			'exile': self.exile,
-			'tags': sorted(self.tags),
-			'normal_summons': self.normal_summons,
-		}
-		return hash(json.dumps(data, sort_keys=True))
-	
-	def has(self, target: str, card: str) -> bool:
-		target = getattr(self, target)
-		return card in target and target[card] > 0
-	
-	def add(self, target: str, card: str) -> None:
-		target = getattr(self, target)
-		target[card] = target.get(card, 0) + 1
-	
-	def remove(self, target: str, card: str) -> None:
-		target = getattr(self, target)
-		target[card] = target[card] - 1
-		if target[card] <= 0:
-			target.pop(card)
-	
-	def move(self, source: str, output: str, card: str) -> None:
-		self.remove(source, card)
-		self.add(output, card)
-	
-	def to_string(self):
-		data = []
-		if self.field:
-			data.append(f'Field: {self.field}')
-		if self.hand:
-			data.append(f'Hand: {self.hand}')
-		if self.grave:
-			data.append(f'Grave: {self.grave}')
-		if self.exile:
-			data.append(f'Exile: {self.exile}')
-		# if self.tags:
-		# 	data.append(f'{self.tags}')
-		return ' | '.join(data)
 
 class Rule:
 	
