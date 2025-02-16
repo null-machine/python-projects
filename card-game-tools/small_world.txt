@@ -1,7 +1,5 @@
 veiler spellcaster light 1 0 0
-droll spellcaster wind 1 0 0
 maxx insect earth 2 500 200
-ash zombie fire 3 0 1800
 fossil rock earth 4 1200 1300
 golem fiend fire 8 3000 2500
 jizukiru machine light 10 3300 2600
@@ -16,7 +14,11 @@ viscount machine fire 4 1400 1400
 monkeyboard beast earth 6 1000 2400
 ninja spellcaster water 6 1800 1800
 marquess machine fire 6 1700 1700
+ash zombie fire 3 0 1800
+fuwalos winged_beast wind 4 100 600
+droll spellcaster wind 1 0 0
 ---
+dominator machine fire 8 2000 2000
 celesmagi spellcaster dark 4 1500 1000
 synchron spellcaster dark 2 200 600
 duke machine fire 8 2000 2000
@@ -30,7 +32,6 @@ kendo warrior wind 5 2400 1000
 karate warrior wind 5 2400 1000
 belle zombie earth 3 0 1800
 prodigy machine dark 4 1000 1500
-dominator machine fire 8 2000 2000
 ecclesia spellcaster light 4 1500 1500
 shifter spellcaster dark 6 1200 2200
 witch spellcaster earth 3 1500 800

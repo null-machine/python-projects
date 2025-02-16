@@ -7,3 +7,5 @@ calculating defense
 	clone list of every winning hand
 	remove hands that have become impossible
 	
+
+actually just straight up generate control and waits for every single hand like dict it
