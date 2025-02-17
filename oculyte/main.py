@@ -48,34 +48,57 @@ for contour in contours:
 	if 2300 < w * h < 2600 and 1.2 < max(w / h, h / w) < 1.5:
 		# print(f'{w * h} {max(w / h, h / w)}')
 		boxes.append(box)
-# 		cv2.rectangle(debug, (x, y), (x + w, y + h), (0, 0, 255), 1)
+		# cv2.rectangle(debug, (x, y), (x + w, y + h), (0, 0, 255), 1)
 # cv2.imwrite('boxes.jpg', debug)
 
 
 
-offsetX = 300
-offsetY = 200
+image_height, image_width = threshold_image.shape
+centroid_offset_x = 200
+centroid_offset_y = 200
 centroids = [ # east south west north
-	(screen_width - deltaX, screen_height / 2 - offsetY),
-	(screen_width / 2 + offsetX, screen_height),
-	(deltaX, screen_height / 2 + offsetY),
-	(screen_width / 2 - offsetX, 0),
+	(image_width, image_height / 2 - centroid_offset_y),
+	(image_width / 2 + centroid_offset_x, image_height),
+	(0, image_height / 2 + centroid_offset_y),
+	(image_width / 2 - centroid_offset_x, 0),
 ]
 key = 0
 for box in boxes:
 	x, y, w, h = box
-	roi = perspective_image[y:y+h, x:x+w]
 	centroid_index = -1
 	centroid_distance = sys.maxsize
-	x += w / 2
-	y += h / 2
 	for i in range(4):
 		centroid = centroids[i]
-		distance = (centroid[0] - x) * (centroid[0] - x) + (centroid[1] - y) * (centroid[1] - y)
+		distance_x = centroid[0] - (x + w / 2)
+		distance_y = centroid[1] - (y + h / 2)
+		distance = distance_x * distance_x + distance_y * distance_y
 		if distance < centroid_distance:
 			centroid_index = i
 			centroid_distance = distance
 	print(f'{centroid_index} {key} ({x}, {y}) {centroids[centroid_index]}')
+	
+	if centroid_index == 0:
+		offset_x = 1
+		offset_y = 8
+	elif centroid_index == 1:
+		offset_x = 5
+		offset_y = 0
+	elif centroid_index == 2:
+		offset_x = 0
+		offset_y = 0
+	elif centroid_index == 3:
+		offset_x = 0
+		offset_y = 0
+	
+	if w > h:
+		x += offset_y
+		y += offset_x
+	else:
+		x += offset_x
+		y += offset_y
+		
+	roi = perspective_image[y:y+48, x:x+36]
+	
 	if centroid_index == 0:
 		if w > h:
 			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
