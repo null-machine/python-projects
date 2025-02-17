@@ -57,10 +57,10 @@ image_height, image_width = threshold_image.shape
 centroid_offset_x = 200
 centroid_offset_y = 200
 centroids = [ # east south west north
-	(image_width, image_height / 2 - centroid_offset_y),
-	(image_width / 2 + centroid_offset_x, image_height),
-	(0, image_height / 2 + centroid_offset_y),
-	(image_width / 2 - centroid_offset_x, 0),
+	(0, image_height / 2 + centroid_offset_y), # west
+	(image_width / 2 - centroid_offset_x, 0), # north
+	(image_width, image_height / 2 - centroid_offset_y), # east
+	(image_width / 2 + centroid_offset_x, image_height), # south
 ]
 key = 0
 for box in boxes:
@@ -78,42 +78,43 @@ for box in boxes:
 	print(f'{centroid_index} {key} ({x}, {y}) {centroids[centroid_index]}')
 	
 	if centroid_index == 0:
-		offset_x = 1
-		offset_y = 8
+		offset_x = 0
+		offset_y = 0
 	elif centroid_index == 1:
-		offset_x = 5
+		offset_x = 0
 		offset_y = 0
 	elif centroid_index == 2:
-		offset_x = 0
-		offset_y = 0
+		offset_x = 1
+		offset_y = 8
 	elif centroid_index == 3:
-		offset_x = 0
+		offset_x = 5
 		offset_y = 0
 	
 	if w > h:
 		x += offset_y
 		y += offset_x
+		roi = perspective_image[y:y+36, x:x+48]
 	else:
 		x += offset_x
 		y += offset_y
+		roi = perspective_image[y:y+48, x:x+36]
 		
-	roi = perspective_image[y:y+48, x:x+36]
 	
 	if centroid_index == 0:
 		if w > h:
-			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
-		else:
-			roi = cv2.rotate(roi, cv2.ROTATE_180)
+			roi = cv2.rotate(roi, cv2.ROTATE_90_COUNTERCLOCKWISE)
 	elif centroid_index == 1:
 		if w > h:
-			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
-	elif centroid_index == 2:
-		if w > h:
-			roi = cv2.rotate(roi, cv2.ROTATE_90_COUNTERCLOCKWISE)
-	elif centroid_index == 3:
-		if w > h:
 			roi = cv2.rotate(roi, cv2.ROTATE_90_COUNTERCLOCKWISE)
 		else:
 			roi = cv2.rotate(roi, cv2.ROTATE_180)
+	elif centroid_index == 2:
+		if w > h:
+			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
+		else:
+			roi = cv2.rotate(roi, cv2.ROTATE_180)
+	elif centroid_index == 3:
+		if w > h:
+			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
 	cv2.imwrite(f'tiles/box_{centroid_index}_{key}.jpg', roi)
 	key += 1
