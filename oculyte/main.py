@@ -2,6 +2,7 @@ import sys
 import cv2
 import numpy as np
 from mss import mss
+from recognizer import Recognizer
 
 CARD_MAX_AREA = 120000
 CARD_MIN_AREA = 25000
@@ -67,6 +68,8 @@ for centroid in centroids:
 	debug = cv2.circle(debug, (centroid[0], centroid[1]), 10, (0, 0, 255), -1)
 cv2.imwrite('debug.jpg', debug)
 
+recognizer = Recognizer()
+
 
 key = 0
 for box in boxes:
@@ -112,10 +115,10 @@ for box in boxes:
 	# 		x += 0
 	# 		y += 0
 	
-	# if w > h:
-	# 	roi = perspective_image[y:y+36, x:x+48]
-	# else:
-	# 	roi = perspective_image[y:y+48, x:x+36]
+	if w > h:
+		roi = perspective_image[y:y+36, x:x+48]
+	else:
+		roi = perspective_image[y:y+48, x:x+36]
 	
 	roi = perspective_image[y:y+h, x:x+w]
 	
@@ -135,5 +138,8 @@ for box in boxes:
 	elif centroid_index == 3:
 		if w > h:
 			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
-	cv2.imwrite(f'tiles/box_{centroid_index}_{key}.jpg', roi)
+	roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
+	cv2.imwrite(f'tiles/box_{centroid_index}_{key}_{recognizer.tile_names[recognizer.recognize(roi)]}.jpg', roi)
 	key += 1
+
+# make all bank images a little bit bigger
