@@ -12,7 +12,7 @@ monitor = {
 	'width': 1920,
 	'height': 1080,
 }
-deltaX = 360
+deltaX = 362
 deltaY = 125
 input_points = np.float32([
 	[0, 0],
@@ -45,23 +45,29 @@ boxes = []
 for contour in contours:
 	box = cv2.boundingRect(contour)
 	x, y, w, h = box
-	if 2300 < w * h < 2600 and 1.2 < max(w / h, h / w) < 1.5:
+	if 2300 < w * h < 2600 and 1.2 < max(w / h, h / w) < 1.5 and not (1360 < x < 1400 and 140 < y < 180):
 		# print(f'{w * h} {max(w / h, h / w)}')
 		boxes.append(box)
-		# cv2.rectangle(debug, (x, y), (x + w, y + h), (0, 0, 255), 1)
-# cv2.imwrite('boxes.jpg', debug)
+		cv2.rectangle(debug, (x, y), (x + w, y + h), (0, 0, 255), 1)
 
 
 
 image_height, image_width = threshold_image.shape
-centroid_offset_x = 200
-centroid_offset_y = 200
+centroid_offset_x = 10
+centroid_offset_y = 10
+centroid_padding_x = 550
 centroids = [ # east south west north
-	(0, image_height / 2 + centroid_offset_y), # west
-	(image_width / 2 - centroid_offset_x, 0), # north
-	(image_width, image_height / 2 - centroid_offset_y), # east
-	(image_width / 2 + centroid_offset_x, image_height), # south
+	(centroid_padding_x, int(image_height / 2) + centroid_offset_y), # west
+	(int(image_width / 2) - centroid_offset_x, 200), # north
+	(image_width - centroid_padding_x, int(image_height / 2) - centroid_offset_y), # east
+	(int(image_width / 2) + centroid_offset_x, 1030), # south
 ]
+
+for centroid in centroids:
+	debug = cv2.circle(debug, (centroid[0], centroid[1]), 10, (0, 0, 255), -1)
+cv2.imwrite('debug.jpg', debug)
+
+
 key = 0
 for box in boxes:
 	x, y, w, h = box
@@ -77,28 +83,41 @@ for box in boxes:
 			centroid_distance = distance
 	print(f'{centroid_index} {key} ({x}, {y}) {centroids[centroid_index]}')
 	
-	if centroid_index == 0:
-		offset_x = 0
-		offset_y = 0
-	elif centroid_index == 1:
-		offset_x = 0
-		offset_y = 0
-	elif centroid_index == 2:
-		offset_x = 1
-		offset_y = 8
-	elif centroid_index == 3:
-		offset_x = 5
-		offset_y = 0
+	# if centroid_index == 0:
+	# 	if w > h:
+	# 		x += 1
+	# 		y += 0
+	# 	else:
+	# 		x += 2
+	# 		y += 4
+	# elif centroid_index == 1:
+	# 	if w > h:
+	# 		x += 0
+	# 		y += 0
+	# 	else:
+	# 		x += 0
+	# 		y += 0
+	# elif centroid_index == 2:
+	# 	if w > h:
+	# 		x += 0
+	# 		y += 0
+	# 	else:
+	# 		x += 0
+	# 		y += 0
+	# elif centroid_index == 3:
+	# 	if w > h:
+	# 		x += 0
+	# 		y += 0
+	# 	else:
+	# 		x += 0
+	# 		y += 0
 	
-	if w > h:
-		x += offset_y
-		y += offset_x
-		roi = perspective_image[y:y+36, x:x+48]
-	else:
-		x += offset_x
-		y += offset_y
-		roi = perspective_image[y:y+48, x:x+36]
-		
+	# if w > h:
+	# 	roi = perspective_image[y:y+36, x:x+48]
+	# else:
+	# 	roi = perspective_image[y:y+48, x:x+36]
+	
+	roi = perspective_image[y:y+h, x:x+w]
 	
 	if centroid_index == 0:
 		if w > h:
