@@ -14,10 +14,9 @@ import cv2
 paths = Path('bank')
 for path in paths.iterdir():
 	path = str(path).replace('\\', '/')
-	# path = f'./{path}'
 	print(path)
 	background = cv2.imread(path)
-	# background = cv2.resize(background, (0, 0), fx=1.1, fy=1.1)
-	background = cv2.copyMakeBorder(background, 5, 5, 5, 5, cv2.BORDER_REPLICATE)
+	background = cv2.resize(background, (0, 0), fx=1.05, fy=1.05)
+	background = cv2.copyMakeBorder(background, 5, 5, 5, 5, borderType=cv2.BORDER_CONSTANT, value=(222, 223, 220))
 	cv2.imwrite(path, background)
 	

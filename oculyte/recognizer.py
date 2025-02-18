@@ -13,7 +13,7 @@ class Recognizer:
 			'z1', 'z2', 'z3', 'z4', 'z5', 'z6', 'z7',
 		]
 		self.channel_length = -1
-		kernel = (3, 3)
+		kernel = (2, 2)
 		for i in ['p', 's', 'm', 'z']:
 			for j in range(1, 10):
 				if i == 'z' and j > 7:
@@ -35,7 +35,7 @@ class Recognizer:
 		min_value = sys.maxsize
 		min_key = -1
 		for i in range(0, len(self.references)):
-			print(len(self.references[i]), len(template))
+			# print(len(self.references[i]), len(template))
 			value = cv2.matchTemplate(self.references[i], template, cv2.TM_SQDIFF)
 			value = cv2.minMaxLoc(value)[0]
 			if value < min_value:

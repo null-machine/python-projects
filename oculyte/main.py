@@ -139,7 +139,7 @@ for box in boxes:
 		if w > h:
 			roi = cv2.rotate(roi, cv2.ROTATE_90_CLOCKWISE)
 	roi = cv2.cvtColor(roi, cv2.COLOR_BGR2GRAY)
-	cv2.imwrite(f'tiles/box_{centroid_index}_{key}_{recognizer.tile_names[recognizer.recognize(roi)]}.jpg', roi)
+	cv2.imwrite(f'tiles/{recognizer.tile_names[recognizer.recognize(roi)]}_{centroid_index}_{key}.jpg', roi)
 	key += 1
 
 # make all bank images a little bit bigger
