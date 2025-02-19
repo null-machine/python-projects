@@ -7,10 +7,10 @@ class Recognizer:
 	def __init__(self):
 		self.references = []
 		self.tile_names = [
-			'p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'p7', 'p8', 'p9',
-			's1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9',
-			'm1', 'm2', 'm3', 'm4', 'm5', 'm6', 'm7', 'm8', 'm9',
-			'z1', 'z2', 'z3', 'z4', 'z5', 'z6', 'z7',
+			'1p', '2p', '3p', '4p', '5p', 'p6', '7p', '8p', '9p',
+			'1s', '2s', '3s', '4s', '5s', 's6', '7s', '8s', '9s',
+			'1m', '2m', '3m', '4m', '5m', 'm6', '7m', '8m', '9m',
+			'1z', '2z', '3z', '4z', '5z', 'z6', '7z',
 		]
 		self.channel_length = -1
 		kernel = (2, 2)
