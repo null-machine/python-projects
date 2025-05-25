@@ -262,12 +262,14 @@ def start_pixel_watch():
 	global watching_pixel
 	watching_pixel = True
 	while (watching_pixel):
-		# print(ahk.pixel_get_color(960, 660))
-		if ahk.pixel_get_color(960, 651) == '0xFE1D5C':
+		# if ahk.pixel_get_color(960, 600) == '0xF99CFF':
+		if ahk.pixel_get_color(978, 605) == '0xAF62BD':
 			mouse.press(Button.left)
 			frame_sleep()
+			time.sleep(0.1)
 			mouse.release(Button.left)
 			small_sleep()
+
 
 def stop_pixel_watch():
 	global watching_pixel
@@ -317,7 +319,7 @@ ahk.add_hotkey('rctrl & rbutton', callback=lambda: ahk.send('{rbutton down}'))
 ahk.add_hotkey('$!wheeldown', callback=click_stack)
 ahk.add_hotkey('$!wheelup', callback=right_click_stack)
 
-# ahk.add_hotkey('$scrolllock', callback=toggle_pixel_watch)
+ahk.add_hotkey('$scrolllock', callback=toggle_pixel_watch)
 # ahk.add_hotkey('q', callback=emote_zaw)
 # ahk.add_hotkey('q up', callback=emote_zaw_cleanup)
 
@@ -356,6 +358,13 @@ ahk.add_hotkey('ralt & left', callback=lambda: mouse.move(-1, 0))
 ahk.add_hotkey('ralt & right', callback=lambda: mouse.move(1, 0))
 ahk.add_hotkey('ralt & up', callback=lambda: mouse.move(0, -1))
 ahk.add_hotkey('ralt & down', callback=lambda: mouse.move(0, 1))
+
+ahk.add_hotkey('appskey', callback=lambda: alt_esc())
+
+def alt_esc():
+	ahk.send('{alt down}')
+	ahk.send('{esc}')
+	ahk.send('{alt up}')
 
 # def update_window():
 # 	global target_window

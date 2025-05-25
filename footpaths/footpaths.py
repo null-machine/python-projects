@@ -21,6 +21,7 @@ class Entry:
 		self.negative = sorted(data[10].split(', '))
 	
 	def __str__(self):
+		# return f'{self.name}'
 		return f'{self.first_contact} {self.last_interaction} | {self.score_to_moons(self.score)} | {self.nationality} | {self.length} | {self.medium} | {self.name} | {self.appeal} | {', '.join(self.aspects)} | {', '.join(self.positive)} | {', '.join(self.neutral)} | {', '.join(self.negative)}'
 	
 	def moons_to_score(self, moons):
@@ -52,6 +53,6 @@ with open('footpaths.txt', encoding='utf-8') as file:
 
 data = sorted(data, key=lambda x: (x.last_interaction, x.score, x.medium), reverse=True)
 
-with open('footpaths.txt', 'w', encoding='utf-8') as file:
+with open('footpaths-1.txt', 'w', encoding='utf-8') as file:
 	for line in data:
 		file.write(f'{line}\n')

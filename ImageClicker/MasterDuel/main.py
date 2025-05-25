@@ -122,7 +122,10 @@ def exit_action(point):
 	keyboard.press(Key.f4)
 	keyboard.release(Key.f4)
 	keyboard.release(Key.alt_l)
-	sys.exit(0)
+	on_press(Key.menu)
+
+def space_action(point):
+	click_point((point[0] + 200, point[1] + 600))
 	
 
 def match_template(frame, target, offset = (0, 0), threshold = 0.035):
@@ -151,7 +154,8 @@ def main_loop():
 	# image_targets['to_battle.png'].offset = (0, 50)
 	# image_targets['unselected_sinner.png'].offset = (0, 50)
 	# image_targets['qmark_choice.png'].offset = (50, 80)
-	# image_targets['skip.png'].action = skip_action
+	image_targets['space.png'].action = space_action
+	image_targets['x.png'].action = exit_action
 	# image_targets['0win.png'].action = win_action
 	# image_targets['exit.png'].action = exit_action
 	
