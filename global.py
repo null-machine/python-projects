@@ -278,6 +278,14 @@ def stop_pixel_watch():
 def ytdlp():
 	ahk.run_script(f'run \"C:\\Home\\yt-dlp\\yt-dlp.exe" {get_clipboard_text()}')
 
+
+def better_fullscreen():
+	window = ahk.win_get('a')
+	window.set_style('^0xC00000')
+	window.maximize()
+	# xywh = window.get_position()
+	# window.move(1980 / 2 - xywh[2] / 2, 1080 / 2 - xywh[3] / 2)
+	# window.move(xywh[0], 0)
 # def wheel_pgup():
 # 	if not check_window('Terraria'):
 # 		return
@@ -300,6 +308,8 @@ def ytdlp():
 ahk.add_hotkey('$!`', callback=open_logbook)
 ahk.add_hotkey('$!insert', callback=ytdlp)
 ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
+
+# ahk.add_hotkey('#f11', callback=better_fullscreen)
 
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
@@ -359,12 +369,12 @@ ahk.add_hotkey('ralt & right', callback=lambda: mouse.move(1, 0))
 ahk.add_hotkey('ralt & up', callback=lambda: mouse.move(0, -1))
 ahk.add_hotkey('ralt & down', callback=lambda: mouse.move(0, 1))
 
-ahk.add_hotkey('appskey', callback=lambda: alt_esc())
+# ahk.add_hotkey('appskey', callback=lambda: alt_esc())
 
-def alt_esc():
-	ahk.send('{alt down}')
-	ahk.send('{esc}')
-	ahk.send('{alt up}')
+# def alt_esc():
+# 	ahk.send('{alt down}')
+# 	ahk.send('{esc}')
+# 	ahk.send('{alt up}')
 
 # def update_window():
 # 	global target_window
@@ -403,5 +413,3 @@ ahk.block_forever()
 # isolate: u+2067
 # override: u+202E
 # arabic mark: u+061C
-
-print("test")
