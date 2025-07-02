@@ -309,7 +309,7 @@ ahk.add_hotkey('$!`', callback=open_logbook)
 ahk.add_hotkey('$!insert', callback=ytdlp)
 ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
 
-# ahk.add_hotkey('#f11', callback=better_fullscreen)
+ahk.add_hotkey('$!f11', callback=better_fullscreen)
 
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
