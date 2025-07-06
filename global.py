@@ -152,6 +152,11 @@ def quick_zipline():
 		key_down = ahk.key_state('y', mode='P')
 	zipline_mutex = False
 
+# def drg_sprint():
+# 	if not check_window('Deep Rock Galactic') or zipline_mutex:
+# 		return
+# 	ahk.send('{scrolllock down}')
+
 	# ahk.mouse_move(x=distance, y=-distance, speed=2, relative=True)
 	
 def rbutton_hook():
@@ -161,15 +166,15 @@ def rbutton_hook():
 	if not check_window('Deep Rock Galactic'):
 		return
 	ahk.send('{scrolllock up}')
-	if pickaxe_mutex:
-		return
-	pickaxe_mutex = True
-	while rbutton_state:
-		ahk.send('{rbutton down}')
-		time.sleep(0.6)
-		if rbutton_state:
-			ahk.send('{rbutton up}')
-	pickaxe_mutex = False
+	# if pickaxe_mutex:
+	# 	return
+	# pickaxe_mutex = True
+	# while rbutton_state:
+	# 	ahk.send('{rbutton down}')
+	# 	time.sleep(0.6)
+	# 	if rbutton_state:
+	# 		ahk.send('{rbutton up}')
+	# pickaxe_mutex = False
 
 def rbutton_up_hook():
 	global rbutton_state
@@ -280,6 +285,7 @@ def ytdlp():
 
 
 def better_fullscreen():
+	print('fullscreen attempt')
 	window = ahk.win_get('a')
 	window.set_style('^0xC00000')
 	window.maximize()
@@ -309,7 +315,7 @@ ahk.add_hotkey('$!`', callback=open_logbook)
 ahk.add_hotkey('$!insert', callback=ytdlp)
 ahk.add_hotkey('$pause', callback=lambda: ahk.send('{esc}'))
 
-ahk.add_hotkey('$!f11', callback=better_fullscreen)
+ahk.add_hotkey('ralt & f11', callback=better_fullscreen)
 
 # unicode mappings
 ahk.add_hotkey('$!^space', callback=lambda: ahk.send('{u+202e}')) # rtl override
@@ -336,12 +342,16 @@ ahk.add_hotkey('$scrolllock', callback=toggle_pixel_watch)
 # ahk.add_hotkey('$wheelup', callback=wheel_pgup)
 # ahk.add_hotkey('$wheeldown', callback=wheel_pgdn)
 
-# ahk.add_hotkey('$~*lbutton', callback=lbutton_hook)
-# ahk.add_hotkey('$~*lbutton up', callback=lbutton_up_hook)
-# ahk.add_hotkey('$~*q', callback=quick_molly)
-# ahk.add_hotkey('$~*y', callback=quick_zipline)
-# ahk.add_hotkey('$~*rbutton', callback=rbutton_hook)
-# ahk.add_hotkey('$~*rbutton up', callback=rbutton_up_hook)
+ahk.add_hotkey('$~*lbutton', callback=lbutton_hook)
+ahk.add_hotkey('$~*lbutton up', callback=lbutton_up_hook)
+ahk.add_hotkey('$~*q', callback=quick_molly)
+ahk.add_hotkey('$~*y', callback=quick_zipline)
+ahk.add_hotkey('$~*rbutton', callback=rbutton_hook)
+ahk.add_hotkey('$~*rbutton up', callback=rbutton_up_hook)
+# ahk.add_hotkey('~*,', callback=drg_sprint)
+
+
+
 # ahk.add_hotkey('$~*backspace', callback=lalt_hook)
 
 # ahk.add_hotkey('f8 up', callback=save_dice_position)

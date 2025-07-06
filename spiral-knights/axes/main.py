@@ -10,8 +10,8 @@ import _thread
 
 ahk = AHK()
 ahk.set_coord_mode('Mouse', 'Screen')
-camera = dxcam.create(output_idx=0)
-monitor_shift = 0
+camera = dxcam.create(output_idx=1)
+monitor_shift = 1920
 humanize = True
 
 halting = False
@@ -36,7 +36,7 @@ def frame_sleep():
 	else:
 		time.sleep(0.0444)
 
-def click(point, point_fuzz=4, speed=333, jitter=2, spline_fuzz=0.2):
+def click(point, just_move=False, point_fuzz=4, speed=222, jitter=2, spline_fuzz=0.2):
 
 	def fuzz_point():
 		return (numpy.random.uniform(-point_fuzz, point_fuzz + 1), numpy.random.uniform(-point_fuzz, point_fuzz + 1))
@@ -76,10 +76,12 @@ def click(point, point_fuzz=4, speed=333, jitter=2, spline_fuzz=0.2):
 	else:
 		ahk.mouse_position = numpy.add(point, fuzz_point())
 	frame_sleep()
-	ahk.key_down('lbutton')
-	frame_sleep()
-	ahk.key_up('lbutton')
-	frame_sleep()
+	if not just_move:
+		ahk.key_down('lbutton')
+		frame_sleep()
+		ahk.key_up('lbutton')
+		frame_sleep()
+	
 
 def match_template(frame, target, threshold=0.035):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
@@ -100,8 +102,8 @@ def template_match_loop():
 	print(files)
 	targets = {file : Target(file, cv2.imread(file), click, (0, 0)) for file in files}
 	
-	targets['space.png'].offset = (200, 600)
-	targets['x.png'].action = exit_action
+	# targets['space.png'].offset = (200, 600)
+	# targets['feed.png'].action = feed
 	
 	frame = camera.grab()
 	while not halting:
@@ -134,6 +136,69 @@ def kill():
 ahk.add_hotkey('ralt & lalt', callback=kill)
 ahk.start_hotkeys()
 
-template_match_loop()
+time.sleep(1)
 
-# ahk.block_forever()
+while(not halting):
+
+	timeout = 0
+	while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
+		print(f'waiting {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+
+	click((2248, 690), True)
+	ahk.send('{space down}')
+	time.sleep(0.98)
+	ahk.send('{, down}')
+	time.sleep(0.1)
+	click((3090, 184), True)
+	ahk.send('{, up}{lshift}')
+
+	timeout = 0
+	while(ahk.pixel_get_color(2786, 362, coord_mode='Screen') != '0xEBC94D' and timeout < 20):
+		print(f'waiting {ahk.pixel_get_color(2786, 362, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+
+	ahk.send('{space up}')
+	click((2888, 669))
+
+	timeout = 0
+	while(ahk.pixel_get_color(3044, 725, coord_mode='Screen') != '0x655236' and timeout < 20):
+		print(f'waiting {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+
+
+	ahk.send('{space down}')
+	click((2821, 884), True)
+	time.sleep(0.1)
+	ahk.send('{lshift}')
+	time.sleep(0.9)
+	click((2289, 881), True)
+	time.sleep(2.8)
+	ahk.send('{a down}')
+	time.sleep(1.4)
+	ahk.send('{a up}')
+	click((2620, 1030), True)
+	time.sleep(1.27)
+	click((2164, 743), True)
+	time.sleep(1.27)
+	click((2060, 800), True)
+	time.sleep(0.2)
+	ahk.send('{lshift}')
+	time.sleep(0.6)
+	ahk.send('{ctrl down}')
+	time.sleep(0.3)
+	ahk.send('{ctrl up}')
+	click((3371, 781), True)
+	time.sleep(1.6)
+	ahk.send('{, down}{space up}')
+	time.sleep(0.51)
+	ahk.send('{, up}{space up}{a down}')
+	time.sleep(0.4)
+	ahk.send('{a up}')
+
+	ahk.send('m')
+	click((3173, 528))
+	time.sleep(0.2)

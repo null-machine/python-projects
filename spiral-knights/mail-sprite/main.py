@@ -10,8 +10,8 @@ import _thread
 
 ahk = AHK()
 ahk.set_coord_mode('Mouse', 'Screen')
-camera = dxcam.create(output_idx=0)
-monitor_shift = 0
+camera = dxcam.create(output_idx=1)
+monitor_shift = 1920
 humanize = True
 
 halting = False
@@ -81,6 +81,12 @@ def click(point, point_fuzz=4, speed=333, jitter=2, spline_fuzz=0.2):
 	ahk.key_up('lbutton')
 	frame_sleep()
 
+def feed(point):
+	material = ahk.mouse_position
+	click(point)
+	click(material)
+	
+
 def match_template(frame, target, threshold=0.035):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
 	min_value, max_value, min_point, max_point = cv2.minMaxLoc(result)
@@ -100,8 +106,9 @@ def template_match_loop():
 	print(files)
 	targets = {file : Target(file, cv2.imread(file), click, (0, 0)) for file in files}
 	
-	targets['space.png'].offset = (200, 600)
-	targets['x.png'].action = exit_action
+	# targets['space.png'].offset = (200, 600)
+	targets['feed.png'].action = feed
+	time.sleep(0.2)
 	
 	frame = camera.grab()
 	while not halting:
