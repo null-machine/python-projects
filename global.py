@@ -1,7 +1,7 @@
 import time
 import numpy
 import os
-from ahk import AHK
+from ahk import AHK, directives
 from pynput.mouse import Button
 from pynput.mouse import Controller as MouseController
 from pynput.keyboard import Key
@@ -34,6 +34,7 @@ def get_clipboard_text():
 		user32.CloseClipboard()
 
 ahk = AHK(executable_path="C:/Program Files/AutoHotkey/v1.1.37.01/AutoHotkeyU64.exe")
+# directives.MaxHotkeysPerInterval(10)
 mouse = MouseController()
 keyboard = KeyboardController()
 
@@ -342,12 +343,13 @@ ahk.add_hotkey('$scrolllock', callback=toggle_pixel_watch)
 # ahk.add_hotkey('$wheelup', callback=wheel_pgup)
 # ahk.add_hotkey('$wheeldown', callback=wheel_pgdn)
 
-ahk.add_hotkey('$~*lbutton', callback=lbutton_hook)
-ahk.add_hotkey('$~*lbutton up', callback=lbutton_up_hook)
-ahk.add_hotkey('$~*q', callback=quick_molly)
-ahk.add_hotkey('$~*y', callback=quick_zipline)
-ahk.add_hotkey('$~*rbutton', callback=rbutton_hook)
-ahk.add_hotkey('$~*rbutton up', callback=rbutton_up_hook)
+# ahk.add_hotkey('$~*lbutton', callback=lbutton_hook)
+# ahk.add_hotkey('$~*lbutton up', callback=lbutton_up_hook)
+# ahk.add_hotkey('$~*q', callback=quick_molly)
+# ahk.add_hotkey('$~*y', callback=quick_zipline)
+# ahk.add_hotkey('$~*rbutton', callback=rbutton_hook)
+# ahk.add_hotkey('$~*rbutton up', callback=rbutton_up_hook)
+
 # ahk.add_hotkey('~*,', callback=drg_sprint)
 
 

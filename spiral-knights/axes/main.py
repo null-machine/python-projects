@@ -142,9 +142,17 @@ while(not halting):
 
 	timeout = 0
 	while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
-		print(f'waiting {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+	# while(not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
+	# or not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[4].isnumeric()
+	# or not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[6].isnumeric()
+	# or (not (2 < int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2]) < 4)
+	# or int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[4]) != 3
+	# or not (1 < int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[6]) < 4)) and timeout < 20):
+		print(f'waiting 0x393721 {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
 		time.sleep(0.2)
 		timeout += 0.2
+	print(f'loaded into ready room {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+	
 
 	click((2248, 690), True)
 	ahk.send('{space down}')
@@ -156,7 +164,7 @@ while(not halting):
 
 	timeout = 0
 	while(ahk.pixel_get_color(2786, 362, coord_mode='Screen') != '0xEBC94D' and timeout < 20):
-		print(f'waiting {ahk.pixel_get_color(2786, 362, coord_mode='Screen')}')
+		print(f'waiting 0xEBC94D {ahk.pixel_get_color(2786, 362, coord_mode='Screen')}')
 		time.sleep(0.2)
 		timeout += 0.2
 
@@ -164,10 +172,14 @@ while(not halting):
 	click((2888, 669))
 
 	timeout = 0
-	while(ahk.pixel_get_color(3044, 725, coord_mode='Screen') != '0x655236' and timeout < 20):
-		print(f'waiting {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
+	# while(ahk.pixel_get_color(3044, 725, coord_mode='Screen') != '0x655236' and timeout < 20):
+	while(
+		not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
+		or int(ahk.pixel_get_color(3044, 725, coord_mode='Screen')[2]) < 4 and timeout < 20):
+		print(f'waiting 0x655236 {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
 		time.sleep(0.2)
 		timeout += 0.2
+	print(f'finished {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
 
 
 	ahk.send('{space down}')
@@ -176,7 +188,7 @@ while(not halting):
 	ahk.send('{lshift}')
 	time.sleep(0.9)
 	click((2289, 881), True)
-	time.sleep(2.8)
+	time.sleep(2.7)
 	ahk.send('{a down}')
 	time.sleep(1.4)
 	ahk.send('{a up}')
@@ -192,7 +204,7 @@ while(not halting):
 	time.sleep(0.3)
 	ahk.send('{ctrl up}')
 	click((3371, 781), True)
-	time.sleep(1.6)
+	time.sleep(1.5)
 	ahk.send('{, down}{space up}')
 	time.sleep(0.51)
 	ahk.send('{, up}{space up}{a down}')
@@ -201,4 +213,3 @@ while(not halting):
 
 	ahk.send('m')
 	click((3173, 528))
-	time.sleep(0.2)

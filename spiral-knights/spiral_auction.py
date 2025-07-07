@@ -1,12 +1,12 @@
 from tkinter import *
 import math
-from ahk import AHK
+from ahk import AHK, directives
 import numpy
 import time
 
 ahk = AHK()
 ahk.set_coord_mode('Mouse', 'Screen')
-ahk.directives.MaxHotkeysPerInterval(1)
+directives.MaxHotkeysPerInterval(1)
 
 monitor_shift = 0
 root = Tk()
@@ -23,7 +23,7 @@ energy_buy.set(6000)
 humanize = True
 
 rarity_position = (0, 0)
-bid_position = (3715, 195)
+bid_position = (3170, 190)
 
 def frame_sleep():
 	if humanize:
