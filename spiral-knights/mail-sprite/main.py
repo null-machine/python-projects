@@ -36,7 +36,7 @@ def frame_sleep():
 	else:
 		time.sleep(0.0444)
 
-def click(point, point_fuzz=4, speed=333, jitter=2, spline_fuzz=0.2):
+def click(point, point_fuzz=0, speed=333, jitter=2, spline_fuzz=0.2):
 
 	def fuzz_point():
 		return (numpy.random.uniform(-point_fuzz, point_fuzz + 1), numpy.random.uniform(-point_fuzz, point_fuzz + 1))

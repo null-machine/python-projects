@@ -333,8 +333,8 @@ ahk.add_hotkey('$!s', callback=lambda: ahk.send('{u+00a7}')) # section sign
 # game inputs
 ahk.add_hotkey('rctrl & lbutton', callback=lambda: ahk.send('{lbutton down}'))
 ahk.add_hotkey('rctrl & rbutton', callback=lambda: ahk.send('{rbutton down}'))
-ahk.add_hotkey('$!wheeldown', callback=click_stack)
-ahk.add_hotkey('$!wheelup', callback=right_click_stack)
+# ahk.add_hotkey('$!wheeldown', callback=click_stack)
+# ahk.add_hotkey('$!wheelup', callback=right_click_stack)
 
 ahk.add_hotkey('$scrolllock', callback=toggle_pixel_watch)
 # ahk.add_hotkey('q', callback=emote_zaw)

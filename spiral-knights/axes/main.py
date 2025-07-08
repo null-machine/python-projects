@@ -81,7 +81,6 @@ def click(point, just_move=False, point_fuzz=4, speed=222, jitter=2, spline_fuzz
 		frame_sleep()
 		ahk.key_up('lbutton')
 		frame_sleep()
-	
 
 def match_template(frame, target, threshold=0.035):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
@@ -120,17 +119,16 @@ def template_match_loop():
 		# print_update('sleeping')
 		# time.sleep(2)
 
-def exit_action(point):
-	global halting
-	ahk.send('{lalt down}{f4}{lalt up}')
-	time.sleep(1)
-	halting = True
-	print('--- halt semaphore set ---')
+def pixel_color_match(pixel_get_color, color_tuple, fuzz=3):
+	# compare('0xFFFFFF', (255, 255, 255), 0)
+	pixel_tuple = (int(pixel_get_color[2:4], 16), int(pixel_get_color[4:6], 16), int(pixel_get_color[6:8], 16))
+	print(f'pixel tuple {pixel_tuple} | color tuple {color_tuple} | match {math.abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
+	return math.abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))
 
 def kill():
 	global halting
 	halting = True
-	# _thread.interrupt_main()
+	_thread.interrupt_main()
 	print('--- halt semaphore set ---')
 
 ahk.add_hotkey('ralt & lalt', callback=kill)
@@ -141,13 +139,8 @@ time.sleep(1)
 while(not halting):
 
 	timeout = 0
-	while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
-	# while(not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
-	# or not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[4].isnumeric()
-	# or not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[6].isnumeric()
-	# or (not (2 < int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2]) < 4)
-	# or int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[4]) != 3
-	# or not (1 < int(ahk.pixel_get_color(3414, 483, coord_mode='Screen')[6]) < 4)) and timeout < 20):
+	while(not pixel_color_match(ahk.pixel_get_color(3414, 483, coord_mode='Screen'), (57, 55, 33), 1) and timeout < 20):
+	# while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
 		print(f'waiting 0x393721 {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
 		time.sleep(0.2)
 		timeout += 0.2
