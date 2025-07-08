@@ -108,6 +108,7 @@ def template_match_loop():
 	
 	# targets['space.png'].offset = (200, 600)
 	targets['feed.png'].action = feed
+	targets['mail.png'].action = feed
 	time.sleep(0.2)
 	
 	frame = camera.grab()
