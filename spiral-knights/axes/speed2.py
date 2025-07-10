@@ -36,7 +36,7 @@ def frame_sleep():
 	else:
 		time.sleep(0.0444)
 
-def click(point, point_fuzz=0, speed=333, jitter=2, spline_fuzz=0.2):
+def click(point, just_move=False, point_fuzz=4, speed=222, jitter=2, spline_fuzz=0.2):
 
 	def fuzz_point():
 		return (numpy.random.uniform(-point_fuzz, point_fuzz + 1), numpy.random.uniform(-point_fuzz, point_fuzz + 1))
@@ -76,16 +76,11 @@ def click(point, point_fuzz=0, speed=333, jitter=2, spline_fuzz=0.2):
 	else:
 		ahk.mouse_position = numpy.add(point, fuzz_point())
 	frame_sleep()
-	ahk.key_down('lbutton')
-	frame_sleep()
-	ahk.key_up('lbutton')
-	frame_sleep()
-
-def feed(point):
-	material = ahk.mouse_position
-	click(point)
-	click(material)
-	
+	if not just_move:
+		ahk.key_down('lbutton')
+		frame_sleep()
+		ahk.key_up('lbutton')
+		frame_sleep()
 
 def match_template(frame, target, threshold=0.035):
 	result = cv2.matchTemplate(frame, target, cv2.TM_SQDIFF_NORMED)
@@ -107,9 +102,7 @@ def template_match_loop():
 	targets = {file : Target(file, cv2.imread(file), click, (0, 0)) for file in files}
 	
 	# targets['space.png'].offset = (200, 600)
-	targets['feed.png'].action = feed
-	targets['mail.png'].action = feed
-	time.sleep(0.8)
+	# targets['feed.png'].action = feed
 	
 	frame = camera.grab()
 	while not halting:
@@ -126,22 +119,90 @@ def template_match_loop():
 		# print_update('sleeping')
 		# time.sleep(2)
 
-def exit_action(point):
-	global halting
-	ahk.send('{lalt down}{f4}{lalt up}')
-	time.sleep(1)
-	halting = True
-	print('--- halt semaphore set ---')
+def pixel_color_match(pixel_get_color, color_tuple):
+	# compare('0xFFFFFF', (255, 255, 255), 0)
+	pixel_tuple = (int(pixel_get_color[2:4], 16), int(pixel_get_color[4:6], 16), int(pixel_get_color[6:8], 16))
+	print(f'pixel tuple {pixel_tuple} | color tuple {color_tuple} | match {abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
+	return abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))
 
 def kill():
 	global halting
 	halting = True
-	# _thread.interrupt_main()
+	_thread.interrupt_main()
 	print('--- halt semaphore set ---')
 
 ahk.add_hotkey('ralt & lalt', callback=kill)
 ahk.start_hotkeys()
 
-template_match_loop()
+time.sleep(1)
 
-# ahk.block_forever()
+while(not halting):
+
+	timeout = 0
+	while(pixel_color_match(ahk.pixel_get_color(2521, 528, coord_mode='Screen'), (137, 80, 31)) > 34 and timeout < 20):
+	# while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
+		print(f'waiting 0x393721 {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+	print(f'loaded into ready room {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+	
+
+	click((2248, 690), True)
+	ahk.send('{space down}')
+	time.sleep(1.08)
+	ahk.send('{, down}')
+	time.sleep(0.1)
+	click((3090, 184), True)
+	ahk.send('{, up}{lshift}')
+
+	timeout = 0
+	while(ahk.pixel_get_color(2786, 362, coord_mode='Screen') != '0xEBC94D' and timeout < 20):
+		print(f'waiting 0xEBC94D {ahk.pixel_get_color(2786, 362, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+
+	ahk.send('{space up}')
+	click((2888, 669))
+
+	timeout = 0
+	# while(ahk.pixel_get_color(3044, 725, coord_mode='Screen') != '0x655236' and timeout < 20):
+	while(
+		not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
+		or int(ahk.pixel_get_color(3044, 725, coord_mode='Screen')[2]) < 4 and timeout < 20):
+		print(f'waiting 0x655236 {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
+		time.sleep(0.2)
+		timeout += 0.2
+	print(f'finished {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
+
+
+	ahk.send('{space down}')
+	click((2821, 884), True)
+	time.sleep(0.1)
+	ahk.send('{lshift}')
+	time.sleep(0.9)
+	click((2289, 801), True)
+	time.sleep(3)
+	ahk.send('{a down}')
+	time.sleep(1)
+	ahk.send('{a up}')
+	click((2620, 1030), True)
+	time.sleep(1.27)
+	click((2164, 743), True)
+	time.sleep(1.27)
+	click((2060, 800), True)
+	time.sleep(0.2)
+	ahk.send('{lshift}')
+	time.sleep(0.6)
+	ahk.send('{ctrl down}')
+	time.sleep(0.3)
+	ahk.send('{ctrl up}')
+	click((3371, 781), True)
+	time.sleep(1.7)
+	ahk.send('{, down}{space up}')
+	time.sleep(0.51)
+	ahk.send('{, up}{space up}{a down}')
+	time.sleep(0.5)
+	ahk.send('{a up}')
+
+	ahk.send('m')
+	click((3173, 528))

@@ -119,11 +119,11 @@ def template_match_loop():
 		# print_update('sleeping')
 		# time.sleep(2)
 
-def pixel_color_match(pixel_get_color, color_tuple, fuzz=3):
+def pixel_color_match(pixel_get_color, color_tuple):
 	# compare('0xFFFFFF', (255, 255, 255), 0)
 	pixel_tuple = (int(pixel_get_color[2:4], 16), int(pixel_get_color[4:6], 16), int(pixel_get_color[6:8], 16))
-	print(f'pixel tuple {pixel_tuple} | color tuple {color_tuple} | match {math.abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
-	return math.abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))
+	print(f'pixel tuple {pixel_tuple} | color tuple {color_tuple} | match {abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
+	return abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))
 
 def kill():
 	global halting
@@ -139,7 +139,7 @@ time.sleep(1)
 while(not halting):
 
 	timeout = 0
-	while(not pixel_color_match(ahk.pixel_get_color(3414, 483, coord_mode='Screen'), (57, 55, 33), 1) and timeout < 20):
+	while(pixel_color_match(ahk.pixel_get_color(2521, 528, coord_mode='Screen'), (137, 80, 31)) > 34 and timeout < 20):
 	# while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
 		print(f'waiting 0x393721 {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
 		time.sleep(0.2)
@@ -149,7 +149,7 @@ while(not halting):
 
 	click((2248, 690), True)
 	ahk.send('{space down}')
-	time.sleep(0.98)
+	time.sleep(1.08)
 	ahk.send('{, down}')
 	time.sleep(0.1)
 	click((3090, 184), True)
@@ -180,10 +180,10 @@ while(not halting):
 	time.sleep(0.1)
 	ahk.send('{lshift}')
 	time.sleep(0.9)
-	click((2289, 881), True)
-	time.sleep(2.7)
+	click((2289, 801), True)
+	time.sleep(3)
 	ahk.send('{a down}')
-	time.sleep(1.4)
+	time.sleep(1)
 	ahk.send('{a up}')
 	click((2620, 1030), True)
 	time.sleep(1.27)
@@ -197,11 +197,11 @@ while(not halting):
 	time.sleep(0.3)
 	ahk.send('{ctrl up}')
 	click((3371, 781), True)
-	time.sleep(1.5)
+	time.sleep(1.7)
 	ahk.send('{, down}{space up}')
 	time.sleep(0.51)
 	ahk.send('{, up}{space up}{a down}')
-	time.sleep(0.4)
+	time.sleep(0.5)
 	ahk.send('{a up}')
 
 	ahk.send('m')

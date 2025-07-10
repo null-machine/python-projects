@@ -17,8 +17,8 @@ buy_prices = []
 energy_bid = StringVar()
 energy_buy = StringVar()
 
-energy_bid.set(4500)
-energy_buy.set(6000)
+energy_bid.set(4200)
+energy_buy.set(5000)
 
 humanize = True
 
