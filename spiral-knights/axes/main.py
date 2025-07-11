@@ -122,7 +122,7 @@ def template_match_loop():
 def pixel_color_match(pixel_get_color, color_tuple):
 	# compare('0xFFFFFF', (255, 255, 255), 0)
 	pixel_tuple = (int(pixel_get_color[2:4], 16), int(pixel_get_color[4:6], 16), int(pixel_get_color[6:8], 16))
-	print(f'pixel tuple {pixel_tuple} | color tuple {color_tuple} | match {abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
+	print(f'{color_tuple} | {pixel_tuple} | {abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))}')
 	return abs(numpy.sum(numpy.subtract(pixel_tuple, color_tuple)))
 
 def kill():
@@ -165,9 +165,6 @@ while(not halting):
 
 	timeout = 0
 	while(pixel_color_match(ahk.pixel_get_color(3044, 725, coord_mode='Screen'), (101, 82, 54)) > 70 and timeout < 20):
-	# while(
-	# 	not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
-	# 	or int(ahk.pixel_get_color(3044, 725, coord_mode='Screen')[2]) < 4 and timeout < 20):
 		time.sleep(0.2)
 		timeout += 0.2
 	print(f'starting level')
@@ -180,14 +177,15 @@ while(not halting):
 	click((2289, 751), True)
 	# time.sleep(1.1 * 3)
 	timeout = 0
-	while(pixel_color_match(ahk.pixel_get_color(3782, 62, coord_mode='Screen'), (184, 209, 216)) > 2 and timeout < 4):
+	while(pixel_color_match(ahk.pixel_get_color(3761, 80, coord_mode='Screen'), (184, 95, 130)) > 4 and timeout < 8):
 		time.sleep(0.2)
 		timeout += 0.2
 	
 	ahk.send('{lshift up}{a down}')
 	
 	timeout = 0
-	while(pixel_color_match(ahk.pixel_get_color(3782, 62, coord_mode='Screen'), (184, 209, 216)) < 30 and timeout < 4):
+	while(pixel_color_match(ahk.pixel_get_color(3761, 80, coord_mode='Screen'), (184, 95, 130)) < 4 and timeout < 8):
+		print('going down')
 		time.sleep(0.2)
 		timeout += 0.2
 	
