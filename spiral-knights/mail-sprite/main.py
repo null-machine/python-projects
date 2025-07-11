@@ -109,11 +109,11 @@ def template_match_loop():
 	# targets['space.png'].offset = (200, 600)
 	targets['feed.png'].action = feed
 	targets['mail.png'].action = feed
-	time.sleep(0.8)
 	
 	frame = camera.grab()
 	while not halting:
 		for target in targets.values():
+			time.sleep(0.7)
 			print_update(f'{target.name}')
 			capture = camera.grab()
 			if capture is not None: # screen has been updated
@@ -124,7 +124,7 @@ def template_match_loop():
 				print(f'{target.name}: {target.action.__name__}')
 				target.action(numpy.add(point, target.offset))
 		# print_update('sleeping')
-		# time.sleep(2)
+		
 
 def exit_action(point):
 	global halting

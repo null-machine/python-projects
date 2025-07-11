@@ -129,6 +129,7 @@ def kill():
 	global halting
 	halting = True
 	_thread.interrupt_main()
+	ahk.send('{lshift up}{space up}{ctrl up}{a up}{, up}')
 	print('--- halt semaphore set ---')
 
 ahk.add_hotkey('ralt & lalt', callback=kill)
@@ -139,9 +140,7 @@ time.sleep(1)
 while(not halting):
 
 	timeout = 0
-	while(pixel_color_match(ahk.pixel_get_color(2521, 528, coord_mode='Screen'), (137, 80, 31)) > 34 and timeout < 20):
-	# while(ahk.pixel_get_color(3414, 483, coord_mode='Screen') != '0x393721' and timeout < 20):
-		print(f'waiting 0x393721 {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
+	while(pixel_color_match(ahk.pixel_get_color(2521, 528, coord_mode='Screen'), (137, 80, 31)) > 100 and timeout < 20):
 		time.sleep(0.2)
 		timeout += 0.2
 	print(f'loaded into ready room {ahk.pixel_get_color(3414, 483, coord_mode='Screen')}')
@@ -149,60 +148,69 @@ while(not halting):
 
 	click((2248, 690), True)
 	ahk.send('{space down}')
-	time.sleep(1.08)
+	time.sleep(1.1 * 1.08)
 	ahk.send('{, down}')
-	time.sleep(0.1)
+	time.sleep(1.1 * 0.1)
 	click((3090, 184), True)
-	ahk.send('{, up}{lshift}')
+	ahk.send('{, up}{lshift down}')
 
 	timeout = 0
 	while(ahk.pixel_get_color(2786, 362, coord_mode='Screen') != '0xEBC94D' and timeout < 20):
-		print(f'waiting 0xEBC94D {ahk.pixel_get_color(2786, 362, coord_mode='Screen')}')
 		time.sleep(0.2)
 		timeout += 0.2
 
-	ahk.send('{space up}')
+	ahk.send('{space up}{lshift up}')
 	click((2888, 669))
+	time.sleep(4)
 
 	timeout = 0
-	# while(ahk.pixel_get_color(3044, 725, coord_mode='Screen') != '0x655236' and timeout < 20):
-	while(
-		not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
-		or int(ahk.pixel_get_color(3044, 725, coord_mode='Screen')[2]) < 4 and timeout < 20):
-		print(f'waiting 0x655236 {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
+	while(pixel_color_match(ahk.pixel_get_color(3044, 725, coord_mode='Screen'), (101, 82, 54)) > 70 and timeout < 20):
+	# while(
+	# 	not ahk.pixel_get_color(3414, 483, coord_mode='Screen')[2].isnumeric()
+	# 	or int(ahk.pixel_get_color(3044, 725, coord_mode='Screen')[2]) < 4 and timeout < 20):
 		time.sleep(0.2)
 		timeout += 0.2
-	print(f'finished {ahk.pixel_get_color(3044, 725, coord_mode='Screen')}')
-
+	print(f'starting level')
 
 	ahk.send('{space down}')
 	click((2821, 884), True)
-	time.sleep(0.1)
-	ahk.send('{lshift}')
-	time.sleep(0.9)
-	click((2289, 801), True)
-	time.sleep(3)
-	ahk.send('{a down}')
-	time.sleep(1)
+	time.sleep(1.1 * 0.1)
+	ahk.send('{lshift down}')
+	time.sleep(1.1 * 1.0)
+	click((2289, 751), True)
+	# time.sleep(1.1 * 3)
+	timeout = 0
+	while(pixel_color_match(ahk.pixel_get_color(3782, 62, coord_mode='Screen'), (184, 209, 216)) > 2 and timeout < 4):
+		time.sleep(0.2)
+		timeout += 0.2
+	
+	ahk.send('{lshift up}{a down}')
+	
+	timeout = 0
+	while(pixel_color_match(ahk.pixel_get_color(3782, 62, coord_mode='Screen'), (184, 209, 216)) < 30 and timeout < 4):
+		time.sleep(0.2)
+		timeout += 0.2
+	
 	ahk.send('{a up}')
 	click((2620, 1030), True)
-	time.sleep(1.27)
+	time.sleep(1.1 * 1.3)
 	click((2164, 743), True)
-	time.sleep(1.27)
+	time.sleep(1.1 * 1.4)
 	click((2060, 800), True)
-	time.sleep(0.2)
-	ahk.send('{lshift}')
-	time.sleep(0.6)
-	ahk.send('{ctrl down}')
-	time.sleep(0.3)
-	ahk.send('{ctrl up}')
+	time.sleep(1.1 * 0.2)
+	ahk.send('{lshift down}')
+	time.sleep(1.1 * 0.6)
+	ahk.send('{lshift up}{ctrl down}')
+	time.sleep(1.1 * 0.3)
 	click((3371, 781), True)
-	time.sleep(1.7)
+	ahk.send('{ctrl up}')
+	time.sleep(1.1 * 1.6)
 	ahk.send('{, down}{space up}')
-	time.sleep(0.51)
+	time.sleep(1.1 * 0.51)
 	ahk.send('{, up}{space up}{a down}')
-	time.sleep(0.5)
+	time.sleep(1.1 * 0.5)
 	ahk.send('{a up}')
 
 	ahk.send('m')
 	click((3173, 528))
+	time.sleep(2)
